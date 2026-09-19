@@ -1,0 +1,6 @@
+[double]
+    double ep 10000: {'Random': 0.5667, 'TensThenTricks': 0.35}
+    double ep 20000: {'Random': 0.585, 'TensThenTricks': 0.34}
+    double ep 30000: {'Random': 0.6133, 'TensThenTricks': 0.31}
+    double ep 40000: {'Random': 0.5983, 'TensThenTricks': 0.34}
+    double ep 50000: {'Random': 0.6033, 'TensThenTricks': 0.32}

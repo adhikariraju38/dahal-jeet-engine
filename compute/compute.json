@@ -1,0 +1,3236 @@
+{
+  "environment": {
+    "captured": "2026-09-04T18:17:13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "Apple M1 Pro",
+    "cpu_cores_logical": 10,
+    "cpu_perf_cores": "8",
+    "cpu_efficiency_cores": "2",
+    "ram_bytes": "17179869184",
+    "os": "macOS 26.6.2",
+    "python": "3.14.5",
+    "accelerator": "none; CPU only (no CUDA, no MPS used)",
+    "ram_gib": 16.0,
+    "ram_gb_decimal": 17.2,
+    "torch_version": "2.13.0",
+    "numpy_version": "2.5.2",
+    "matplotlib_version": "3.11.1",
+    "torch_threads": 8,
+    "torch_cuda_available": false,
+    "torch_mps_available": true,
+    "max_concurrent_workers": 5
+  },
+  "worker_environments": {
+    "distinct_configurations": 1,
+    "peak_rss_mb": {
+      "max": 672.3,
+      "max_artifact": "ablate_no_ten_status_s1.json",
+      "median": 596.2,
+      "n_reported": 18,
+      "note": "Per-process peak resident memory, recorded by each worker. Artifacts written before this was captured report nothing."
+    },
+    "configurations": [
+      {
+        "OMP_NUM_THREADS": "1",
+        "torch_num_threads": 1,
+        "device": "cpu",
+        "mps_used": false,
+        "torch": "2.13.0",
+        "n_artifacts": 79,
+        "artifacts": [
+          "ablate_minimal_s0.json",
+          "ablate_minimal_s0.json",
+          "ablate_minimal_s1.json",
+          "ablate_minimal_s2.json",
+          "ablate_no_history_s0.json",
+          "ablate_no_history_s0.json"
+        ]
+      }
+    ],
+    "artifacts_without_env": [
+      "championship_results.json",
+      "tuned_genome.json"
+    ],
+    "note": "Artifacts without an `env` block predate per-worker environment capture and should be re-run before submission if their thread settings matter."
+  },
+  "experiments": [
+    {
+      "artifact": "rl_a2c_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T19:06:26",
+        "pid": 39560,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method a2c --episodes 60000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "a2c"
+      },
+      "seconds": 1088.8,
+      "results": {
+        "Random": 0.6108,
+        "TensThenTricks": 0.3967
+      }
+    },
+    {
+      "artifact": "rl_a2c_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T09:33:24",
+        "pid": 50821,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method a2c --episodes 60000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "a2c"
+      },
+      "seconds": 2140.7,
+      "results": {
+        "Random": 0.5988,
+        "TensThenTricks": 0.345
+      }
+    },
+    {
+      "artifact": "rl_a2c_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T09:33:09",
+        "pid": 50847,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method a2c --episodes 60000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "a2c"
+      },
+      "seconds": 2126.2,
+      "results": {
+        "Random": 0.6558,
+        "TensThenTricks": 0.4133
+      }
+    },
+    {
+      "artifact": "rl_deepcfr_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T15:44:16",
+        "pid": 93002,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "deepcfr.py --iters 40 --traversals 120 --depth 10 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "deepcfr",
+        "iters": 40,
+        "traversals": 120,
+        "seed": 0
+      },
+      "seconds": 19455.3,
+      "results": {
+        "Random": 0.6433,
+        "TensThenTricks": 0.3867
+      }
+    },
+    {
+      "artifact": "rl_deepcfr_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T15:39:11",
+        "pid": 93007,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "deepcfr.py --iters 40 --traversals 120 --depth 10 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "deepcfr",
+        "iters": 40,
+        "traversals": 120,
+        "seed": 1
+      },
+      "seconds": 19149.7,
+      "results": {
+        "Random": 0.6267,
+        "TensThenTricks": 0.395
+      }
+    },
+    {
+      "artifact": "rl_deepcfr_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T15:50:52",
+        "pid": 93012,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "deepcfr.py --iters 40 --traversals 120 --depth 10 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "deepcfr",
+        "iters": 40,
+        "traversals": 120,
+        "seed": 2
+      },
+      "seconds": 19851.2,
+      "results": {
+        "Random": 0.6242,
+        "TensThenTricks": 0.3642
+      }
+    },
+    {
+      "artifact": "rl_distill_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T15:52:08",
+        "pid": 2336,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method distill --epochs 30 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "distill"
+      },
+      "seconds": 74.5,
+      "results": {
+        "Random": 0.7262,
+        "TensThenTricks": 0.5142
+      }
+    },
+    {
+      "artifact": "rl_distill_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T15:51:58",
+        "pid": 2341,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method distill --epochs 30 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "distill"
+      },
+      "seconds": 64.8,
+      "results": {
+        "Random": 0.74,
+        "TensThenTricks": 0.5375
+      }
+    },
+    {
+      "artifact": "rl_distill_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T15:51:56",
+        "pid": 2346,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method distill --epochs 30 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "distill"
+      },
+      "seconds": 62.2,
+      "results": {
+        "Random": 0.7412,
+        "TensThenTricks": 0.5292
+      }
+    },
+    {
+      "artifact": "rl_double_dueling_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T19:41:48",
+        "pid": 39555,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method double_dueling --episodes 60000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "double_dueling"
+      },
+      "seconds": 3210.8,
+      "results": {
+        "Random": 0.6142,
+        "TensThenTricks": 0.3642
+      }
+    },
+    {
+      "artifact": "rl_double_dueling_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T10:19:52",
+        "pid": 50815,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method double_dueling --episodes 60000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "double_dueling"
+      },
+      "seconds": 4928.7,
+      "results": {
+        "Random": 0.6188,
+        "TensThenTricks": 0.35
+      }
+    },
+    {
+      "artifact": "rl_double_dueling_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T10:20:00",
+        "pid": 50842,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method double_dueling --episodes 60000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "double_dueling"
+      },
+      "seconds": 4936.4,
+      "results": {
+        "Random": 0.6067,
+        "TensThenTricks": 0.3375
+      }
+    },
+    {
+      "artifact": "rl_double_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T19:40:47",
+        "pid": 39550,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method double --episodes 60000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "double"
+      },
+      "seconds": 3149.3,
+      "results": {
+        "Random": 0.6021,
+        "TensThenTricks": 0.3525
+      }
+    },
+    {
+      "artifact": "rl_double_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T10:18:41",
+        "pid": 50810,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method double --episodes 60000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "double"
+      },
+      "seconds": 4858.3,
+      "results": {
+        "Random": 0.5758,
+        "TensThenTricks": 0.3392
+      }
+    },
+    {
+      "artifact": "rl_double_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T10:18:49",
+        "pid": 50837,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_more.py --method double --episodes 60000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "double"
+      },
+      "seconds": 4865.9,
+      "results": {
+        "Random": 0.6029,
+        "TensThenTricks": 0.3192
+      }
+    },
+    {
+      "artifact": "rl_dqn_potential_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T14:35:14",
+        "pid": 44041,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward potential --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "seconds": 6489.5,
+      "results": {
+        "Random": 0.6183,
+        "TensThenTricks": 0.3375
+      }
+    },
+    {
+      "artifact": "rl_dqn_potential_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T16:35:35",
+        "pid": 74639,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward potential --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "seconds": 6478.5,
+      "results": {
+        "Random": 0.6054,
+        "TensThenTricks": 0.3308
+      }
+    },
+    {
+      "artifact": "rl_dqn_potential_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T18:35:45",
+        "pid": 4538,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward potential --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "seconds": 6521.4,
+      "results": {
+        "Random": 0.6183,
+        "TensThenTricks": 0.3533
+      }
+    },
+    {
+      "artifact": "rl_dqn_ten_shaped_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T14:35:24",
+        "pid": 44036,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward ten_shaped --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "seconds": 6499.5,
+      "results": {
+        "Random": 0.5996,
+        "TensThenTricks": 0.3558
+      }
+    },
+    {
+      "artifact": "rl_dqn_ten_shaped_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T16:35:21",
+        "pid": 74634,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward ten_shaped --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "seconds": 6464.6,
+      "results": {
+        "Random": 0.6283,
+        "TensThenTricks": 0.3733
+      }
+    },
+    {
+      "artifact": "rl_dqn_ten_shaped_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T18:36:04",
+        "pid": 4533,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward ten_shaped --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "seconds": 6540.8,
+      "results": {
+        "Random": 0.6029,
+        "TensThenTricks": 0.4025
+      }
+    },
+    {
+      "artifact": "rl_dqn_terminal_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T14:35:09",
+        "pid": 44031,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward terminal --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "seconds": 6484.8,
+      "results": {
+        "Random": 0.5988,
+        "TensThenTricks": 0.3417
+      }
+    },
+    {
+      "artifact": "rl_dqn_terminal_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T16:35:25",
+        "pid": 74629,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward terminal --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "seconds": 6468.9,
+      "results": {
+        "Random": 0.5733,
+        "TensThenTricks": 0.3133
+      }
+    },
+    {
+      "artifact": "rl_dqn_terminal_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T18:35:43",
+        "pid": 4528,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward terminal --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "seconds": 6519.4,
+      "results": {
+        "Random": 0.625,
+        "TensThenTricks": 0.3825
+      }
+    },
+    {
+      "artifact": "rl_dqn_trick_shaped_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T14:35:06",
+        "pid": 44046,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward trick_shaped --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "seconds": 6481.6,
+      "results": {
+        "Random": 0.5983,
+        "TensThenTricks": 0.33
+      }
+    },
+    {
+      "artifact": "rl_dqn_trick_shaped_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T16:35:31",
+        "pid": 74644,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward trick_shaped --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "seconds": 6474.7,
+      "results": {
+        "Random": 0.5713,
+        "TensThenTricks": 0.3292
+      }
+    },
+    {
+      "artifact": "rl_dqn_trick_shaped_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T18:35:58",
+        "pid": 4543,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo dqn --reward trick_shaped --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "dqn",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "seconds": 6534.7,
+      "results": {
+        "Random": 0.6021,
+        "TensThenTricks": 0.3417
+      }
+    },
+    {
+      "artifact": "rl_mappo_potential_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T19:24:36",
+        "pid": 39565,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_mappo.py --reward potential --episodes 200000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "mappo",
+        "reward": "potential",
+        "episodes": 200000
+      },
+      "seconds": 2178.1,
+      "results": {
+        "Random": 0.7208,
+        "TensThenTricks": 0.4483,
+        "GreedyTricks": 0.4475
+      }
+    },
+    {
+      "artifact": "rl_mappo_potential_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T10:06:01",
+        "pid": 50826,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_mappo.py --reward potential --episodes 200000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "mappo",
+        "reward": "potential",
+        "episodes": 200000
+      },
+      "seconds": 4098.2,
+      "results": {
+        "Random": 0.715,
+        "TensThenTricks": 0.485,
+        "GreedyTricks": 0.47
+      }
+    },
+    {
+      "artifact": "rl_mappo_potential_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T10:05:54",
+        "pid": 50852,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_mappo.py --reward potential --episodes 200000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "mappo",
+        "reward": "potential",
+        "episodes": 200000
+      },
+      "seconds": 4091.1,
+      "results": {
+        "Random": 0.7204,
+        "TensThenTricks": 0.4433,
+        "GreedyTricks": 0.4333
+      }
+    },
+    {
+      "artifact": "rl_nfsp_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T19:02:51",
+        "pid": 39570,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "nfsp.py --episodes 80000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "nfsp",
+        "episodes": 80000,
+        "eta": 0.1,
+        "seed": 0
+      },
+      "seconds": 873.9,
+      "results": {
+        "Random": 0.5358,
+        "TensThenTricks": 0.265
+      }
+    },
+    {
+      "artifact": "rl_nfsp_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T09:29:38",
+        "pid": 50831,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "nfsp.py --episodes 80000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "nfsp",
+        "episodes": 80000,
+        "eta": 0.1,
+        "seed": 1
+      },
+      "seconds": 1915.2,
+      "results": {
+        "Random": 0.5337,
+        "TensThenTricks": 0.2583
+      }
+    },
+    {
+      "artifact": "rl_nfsp_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-09-01T09:29:38",
+        "pid": 50857,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "nfsp.py --episodes 80000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "method": "nfsp",
+        "episodes": 80000,
+        "eta": 0.1,
+        "seed": 2
+      },
+      "seconds": 1914.6,
+      "results": {
+        "Random": 0.5304,
+        "TensThenTricks": 0.2658
+      }
+    },
+    {
+      "artifact": "rl_ppo_potential_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T14:47:34",
+        "pid": 71254,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward potential --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "seconds": 728.2,
+      "results": {
+        "Random": 0.6971,
+        "TensThenTricks": 0.5
+      }
+    },
+    {
+      "artifact": "rl_ppo_potential_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T16:47:03",
+        "pid": 1672,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward potential --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "seconds": 686.5,
+      "results": {
+        "Random": 0.6879,
+        "TensThenTricks": 0.4958
+      }
+    },
+    {
+      "artifact": "rl_ppo_potential_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T18:48:14",
+        "pid": 36399,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward potential --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "seconds": 728.9,
+      "results": {
+        "Random": 0.6913,
+        "TensThenTricks": 0.5158
+      }
+    },
+    {
+      "artifact": "rl_ppo_ten_shaped_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T14:47:32",
+        "pid": 71248,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward ten_shaped --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "seconds": 726.9,
+      "results": {
+        "Random": 0.6825,
+        "TensThenTricks": 0.5083
+      }
+    },
+    {
+      "artifact": "rl_ppo_ten_shaped_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T16:47:01",
+        "pid": 1667,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward ten_shaped --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "seconds": 685.4,
+      "results": {
+        "Random": 0.6908,
+        "TensThenTricks": 0.5008
+      }
+    },
+    {
+      "artifact": "rl_ppo_ten_shaped_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T18:48:08",
+        "pid": 36394,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward ten_shaped --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "seconds": 722.2,
+      "results": {
+        "Random": 0.6825,
+        "TensThenTricks": 0.4992
+      }
+    },
+    {
+      "artifact": "rl_ppo_terminal_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T14:47:30",
+        "pid": 71243,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward terminal --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "seconds": 724.3,
+      "results": {
+        "Random": 0.6933,
+        "TensThenTricks": 0.5017
+      }
+    },
+    {
+      "artifact": "rl_ppo_terminal_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T16:47:01",
+        "pid": 1662,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward terminal --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "seconds": 684.9,
+      "results": {
+        "Random": 0.6821,
+        "TensThenTricks": 0.4775
+      }
+    },
+    {
+      "artifact": "rl_ppo_terminal_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T18:48:16",
+        "pid": 36389,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward terminal --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "seconds": 730.8,
+      "results": {
+        "Random": 0.6779,
+        "TensThenTricks": 0.4858
+      }
+    },
+    {
+      "artifact": "rl_ppo_trick_shaped_s0.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T14:47:35",
+        "pid": 71259,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward trick_shaped --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "seconds": 729.5,
+      "results": {
+        "Random": 0.7063,
+        "TensThenTricks": 0.5067
+      }
+    },
+    {
+      "artifact": "rl_ppo_trick_shaped_s1.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T16:47:02",
+        "pid": 1677,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward trick_shaped --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "seconds": 685.8,
+      "results": {
+        "Random": 0.6892,
+        "TensThenTricks": 0.5033
+      }
+    },
+    {
+      "artifact": "rl_ppo_trick_shaped_s2.json",
+      "kind": "learning agent",
+      "env": {
+        "started": "2026-08-31T18:48:09",
+        "pid": 36404,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "train_rl.py --algo ppo --reward trick_shaped --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "algo": "ppo",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "seconds": 723.4,
+      "results": {
+        "Random": 0.6883,
+        "TensThenTricks": 0.4917
+      }
+    },
+    {
+      "artifact": "exploit_Adaptive_s0.json",
+      "kind": "exploitability",
+      "env": {
+        "started": "2026-09-01T17:25:07",
+        "pid": 14326,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "exploit.py --target Adaptive --episodes 50000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 50000,
+        "seed": 0,
+        "target": "Adaptive"
+      },
+      "seconds": 2763,
+      "results": {
+        "best_response": 0.386,
+        "generic_baseline": 0.58,
+        "exploitability": -0.194
+      }
+    },
+    {
+      "artifact": "exploit_GreedyTricks_s0.json",
+      "kind": "exploitability",
+      "env": {
+        "started": "2026-09-01T17:25:06",
+        "pid": 14321,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "exploit.py --target GreedyTricks --episodes 50000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 50000,
+        "seed": 0,
+        "target": "GreedyTricks"
+      },
+      "seconds": 2762,
+      "results": {
+        "best_response": 0.361,
+        "generic_baseline": 0.55,
+        "exploitability": -0.189
+      }
+    },
+    {
+      "artifact": "exploit_TensThenTricks_s0.json",
+      "kind": "exploitability",
+      "env": {
+        "started": "2026-09-01T17:25:03",
+        "pid": 14310,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "exploit.py --target TensThenTricks --episodes 50000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 50000,
+        "seed": 0,
+        "target": "TensThenTricks"
+      },
+      "seconds": 2759,
+      "results": {
+        "best_response": 0.3395,
+        "generic_baseline": 0.45,
+        "exploitability": -0.1105
+      }
+    },
+    {
+      "artifact": "exploit_Tuned_s0.json",
+      "kind": "exploitability",
+      "env": {
+        "started": "2026-09-01T17:24:59",
+        "pid": 14315,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "exploit.py --target Tuned --episodes 50000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 50000,
+        "seed": 0,
+        "target": "Tuned"
+      },
+      "seconds": 2755,
+      "results": {
+        "best_response": 0.308,
+        "generic_baseline": 0.5067,
+        "exploitability": -0.1987
+      }
+    },
+    {
+      "artifact": "ablate_minimal_s0.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T08:11:44",
+        "pid": 77116,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block minimal --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 597.7,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 0,
+        "block": "minimal",
+        "features_zeroed": 241
+      },
+      "seconds": 5156.7,
+      "results": {
+        "Random": {
+          "win": 0.6531,
+          "ci": [
+            0.6381,
+            0.6675
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4094,
+          "ci": [
+            0.3887,
+            0.4319
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_minimal_s1.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T10:19:05",
+        "pid": 7961,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block minimal --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 667.2,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 1,
+        "block": "minimal",
+        "features_zeroed": 241
+      },
+      "seconds": 5518.4,
+      "results": {
+        "Random": {
+          "win": 0.685,
+          "ci": [
+            0.6713,
+            0.6994
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4644,
+          "ci": [
+            0.4437,
+            0.485
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_minimal_s2.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T11:45:56",
+        "pid": 31611,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block minimal --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 552.0,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 2,
+        "block": "minimal",
+        "features_zeroed": 241
+      },
+      "seconds": 5209.3,
+      "results": {
+        "Random": {
+          "win": 0.6447,
+          "ci": [
+            0.6309,
+            0.6597
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4081,
+          "ci": [
+            0.3887,
+            0.4281
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_history_s0.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T08:11:42",
+        "pid": 77106,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_history --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 596.7,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 0,
+        "block": "no_history",
+        "features_zeroed": 208
+      },
+      "seconds": 5155.6,
+      "results": {
+        "Random": {
+          "win": 0.5925,
+          "ci": [
+            0.5778,
+            0.6075
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3375,
+          "ci": [
+            0.3175,
+            0.3581
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_history_s1.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T10:19:03",
+        "pid": 7957,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_history --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 669.5,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 1,
+        "block": "no_history",
+        "features_zeroed": 208
+      },
+      "seconds": 5517.0,
+      "results": {
+        "Random": {
+          "win": 0.6194,
+          "ci": [
+            0.6038,
+            0.6347
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3887,
+          "ci": [
+            0.3694,
+            0.4094
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_history_s2.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T11:45:53",
+        "pid": 31607,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_history --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 557.9,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 2,
+        "block": "no_history",
+        "features_zeroed": 208
+      },
+      "seconds": 5206.1,
+      "results": {
+        "Random": {
+          "win": 0.5969,
+          "ci": [
+            0.5822,
+            0.6116
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3444,
+          "ci": [
+            0.325,
+            0.3638
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_scalars_s0.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T08:12:00",
+        "pid": 77111,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_scalars --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 593.9,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 0,
+        "block": "no_scalars",
+        "features_zeroed": 5
+      },
+      "seconds": 5173.4,
+      "results": {
+        "Random": {
+          "win": 0.6184,
+          "ci": [
+            0.6038,
+            0.6328
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3769,
+          "ci": [
+            0.3575,
+            0.3969
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_scalars_s1.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T10:19:02",
+        "pid": 7959,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_scalars --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 670.1,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 1,
+        "block": "no_scalars",
+        "features_zeroed": 5
+      },
+      "seconds": 5516.0,
+      "results": {
+        "Random": {
+          "win": 0.6147,
+          "ci": [
+            0.6003,
+            0.6288
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3694,
+          "ci": [
+            0.3494,
+            0.3887
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_scalars_s2.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T11:46:15",
+        "pid": 31609,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_scalars --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 560.5,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 2,
+        "block": "no_scalars",
+        "features_zeroed": 5
+      },
+      "seconds": 5228.3,
+      "results": {
+        "Random": {
+          "win": 0.6194,
+          "ci": [
+            0.6044,
+            0.6334
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.355,
+          "ci": [
+            0.335,
+            0.3744
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_ten_status_s0.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T08:12:13",
+        "pid": 77096,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_ten_status --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 594.8,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 0,
+        "block": "no_ten_status",
+        "features_zeroed": 12
+      },
+      "seconds": 5186.2,
+      "results": {
+        "Random": {
+          "win": 0.6006,
+          "ci": [
+            0.5869,
+            0.6144
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3588,
+          "ci": [
+            0.3369,
+            0.3769
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_ten_status_s1.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T10:18:56",
+        "pid": 7953,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_ten_status --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 672.3,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 1,
+        "block": "no_ten_status",
+        "features_zeroed": 12
+      },
+      "seconds": 5509.9,
+      "results": {
+        "Random": {
+          "win": 0.6091,
+          "ci": [
+            0.5944,
+            0.6231
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3394,
+          "ci": [
+            0.32,
+            0.3588
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_ten_status_s2.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T11:45:15",
+        "pid": 31603,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_ten_status --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 551.3,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 2,
+        "block": "no_ten_status",
+        "features_zeroed": 12
+      },
+      "seconds": 5167.9,
+      "results": {
+        "Random": {
+          "win": 0.6244,
+          "ci": [
+            0.61,
+            0.6394
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3919,
+          "ci": [
+            0.3719,
+            0.4119
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_voids_s0.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T08:12:04",
+        "pid": 77101,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_voids --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 596.5,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 0,
+        "block": "no_voids",
+        "features_zeroed": 16
+      },
+      "seconds": 5177.0,
+      "results": {
+        "Random": {
+          "win": 0.6281,
+          "ci": [
+            0.6134,
+            0.6434
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3625,
+          "ci": [
+            0.3431,
+            0.3819
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_voids_s1.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T10:19:02",
+        "pid": 7955,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_voids --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 668.5,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 1,
+        "block": "no_voids",
+        "features_zeroed": 16
+      },
+      "seconds": 5516.3,
+      "results": {
+        "Random": {
+          "win": 0.6294,
+          "ci": [
+            0.6159,
+            0.6444
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3787,
+          "ci": [
+            0.3581,
+            0.3987
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_voids_s2.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T11:45:33",
+        "pid": 31605,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_voids --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 554.5,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 2,
+        "block": "no_voids",
+        "features_zeroed": 16
+      },
+      "seconds": 5186.4,
+      "results": {
+        "Random": {
+          "win": 0.5894,
+          "ci": [
+            0.5747,
+            0.6041
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3513,
+          "ci": [
+            0.3306,
+            0.3725
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_none_s0.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T08:12:03",
+        "pid": 77091,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block none --episodes 120000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 596.2,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 0,
+        "block": "none",
+        "features_zeroed": 0
+      },
+      "seconds": 5175.8,
+      "results": {
+        "Random": {
+          "win": 0.6159,
+          "ci": [
+            0.6012,
+            0.6306
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3887,
+          "ci": [
+            0.3694,
+            0.4081
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_none_s1.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T10:19:05",
+        "pid": 7951,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block none --episodes 120000 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 667.2,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 1,
+        "block": "none",
+        "features_zeroed": 0
+      },
+      "seconds": 5519.1,
+      "results": {
+        "Random": {
+          "win": 0.5978,
+          "ci": [
+            0.5822,
+            0.6138
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3494,
+          "ci": [
+            0.3287,
+            0.3694
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_none_s2.json",
+      "kind": "encoding ablation",
+      "env": {
+        "started": "2026-09-03T11:45:32",
+        "pid": 31601,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block none --episodes 120000 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2",
+        "peak_rss_mb": 561.7,
+        "peak_rss_children_mb": 4.3,
+        "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+      },
+      "config": {
+        "episodes": 120000,
+        "seed": 2,
+        "block": "none",
+        "features_zeroed": 0
+      },
+      "seconds": 5184.9,
+      "results": {
+        "Random": {
+          "win": 0.6038,
+          "ci": [
+            0.5891,
+            0.6178
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3506,
+          "ci": [
+            0.33,
+            0.3719
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_minimal_s0.json",
+      "kind": "encoding ablation (40k, superseded)",
+      "env": {
+        "started": "2026-09-01T21:56:20",
+        "pid": 25604,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block minimal --episodes 40000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 40000,
+        "seed": 0,
+        "block": "minimal",
+        "features_zeroed": 241
+      },
+      "seconds": 16272.2,
+      "results": {
+        "Random": {
+          "win": 0.6497,
+          "ci": [
+            0.6356,
+            0.6653
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4244,
+          "ci": [
+            0.4056,
+            0.4431
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_history_s0.json",
+      "kind": "encoding ablation (40k, superseded)",
+      "env": {
+        "started": "2026-09-01T22:00:13",
+        "pid": 25594,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_history --episodes 40000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 40000,
+        "seed": 0,
+        "block": "no_history",
+        "features_zeroed": 208
+      },
+      "seconds": 16504.8,
+      "results": {
+        "Random": {
+          "win": 0.6172,
+          "ci": [
+            0.6034,
+            0.6306
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3875,
+          "ci": [
+            0.3688,
+            0.4075
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_scalars_s0.json",
+      "kind": "encoding ablation (40k, superseded)",
+      "env": {
+        "started": "2026-09-01T21:58:14",
+        "pid": 25599,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_scalars --episodes 40000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 40000,
+        "seed": 0,
+        "block": "no_scalars",
+        "features_zeroed": 5
+      },
+      "seconds": 16385.6,
+      "results": {
+        "Random": {
+          "win": 0.5928,
+          "ci": [
+            0.5784,
+            0.6084
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3419,
+          "ci": [
+            0.3212,
+            0.3619
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_ten_status_s0.json",
+      "kind": "encoding ablation (40k, superseded)",
+      "env": {
+        "started": "2026-09-01T21:58:29",
+        "pid": 25584,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_ten_status --episodes 40000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 40000,
+        "seed": 0,
+        "block": "no_ten_status",
+        "features_zeroed": 12
+      },
+      "seconds": 16400.8,
+      "results": {
+        "Random": {
+          "win": 0.5781,
+          "ci": [
+            0.5641,
+            0.5925
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3431,
+          "ci": [
+            0.325,
+            0.3631
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_no_voids_s0.json",
+      "kind": "encoding ablation (40k, superseded)",
+      "env": {
+        "started": "2026-09-01T21:58:25",
+        "pid": 25589,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block no_voids --episodes 40000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 40000,
+        "seed": 0,
+        "block": "no_voids",
+        "features_zeroed": 16
+      },
+      "seconds": 16396.6,
+      "results": {
+        "Random": {
+          "win": 0.595,
+          "ci": [
+            0.5794,
+            0.6094
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3438,
+          "ci": [
+            0.3244,
+            0.3638
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "ablate_none_s0.json",
+      "kind": "encoding ablation (40k, superseded)",
+      "env": {
+        "started": "2026-09-01T21:58:26",
+        "pid": 25579,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_encoding.py --block none --episodes 40000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 40000,
+        "seed": 0,
+        "block": "none",
+        "features_zeroed": 0
+      },
+      "seconds": 16398.3,
+      "results": {
+        "Random": {
+          "win": 0.5869,
+          "ci": [
+            0.5722,
+            0.6016
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3469,
+          "ci": [
+            0.3262,
+            0.3663
+          ]
+        }
+      }
+    },
+    {
+      "artifact": "void_constraint_ablation.json",
+      "kind": "determinization ablation",
+      "env": {
+        "started": "2026-09-02T03:51:36",
+        "pid": 20029,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "ablate_determinize.py --deals 400",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {},
+      "seconds": 14021.4,
+      "results": {}
+    },
+    {
+      "artifact": "sweep_s0.json",
+      "kind": "hyperparameter sweep",
+      "env": {
+        "started": "2026-09-01T23:55:35",
+        "pid": 91066,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "sweep.py --episodes 20000 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "episodes": 20000,
+        "seed": 0
+      },
+      "seconds": 6917.6,
+      "results": [
+        {
+          "lr": 0.0001,
+          "hidden": 512,
+          "gamma": 0.99,
+          "win_vs_best_heuristic": 0.3887
+        },
+        {
+          "lr": 0.0003,
+          "hidden": 512,
+          "gamma": 0.99,
+          "win_vs_best_heuristic": 0.3525
+        },
+        {
+          "lr": 0.001,
+          "hidden": 512,
+          "gamma": 0.99,
+          "win_vs_best_heuristic": 0.3275
+        },
+        {
+          "lr": 0.0003,
+          "hidden": 256,
+          "gamma": 0.99,
+          "win_vs_best_heuristic": 0.3688
+        },
+        {
+          "lr": 0.0003,
+          "hidden": 1024,
+          "gamma": 0.99,
+          "win_vs_best_heuristic": 0.34
+        },
+        {
+          "lr": 0.0003,
+          "hidden": 512,
+          "gamma": 0.95,
+          "win_vs_best_heuristic": 0.3525
+        },
+        {
+          "lr": 0.0003,
+          "hidden": 512,
+          "gamma": 1.0,
+          "win_vs_best_heuristic": 0.325
+        }
+      ]
+    },
+    {
+      "artifact": "alphadj_eval_s0_n100.json",
+      "kind": "neural-guided search",
+      "env": {
+        "started": "2026-09-01T16:07:45",
+        "pid": 2795,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "alphazero.py --stage eval --sims 100 --seed 0",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "seed": 0,
+        "sims": 100
+      },
+      "seconds": null,
+      "results": {
+        "Random": {
+          "win": 0.7725,
+          "ci": [
+            0.745,
+            0.8
+          ],
+          "ms": 22.4
+        },
+        "TensThenTricks": {
+          "win": 0.4562,
+          "ci": [
+            0.425,
+            0.4875
+          ],
+          "ms": 21.68
+        }
+      }
+    },
+    {
+      "artifact": "alphadj_eval_s1_n100.json",
+      "kind": "neural-guided search",
+      "env": {
+        "started": "2026-09-01T16:23:21",
+        "pid": 6622,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "alphazero.py --stage eval --sims 100 --seed 1",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "seed": 1,
+        "sims": 100
+      },
+      "seconds": null,
+      "results": {
+        "Random": {
+          "win": 0.7612,
+          "ci": [
+            0.7338,
+            0.79
+          ],
+          "ms": 22.33
+        },
+        "TensThenTricks": {
+          "win": 0.4562,
+          "ci": [
+            0.425,
+            0.4888
+          ],
+          "ms": 21.75
+        }
+      }
+    },
+    {
+      "artifact": "alphadj_eval_s2_n100.json",
+      "kind": "neural-guided search",
+      "env": {
+        "started": "2026-09-01T16:39:03",
+        "pid": 10463,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "alphazero.py --stage eval --sims 100 --seed 2",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "seed": 2,
+        "sims": 100
+      },
+      "seconds": null,
+      "results": {
+        "Random": {
+          "win": 0.76,
+          "ci": [
+            0.7338,
+            0.7863
+          ],
+          "ms": 22.54
+        },
+        "TensThenTricks": {
+          "win": 0.4675,
+          "ci": [
+            0.4363,
+            0.4988
+          ],
+          "ms": 21.8
+        }
+      }
+    },
+    {
+      "artifact": "championship_results.json",
+      "kind": "heuristic championship",
+      "env": null,
+      "config": {},
+      "seconds": 2957.4,
+      "results": {}
+    },
+    {
+      "artifact": "final_tournament.json",
+      "kind": "final round-robin",
+      "env": {
+        "started": "2026-09-02T23:09:20",
+        "pid": 30786,
+        "python": "3.14.5",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "cpu_count": 10,
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "argv": "final_tournament.py --deals 300",
+        "torch": "2.13.0",
+        "torch_num_threads": 1,
+        "torch_num_interop_threads": 10,
+        "device": "cpu",
+        "cuda_available": false,
+        "mps_available": true,
+        "mps_used": false,
+        "numpy": "2.5.2"
+      },
+      "config": {
+        "deals_per_pair": 300
+      },
+      "seconds": 8067.3,
+      "results": {}
+    },
+    {
+      "artifact": "tuned_genome.json",
+      "kind": "metaheuristic tuning",
+      "env": null,
+      "config": {},
+      "seconds": null,
+      "results": {}
+    }
+  ],
+  "log_derived_timings_s": {
+    "mappo/potential": 2178,
+    "distill": 111,
+    "ppo/ten_shaped": 722,
+    "ablate/no_ten_status": 5186,
+    "ablate/no_scalars": 5173,
+    "ablate/no_voids": 5177,
+    "ablate/no_history": 5156,
+    "ablate/minimal": 5157,
+    "ablate/none": 5176,
+    "ppo/potential": 729,
+    "dqn/ten_shaped": 6541,
+    "a2c": 1089,
+    "dqn/trick_shaped": 6535,
+    "dqn/terminal": 535,
+    "dqn/potential": 536,
+    "ppo/terminal": 148,
+    "ppo/trick_shaped": 148,
+    "nfsp": 874,
+    "double": 3149,
+    "double_dueling": 3211
+  },
+  "totals": {
+    "artifacts": 81,
+    "artifacts_with_timing": 77,
+    "artifacts_without_timing": 4,
+    "measured_wall_clock_s": 485745.4,
+    "measured_wall_clock_h": 134.93,
+    "note": "Sum of per-experiment wall-clock. Jobs ran up to 5 at a time with OMP_NUM_THREADS=1, so this is CPU-time across workers, NOT elapsed time at the wall. Elapsed time is lower by roughly the concurrency factor."
+  }
+}

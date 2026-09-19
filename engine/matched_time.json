@@ -1,0 +1,356 @@
+{
+  "env": {
+    "started": "2026-09-02T08:27:43",
+    "pid": 77369,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "matched_time.py --measure --deals 400",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "source_artifact": "void_constraint_ablation.json",
+  "interpolated": [
+    {
+      "algo": "ISMCTS",
+      "budget": 50,
+      "constrained_win": 0.5631,
+      "constrained_ci": [
+        0.5444,
+        0.5837
+      ],
+      "matched_ms": 8.63,
+      "unconstrained_at_same_time_linear": 0.5517,
+      "unconstrained_at_same_time_log": 0.5554,
+      "delta_linear": 0.0114,
+      "delta_log": 0.0077,
+      "agrees_across_interpolation": true,
+      "ci_excludes_interpolated": false
+    },
+    {
+      "algo": "ISMCTS",
+      "budget": 100,
+      "constrained_win": 0.6181,
+      "constrained_ci": [
+        0.5969,
+        0.6394
+      ],
+      "matched_ms": 17.281,
+      "unconstrained_at_same_time_linear": 0.6099,
+      "unconstrained_at_same_time_log": 0.6107,
+      "delta_linear": 0.0082,
+      "delta_log": 0.0074,
+      "agrees_across_interpolation": true,
+      "ci_excludes_interpolated": false
+    },
+    {
+      "algo": "ISMCTS",
+      "budget": 200,
+      "constrained_win": 0.6706,
+      "constrained_ci": [
+        0.65,
+        0.69
+      ],
+      "matched_ms": 34.417,
+      "unconstrained_at_same_time_linear": 0.6261,
+      "unconstrained_at_same_time_log": 0.6277,
+      "delta_linear": 0.0445,
+      "delta_log": 0.0429,
+      "agrees_across_interpolation": true,
+      "ci_excludes_interpolated": true
+    },
+    {
+      "algo": "ISMCTS",
+      "budget": 400,
+      "constrained_win": 0.6694,
+      "constrained_ci": [
+        0.65,
+        0.6894
+      ],
+      "matched_ms": 68.754,
+      "unconstrained_at_same_time_linear": null,
+      "unconstrained_at_same_time_log": null,
+      "note": "outside the measured unconstrained range; extrapolation refused"
+    },
+    {
+      "algo": "PIMC",
+      "budget": 4,
+      "constrained_win": 0.5363,
+      "constrained_ci": [
+        0.5169,
+        0.5569
+      ],
+      "matched_ms": 3.244,
+      "unconstrained_at_same_time_linear": 0.5257,
+      "unconstrained_at_same_time_log": 0.5265,
+      "delta_linear": 0.0106,
+      "delta_log": 0.0098,
+      "agrees_across_interpolation": true,
+      "ci_excludes_interpolated": false
+    },
+    {
+      "algo": "PIMC",
+      "budget": 8,
+      "constrained_win": 0.6075,
+      "constrained_ci": [
+        0.5869,
+        0.6275
+      ],
+      "matched_ms": 6.559,
+      "unconstrained_at_same_time_linear": 0.5821,
+      "unconstrained_at_same_time_log": 0.5827,
+      "delta_linear": 0.0254,
+      "delta_log": 0.0248,
+      "agrees_across_interpolation": true,
+      "ci_excludes_interpolated": true
+    },
+    {
+      "algo": "PIMC",
+      "budget": 16,
+      "constrained_win": 0.6556,
+      "constrained_ci": [
+        0.6344,
+        0.6763
+      ],
+      "matched_ms": 13.185,
+      "unconstrained_at_same_time_linear": 0.6247,
+      "unconstrained_at_same_time_log": 0.6254,
+      "delta_linear": 0.0309,
+      "delta_log": 0.0302,
+      "agrees_across_interpolation": true,
+      "ci_excludes_interpolated": true
+    },
+    {
+      "algo": "PIMC",
+      "budget": 32,
+      "constrained_win": 0.7025,
+      "constrained_ci": [
+        0.6819,
+        0.7244
+      ],
+      "matched_ms": 26.634,
+      "unconstrained_at_same_time_linear": null,
+      "unconstrained_at_same_time_log": null,
+      "note": "outside the measured unconstrained range; extrapolation refused"
+    }
+  ],
+  "measured": [
+    {
+      "algo": "ISMCTS",
+      "constrained_budget": 50,
+      "constrained_win": 0.5631,
+      "constrained_ci": [
+        0.5444,
+        0.5837
+      ],
+      "constrained_ms": 8.63,
+      "unconstrained_budget_for_time_match": 58,
+      "unconstrained_win": 0.5687,
+      "unconstrained_ci": [
+        0.5494,
+        0.5894
+      ],
+      "unconstrained_ms": 8.562,
+      "time_match_error_pct": -0.8,
+      "budgets_tried": [
+        58,
+        59
+      ],
+      "delta_measured": -0.0056,
+      "paired_p": 0.71071,
+      "paired_mean_diff": -0.0056,
+      "ci_overlap": true
+    },
+    {
+      "algo": "ISMCTS",
+      "constrained_budget": 100,
+      "constrained_win": 0.6181,
+      "constrained_ci": [
+        0.5969,
+        0.6394
+      ],
+      "constrained_ms": 17.281,
+      "unconstrained_budget_for_time_match": 117,
+      "unconstrained_win": 0.6144,
+      "unconstrained_ci": [
+        0.5944,
+        0.6344
+      ],
+      "unconstrained_ms": 17.276,
+      "time_match_error_pct": -0.0,
+      "budgets_tried": [
+        117
+      ],
+      "delta_measured": 0.0037,
+      "paired_p": 0.82566,
+      "paired_mean_diff": 0.0037,
+      "ci_overlap": true
+    },
+    {
+      "algo": "ISMCTS",
+      "constrained_budget": 200,
+      "constrained_win": 0.6706,
+      "constrained_ci": [
+        0.65,
+        0.69
+      ],
+      "constrained_ms": 34.417,
+      "unconstrained_budget_for_time_match": 236,
+      "unconstrained_win": 0.6325,
+      "unconstrained_ci": [
+        0.6125,
+        0.6531
+      ],
+      "unconstrained_ms": 34.479,
+      "time_match_error_pct": 0.2,
+      "budgets_tried": [
+        234,
+        236
+      ],
+      "delta_measured": 0.0381,
+      "paired_p": 0.0025,
+      "paired_mean_diff": 0.0381,
+      "ci_overlap": true
+    },
+    {
+      "algo": "ISMCTS",
+      "constrained_budget": 400,
+      "constrained_win": 0.6694,
+      "constrained_ci": [
+        0.65,
+        0.6894
+      ],
+      "constrained_ms": 68.754,
+      "unconstrained_budget_for_time_match": 473,
+      "unconstrained_win": 0.6462,
+      "unconstrained_ci": [
+        0.6244,
+        0.6669
+      ],
+      "unconstrained_ms": 68.854,
+      "time_match_error_pct": 0.1,
+      "budgets_tried": [
+        467,
+        472,
+        473
+      ],
+      "delta_measured": 0.0232,
+      "paired_p": 0.0716,
+      "paired_mean_diff": 0.0231,
+      "ci_overlap": true
+    },
+    {
+      "algo": "PIMC",
+      "constrained_budget": 4,
+      "constrained_win": 0.5363,
+      "constrained_ci": [
+        0.5169,
+        0.5569
+      ],
+      "constrained_ms": 3.244,
+      "unconstrained_budget_for_time_match": 4,
+      "unconstrained_win": 0.5238,
+      "unconstrained_ci": [
+        0.5025,
+        0.5444
+      ],
+      "unconstrained_ms": 3.127,
+      "time_match_error_pct": -3.6,
+      "budgets_tried": [
+        4
+      ],
+      "delta_measured": 0.0125,
+      "paired_p": 0.37018,
+      "paired_mean_diff": 0.0125,
+      "ci_overlap": true
+    },
+    {
+      "algo": "PIMC",
+      "constrained_budget": 8,
+      "constrained_win": 0.6075,
+      "constrained_ci": [
+        0.5869,
+        0.6275
+      ],
+      "constrained_ms": 6.559,
+      "unconstrained_budget_for_time_match": 8,
+      "unconstrained_win": 0.5806,
+      "unconstrained_ci": [
+        0.5613,
+        0.6
+      ],
+      "unconstrained_ms": 6.318,
+      "time_match_error_pct": -3.7,
+      "budgets_tried": [
+        8
+      ],
+      "delta_measured": 0.0269,
+      "paired_p": 0.0487,
+      "paired_mean_diff": 0.0269,
+      "ci_overlap": true
+    },
+    {
+      "algo": "PIMC",
+      "constrained_budget": 16,
+      "constrained_win": 0.6556,
+      "constrained_ci": [
+        0.6344,
+        0.6763
+      ],
+      "constrained_ms": 13.185,
+      "unconstrained_budget_for_time_match": 16,
+      "unconstrained_win": 0.6231,
+      "unconstrained_ci": [
+        0.6031,
+        0.645
+      ],
+      "unconstrained_ms": 12.729,
+      "time_match_error_pct": -3.5,
+      "budgets_tried": [
+        16,
+        17
+      ],
+      "delta_measured": 0.0325,
+      "paired_p": 0.01465,
+      "paired_mean_diff": 0.0325,
+      "ci_overlap": true
+    },
+    {
+      "algo": "PIMC",
+      "constrained_budget": 32,
+      "constrained_win": 0.7025,
+      "constrained_ci": [
+        0.6819,
+        0.7244
+      ],
+      "constrained_ms": 26.634,
+      "unconstrained_budget_for_time_match": 33,
+      "unconstrained_win": 0.6787,
+      "unconstrained_ci": [
+        0.6575,
+        0.6994
+      ],
+      "unconstrained_ms": 26.412,
+      "time_match_error_pct": -0.8,
+      "budgets_tried": [
+        33,
+        34
+      ],
+      "delta_measured": 0.0238,
+      "paired_p": 0.05905,
+      "paired_mean_diff": 0.0238,
+      "ci_overlap": true
+    }
+  ],
+  "reading": "delta > 0 means the void constraint is worth its cost at equal wall-clock. INTERPOLATED entries are inferred, not observed; where linear and log interpolation disagree the comparison is unresolved and must not be reported as a result. MEASURED entries were actually run and are the claim to cite."
+}

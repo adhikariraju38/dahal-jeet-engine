@@ -1,0 +1,16 @@
+
+====================================================================================================
+PART 3 - SEARCH LATENCY vs STRENGTH  (vs TensThenTricks, 120 deals each)
+====================================================================================================
+  PIMC   worlds=  2  win 0.4771 [0.4396,0.5125]      1.75 ms/decision
+  PIMC   worlds=  4  win 0.5312 [0.4958,0.5687]      3.54 ms/decision
+  PIMC   worlds=  8  win 0.6229 [0.5833,0.6604]      7.14 ms/decision
+  PIMC   worlds= 16  win 0.6708 [0.6312,0.7104]     14.48 ms/decision
+  PIMC   worlds= 32  win 0.7312 [0.6958,0.7667]     28.92 ms/decision
+  ISMCTS iters=  50  win 0.5958 [0.5563,0.6354]      9.49 ms/decision
+  ISMCTS iters= 100  win 0.6292 [0.5875,0.6750]     18.93 ms/decision
+  ISMCTS iters= 200  win 0.7021 [0.6646,0.7396]     38.10 ms/decision
+  ISMCTS iters= 400  win 0.7063 [0.6667,0.7438]     76.09 ms/decision
+  ISMCTS iters= 800  win 0.7396 [0.7021,0.7771]    152.53 ms/decision
+
+saved eval_curve.json

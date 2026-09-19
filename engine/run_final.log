@@ -1,0 +1,702 @@
+run started Wed Sep  2 20:54:50 +0545 2026
+env: OMP_NUM_THREADS=1 MAX_WORKERS=7
+
+########## 0/9  verification — every self-test before any compute is spent  2026-09-02 20:54:50 ##########
+[20:54:50] STEP .venv/bin/python perfect_info.py --verify --tricks 5 --cases 25 --rules 100
+VERIFICATION
+
+  [PASS] legal moves and trick winners match the engine over 100 deals (0 mismatches)
+  [PASS] solver (with equivalence collapsing) equals exhaustive minimax on 25 5-trick endgames (0 disagreements)
+  [PASS] exactly one team wins each solved position (0 contradictions)
+
+ALL PASS
+[20:54:50] STEP .venv/bin/python analyse_tournament.py --selftest
+SELF-TEST
+
+  [PASS] sign-flip: null p=0.813 (>0.05), strong effect p=0.0002 (<0.001)
+  [PASS] corrections: Holm >= BH >= raw   Holm=[0.005, 0.04, 0.06, 0.08, 0.5]
+  [PASS] Bradley-Terry recovers ladder: got [8.0, 4.0, 2.0, 1.0], want [8.0, 4.0, 2.0, 1.0]
+  [PASS] intransitivity: ladder cyclic=0.000 (~0), cycle cyclic=1.000 (~1), cycles found=1
+  [PASS] power: sd=0.5 delta=0.1 80% -> n=197 (textbook 196-197)
+
+ALL PASS
+[20:54:51] STEP .venv/bin/python complexity.py --selftest
+SELF-TEST
+
+  [PASS] exact void-constrained count matches brute force on 60 random cases
+  [PASS] unconstrained case equals multinomial: 1680 == 1680
+  [PASS] impossible constraint yields 0
+
+ALL PASS
+[20:54:51] STEP .venv/bin/python trainer.py --equivalence-test
+EQUIVALENCE TEST (260 episodes, seed 0)
+
+  [N/A]  train_rl.py now delegates to trainer.py: both names are
+         the same function object, so there is no second
+         implementation to diverge. Drift is structurally
+         impossible rather than tested. The behavioural
+         equivalence of the two SEPARATE implementations was
+         verified before the refactor (dqn and ppo, bit-identical
+         weights at seed 0), which is what licensed removing the
+         duplicate.
+  [skip] optimization_equivalence.json
+
+########## 1/9  heuristics: metaheuristic tuning + championship  2026-09-02 20:54:51 ##########
+  [skip] tuned_genome.json
+  [skip] championship_results.json
+  [ok] tuned_genome.json
+  [ok] championship_results.json
+
+########## 2/9  search: PIMC + ISMCTS latency/strength curve  2026-09-02 20:54:52 ##########
+  [skip] eval_curve.json
+  [ok] eval_curve.json
+
+########## 3/9  reinforcement learning, 3 seeds x 4 rewards x 2 algos  2026-09-02 20:54:52 ##########
+  [skip] rl_dqn_terminal_s0.pt
+  [skip] rl_ppo_terminal_s0.pt
+  [skip] rl_dqn_ten_shaped_s0.pt
+  [skip] rl_ppo_ten_shaped_s0.pt
+  [skip] rl_dqn_potential_s0.pt
+  [skip] rl_ppo_potential_s0.pt
+  [skip] rl_dqn_trick_shaped_s0.pt
+  [skip] rl_ppo_trick_shaped_s0.pt
+  [skip] rl_dqn_terminal_s1.pt
+  [skip] rl_ppo_terminal_s1.pt
+  [skip] rl_dqn_ten_shaped_s1.pt
+  [skip] rl_ppo_ten_shaped_s1.pt
+  [skip] rl_dqn_potential_s1.pt
+  [skip] rl_ppo_potential_s1.pt
+  [skip] rl_dqn_trick_shaped_s1.pt
+  [skip] rl_ppo_trick_shaped_s1.pt
+  [skip] rl_dqn_terminal_s2.pt
+  [skip] rl_ppo_terminal_s2.pt
+  [skip] rl_dqn_ten_shaped_s2.pt
+  [skip] rl_ppo_ten_shaped_s2.pt
+  [skip] rl_dqn_potential_s2.pt
+  [skip] rl_ppo_potential_s2.pt
+  [skip] rl_dqn_trick_shaped_s2.pt
+  [skip] rl_ppo_trick_shaped_s2.pt
+  [ok] 24 artifact(s) matching 'rl_dqn_*_s*.pt rl_ppo_*_s*.pt'
+
+########## 4/9  DQN variants, A2C, MAPPO, NFSP, Deep CFR — 3 seeds  2026-09-02 20:54:52 ##########
+  [skip] rl_double_s0.pt
+  [skip] rl_double_dueling_s0.pt
+  [skip] rl_a2c_s0.pt
+  [skip] rl_mappo_potential_s0.pt
+  [skip] rl_nfsp_s0.pt
+  [skip] rl_double_s1.pt
+  [skip] rl_double_dueling_s1.pt
+  [skip] rl_a2c_s1.pt
+  [skip] rl_mappo_potential_s1.pt
+  [skip] rl_nfsp_s1.pt
+  [skip] rl_double_s2.pt
+  [skip] rl_double_dueling_s2.pt
+  [skip] rl_a2c_s2.pt
+  [skip] rl_mappo_potential_s2.pt
+  [skip] rl_nfsp_s2.pt
+  [skip] rl_deepcfr_s0.pt
+  [skip] rl_deepcfr_s1.pt
+  [skip] rl_deepcfr_s2.pt
+  [ok] 3 artifact(s) matching 'rl_double_s*.pt'
+  [ok] 3 artifact(s) matching 'rl_double_dueling_s*.pt'
+  [ok] 3 artifact(s) matching 'rl_a2c_s*.pt'
+  [ok] 3 artifact(s) matching 'rl_mappo_*_s*.pt'
+  [ok] 3 artifact(s) matching 'rl_nfsp_s*.pt'
+  [ok] 3 artifact(s) matching 'rl_deepcfr_s*.pt'
+
+########## 5/9  distillation + neural-guided search, 3 seeds  2026-09-02 20:54:52 ##########
+  [skip] expert_data.pkl
+  [ok] 1 artifact(s) matching 'expert_data.pkl'
+  [skip] rl_distill_s0.pt
+  [skip] rl_distill_s1.pt
+  [skip] rl_distill_s2.pt
+  [ok] 3 artifact(s) matching 'rl_distill_s*.pt'
+  [skip] alphadj_s0.pt
+  [skip] alphadj_eval_s0_n100.json
+  [skip] alphadj_s1.pt
+  [skip] alphadj_eval_s1_n100.json
+  [skip] alphadj_s2.pt
+  [skip] alphadj_eval_s2_n100.json
+  [ok] 3 artifact(s) matching 'alphadj_s*.pt'
+
+########## 6/9  exploitability + encoding ablation + hyperparameter sweep  2026-09-02 20:54:52 ##########
+  [skip] exploit_TensThenTricks_s0.json
+  [skip] exploit_Tuned_s0.json
+  [skip] exploit_GreedyTricks_s0.json
+  [skip] exploit_Adaptive_s0.json
+  [ok] 4 artifact(s) matching 'exploit_*.json'
+  [skip] ablate_none_s0.json
+  [skip] ablate_no_ten_status_s0.json
+  [skip] ablate_no_voids_s0.json
+  [skip] ablate_no_history_s0.json
+  [skip] ablate_no_scalars_s0.json
+  [skip] ablate_minimal_s0.json
+  [ok] 6 artifact(s) matching 'ablate_*_s0.json'
+  [skip] sweep_s0.json
+  [ok] 1 artifact(s) matching 'sweep_*.json'
+
+########## 7/9  controls, complexity, determinization ablation, endgame bound  2026-09-02 20:54:52 ##########
+  [skip] control_untrained.json
+  [ok] control_untrained.json
+  [skip] complexity.json
+  [ok] complexity.json
+  [skip] void_constraint_ablation.json
+  [ok] void_constraint_ablation.json
+  [skip] matched_time.json
+  [ok] matched_time.json
+  [skip] perfect_info_probe.json
+  [ok] perfect_info_probe.json
+  [skip] perfect_info_endgame_k7.json
+  [ok] perfect_info_endgame_k7.json
+
+########## 7b/9  self-play + opponent-generalisation matrix  2026-09-02 20:54:52 ##########
+  [skip] gen_ppo_Random_s0.pt
+  [skip] gen_ppo_GreedyTricks_s0.pt
+  [skip] gen_ppo_TenAware_s0.pt
+  [skip] gen_ppo_Adaptive_s0.pt
+  [skip] gen_ppo_TensThenTricks_s0.pt
+  [skip] gen_ppo_self_s0.pt
+  [skip] gen_ppo_league_s0.pt
+  [skip] gen_dqn_Random_s0.pt
+  [skip] gen_dqn_GreedyTricks_s0.pt
+  [skip] gen_dqn_TenAware_s0.pt
+  [skip] gen_dqn_Adaptive_s0.pt
+  [skip] gen_dqn_TensThenTricks_s0.pt
+  [skip] gen_dqn_self_s0.pt
+  [skip] gen_dqn_league_s0.pt
+  [skip] gen_ppo_Random_s1.pt
+  [skip] gen_ppo_GreedyTricks_s1.pt
+  [skip] gen_ppo_TenAware_s1.pt
+  [skip] gen_ppo_Adaptive_s1.pt
+  [skip] gen_ppo_TensThenTricks_s1.pt
+  [skip] gen_ppo_self_s1.pt
+  [skip] gen_ppo_league_s1.pt
+  [skip] gen_dqn_Random_s1.pt
+  [skip] gen_dqn_GreedyTricks_s1.pt
+  [skip] gen_dqn_TenAware_s1.pt
+  [skip] gen_dqn_Adaptive_s1.pt
+  [skip] gen_dqn_TensThenTricks_s1.pt
+  [skip] gen_dqn_self_s1.pt
+  [skip] gen_dqn_league_s1.pt
+  [skip] gen_ppo_Random_s2.pt
+  [skip] gen_ppo_GreedyTricks_s2.pt
+  [skip] gen_ppo_TenAware_s2.pt
+  [skip] gen_ppo_Adaptive_s2.pt
+  [skip] gen_ppo_TensThenTricks_s2.pt
+  [skip] gen_ppo_self_s2.pt
+  [skip] gen_ppo_league_s2.pt
+  [skip] gen_dqn_Random_s2.pt
+  [skip] gen_dqn_GreedyTricks_s2.pt
+  [skip] gen_dqn_TenAware_s2.pt
+  [skip] gen_dqn_Adaptive_s2.pt
+  [skip] gen_dqn_TensThenTricks_s2.pt
+  [skip] gen_dqn_self_s2.pt
+  [skip] gen_dqn_league_s2.pt
+  [ok] 42 artifact(s) matching 'gen_*.pt'
+  [skip] generalisation_matrix.json
+  [ok] generalisation_matrix.json
+
+########## 8/9  final evaluation and round-robin  2026-09-02 20:54:52 ##########
+  [skip] eval_rl.json
+  [ok] eval_rl.json
+[20:54:52] STEP .venv/bin/python final_tournament.py --deals 300
+  [roster] one seed per method: keeping seed 0; 30 other-seed checkpoint(s) excluded
+roster (26): Random, GreedyTricks, PartnerAware, TenAware, Adaptive, AdaptiveGreedy, TensThenTricks, Tuned, a2c, deepcfr, distill, double_dueling, double, dqn_potential, dqn_ten_shaped, dqn_terminal, dqn_trick_shaped, mappo_potential, nfsp, ppo_potential, ppo_ten_shaped, ppo_terminal, ppo_trick_shaped, AlphaDJ60, PIMC16, ISMCTS250
+
+325 pairings x 300 deals x 4 rotations = 390,000 hands   (8 processes)
+
+  [  1/325] GreedyTricks       vs ISMCTS250          0.3108 [0.2867, 0.335]
+  [  2/325] PartnerAware       vs ISMCTS250          0.3367 [0.3133, 0.3583]
+  [  3/325] AdaptiveGreedy     vs ISMCTS250          0.3025 [0.2783, 0.3283]
+  [  4/325] TenAware           vs ISMCTS250          0.3033 [0.2792, 0.3275]
+  [  5/325] Random             vs ISMCTS250          0.1583 [0.1375, 0.18]
+  [  6/325] Adaptive           vs ISMCTS250          0.3050 [0.2808, 0.33]
+  [  7/325] PIMC16             vs ISMCTS250          0.4850 [0.4625, 0.5067]
+  [  8/325] AlphaDJ60          vs ISMCTS250          0.3367 [0.3133, 0.36]
+  [  9/325] Tuned              vs ISMCTS250          0.3833 [0.3592, 0.4083]
+  [ 10/325] TensThenTricks     vs ISMCTS250          0.3442 [0.32, 0.3675]
+  [ 11/325] deepcfr            vs ISMCTS250          0.2250 [0.2033, 0.2483]
+  [ 12/325] distill            vs ISMCTS250          0.3133 [0.2908, 0.3375]
+  [ 13/325] a2c                vs ISMCTS250          0.2192 [0.1975, 0.2417]
+  [ 14/325] double_dueling     vs ISMCTS250          0.2417 [0.22, 0.265]
+  [ 15/325] double             vs ISMCTS250          0.2092 [0.1883, 0.2308]
+  [ 16/325] dqn_potential      vs ISMCTS250          0.1900 [0.1683, 0.2117]
+  [ 17/325] dqn_terminal       vs ISMCTS250          0.2042 [0.1817, 0.2275]
+  [ 18/325] dqn_ten_shaped     vs ISMCTS250          0.2283 [0.2058, 0.2508]
+  [ 19/325] dqn_trick_shaped   vs ISMCTS250          0.2125 [0.19, 0.2358]
+  [ 20/325] mappo_potential    vs ISMCTS250          0.3425 [0.3183, 0.3658]
+  [ 21/325] ppo_potential      vs ISMCTS250          0.2875 [0.2633, 0.3108]
+  [ 22/325] nfsp               vs ISMCTS250          0.1625 [0.1417, 0.185]
+  [ 23/325] ppo_terminal       vs ISMCTS250          0.2742 [0.2492, 0.2992]
+  [ 24/325] ppo_ten_shaped     vs ISMCTS250          0.2908 [0.2667, 0.315]
+  [ 25/325] GreedyTricks       vs AlphaDJ60          0.4800 [0.455, 0.5058]
+  [ 26/325] PartnerAware       vs AlphaDJ60          0.4983 [0.475, 0.5217]
+  [ 27/325] Random             vs AlphaDJ60          0.2608 [0.2383, 0.2833]
+  [ 28/325] TenAware           vs AlphaDJ60          0.4825 [0.4558, 0.5092]
+  [ 29/325] AlphaDJ60          vs PIMC16             0.3842 [0.3617, 0.4067]
+  [ 30/325] Adaptive           vs AlphaDJ60          0.4700 [0.4433, 0.4975]
+  [ 31/325] AdaptiveGreedy     vs AlphaDJ60          0.4950 [0.4675, 0.5208]
+  [ 32/325] TensThenTricks     vs AlphaDJ60          0.5275 [0.5042, 0.5525]
+  [ 33/325] Tuned              vs AlphaDJ60          0.4958 [0.4708, 0.5208]
+  [ 34/325] a2c                vs AlphaDJ60          0.3325 [0.3083, 0.3575]
+  [ 35/325] deepcfr            vs AlphaDJ60          0.3658 [0.3408, 0.39]
+  [ 36/325] ppo_trick_shaped   vs ISMCTS250          0.2983 [0.2725, 0.3242]
+  [ 37/325] double_dueling     vs AlphaDJ60          0.3692 [0.3458, 0.3925]
+  [ 38/325] distill            vs AlphaDJ60          0.4417 [0.4183, 0.465]
+  [ 39/325] double             vs AlphaDJ60          0.3367 [0.3108, 0.3625]
+  [ 40/325] dqn_ten_shaped     vs AlphaDJ60          0.3475 [0.3258, 0.3708]
+  [ 41/325] dqn_potential      vs AlphaDJ60          0.3267 [0.3033, 0.3508]
+  [ 42/325] dqn_terminal       vs AlphaDJ60          0.3342 [0.3108, 0.3583]
+  [ 43/325] dqn_trick_shaped   vs AlphaDJ60          0.3325 [0.3075, 0.3592]
+  [ 44/325] mappo_potential    vs AlphaDJ60          0.4692 [0.4425, 0.4958]
+  [ 45/325] Random             vs PIMC16             0.1775 [0.1567, 0.2]
+  [ 46/325] ppo_potential      vs AlphaDJ60          0.4333 [0.4092, 0.4575]
+  [ 47/325] GreedyTricks       vs PIMC16             0.2933 [0.2683, 0.3183]
+  [ 48/325] nfsp               vs AlphaDJ60          0.2483 [0.225, 0.2717]
+  [ 49/325] ppo_ten_shaped     vs AlphaDJ60          0.4175 [0.3942, 0.4425]
+  [ 50/325] ppo_terminal       vs AlphaDJ60          0.3983 [0.3725, 0.425]
+  [ 51/325] ppo_trick_shaped   vs AlphaDJ60          0.4400 [0.4158, 0.465]
+  [ 52/325] PartnerAware       vs PIMC16             0.3467 [0.3217, 0.3708]
+  [ 53/325] a2c                vs PIMC16             0.2492 [0.2242, 0.275]
+  [ 54/325] TensThenTricks     vs PIMC16             0.3258 [0.3025, 0.3467]
+  [ 55/325] Tuned              vs PIMC16             0.3458 [0.3225, 0.3675]
+  [ 56/325] TenAware           vs PIMC16             0.3083 [0.285, 0.3317]
+  [ 57/325] AdaptiveGreedy     vs PIMC16             0.3050 [0.28, 0.3308]
+  [ 58/325] deepcfr            vs PIMC16             0.2700 [0.2458, 0.2942]
+  [ 59/325] Adaptive           vs PIMC16             0.3033 [0.28, 0.3258]
+  [ 60/325] distill            vs PIMC16             0.3350 [0.3125, 0.3592]
+  [ 61/325] double_dueling     vs PIMC16             0.2600 [0.2367, 0.2825]
+  [ 62/325] dqn_potential      vs PIMC16             0.2592 [0.2367, 0.2808]
+  [ 63/325] double             vs PIMC16             0.2625 [0.2367, 0.2875]
+  [ 64/325] dqn_trick_shaped   vs PIMC16             0.2425 [0.2167, 0.2667]
+  [ 65/325] dqn_terminal       vs PIMC16             0.2417 [0.2167, 0.265]
+  [ 66/325] Random             vs GreedyTricks       0.2892 [0.2667, 0.3125]
+  [ 67/325] Random             vs PartnerAware       0.2883 [0.2642, 0.3117]
+  [ 68/325] Random             vs TenAware           0.3258 [0.3025, 0.3508]
+  [ 69/325] Random             vs Adaptive           0.3250 [0.3017, 0.3475]
+  [ 70/325] Random             vs AdaptiveGreedy     0.3100 [0.2883, 0.3308]
+  [ 71/325] Random             vs TensThenTricks     0.2633 [0.24, 0.2858]
+  [ 72/325] Random             vs Tuned              0.2458 [0.2208, 0.2683]
+  [ 73/325] Random             vs a2c                0.3950 [0.37, 0.4192]
+  [ 74/325] dqn_ten_shaped     vs PIMC16             0.2383 [0.2158, 0.2617]
+  [ 75/325] Random             vs deepcfr            0.3867 [0.365, 0.4092]
+  [ 76/325] Random             vs distill            0.2533 [0.2317, 0.2758]
+  [ 77/325] Random             vs double_dueling     0.3942 [0.3708, 0.4175]
+  [ 78/325] Random             vs double             0.4242 [0.4008, 0.4467]
+  [ 79/325] Random             vs dqn_potential      0.4125 [0.3883, 0.4383]
+  [ 80/325] Random             vs dqn_ten_shaped     0.4050 [0.3833, 0.4283]
+  [ 81/325] Random             vs dqn_terminal       0.3933 [0.3692, 0.4167]
+  [ 82/325] Random             vs dqn_trick_shaped   0.3883 [0.3633, 0.4133]
+  [ 83/325] mappo_potential    vs PIMC16             0.3583 [0.3358, 0.3808]
+  [ 84/325] Random             vs mappo_potential    0.2625 [0.2375, 0.2867]
+  [ 85/325] Random             vs nfsp               0.4767 [0.4525, 0.5017]
+  [ 86/325] Random             vs ppo_potential      0.3308 [0.3067, 0.3558]
+  [ 87/325] Random             vs ppo_ten_shaped     0.3192 [0.2967, 0.3417]
+  [ 88/325] Random             vs ppo_terminal       0.3167 [0.295, 0.3408]
+  [ 89/325] GreedyTricks       vs PartnerAware       0.4950 [0.465, 0.525]
+  [ 90/325] Random             vs ppo_trick_shaped   0.2942 [0.27, 0.3192]
+  [ 91/325] GreedyTricks       vs TenAware           0.4767 [0.4433, 0.5083]
+  [ 92/325] GreedyTricks       vs Adaptive           0.4950 [0.4617, 0.5267]
+  [ 93/325] GreedyTricks       vs AdaptiveGreedy     0.4850 [0.45, 0.5183]
+  [ 94/325] GreedyTricks       vs TensThenTricks     0.4100 [0.38, 0.4383]
+  [ 95/325] GreedyTricks       vs Tuned              0.4083 [0.3783, 0.4383]
+  [ 96/325] GreedyTricks       vs distill            0.5133 [0.4817, 0.5433]
+  [ 97/325] GreedyTricks       vs deepcfr            0.6000 [0.5683, 0.6317]
+  [ 98/325] GreedyTricks       vs a2c                0.6533 [0.6233, 0.685]
+  [ 99/325] GreedyTricks       vs dqn_potential      0.6533 [0.62, 0.6867]
+  [100/325] GreedyTricks       vs double             0.6433 [0.6117, 0.6767]
+  [101/325] GreedyTricks       vs double_dueling     0.6350 [0.6033, 0.665]
+  [102/325] GreedyTricks       vs dqn_ten_shaped     0.6417 [0.6083, 0.675]
+  [103/325] GreedyTricks       vs dqn_terminal       0.6500 [0.6167, 0.6833]
+  [104/325] GreedyTricks       vs dqn_trick_shaped   0.6617 [0.63, 0.6933]
+  [105/325] GreedyTricks       vs nfsp               0.7167 [0.6867, 0.7483]
+  [106/325] GreedyTricks       vs mappo_potential    0.5433 [0.5117, 0.575]
+  [107/325] GreedyTricks       vs ppo_potential      0.5400 [0.5083, 0.57]
+  [108/325] GreedyTricks       vs ppo_ten_shaped     0.5167 [0.48, 0.5533]
+  [109/325] GreedyTricks       vs ppo_terminal       0.5400 [0.5083, 0.5717]
+  [110/325] PartnerAware       vs TenAware           0.4667 [0.4333, 0.5]
+  [111/325] PartnerAware       vs Adaptive           0.4750 [0.4417, 0.5083]
+  [112/325] GreedyTricks       vs ppo_trick_shaped   0.5267 [0.4933, 0.56]
+  [113/325] PartnerAware       vs TensThenTricks     0.4283 [0.3967, 0.46]
+  [114/325] PartnerAware       vs AdaptiveGreedy     0.4817 [0.4483, 0.5167]
+  [115/325] PartnerAware       vs Tuned              0.4700 [0.4417, 0.4983]
+  [116/325] PartnerAware       vs distill            0.5500 [0.5183, 0.5817]
+  [117/325] PartnerAware       vs deepcfr            0.6050 [0.5717, 0.6367]
+  [118/325] PartnerAware       vs a2c                0.6583 [0.6267, 0.6917]
+  [119/325] PartnerAware       vs double             0.6883 [0.6567, 0.72]
+  [120/325] PartnerAware       vs dqn_potential      0.6750 [0.6417, 0.7083]
+  [121/325] PartnerAware       vs double_dueling     0.6350 [0.6017, 0.6683]
+  [122/325] PartnerAware       vs dqn_ten_shaped     0.6367 [0.6033, 0.6717]
+  [123/325] PartnerAware       vs dqn_trick_shaped   0.6817 [0.6517, 0.7133]
+  [124/325] PartnerAware       vs dqn_terminal       0.6450 [0.6133, 0.6767]
+  [125/325] PartnerAware       vs mappo_potential    0.5333 [0.505, 0.565]
+  [126/325] PartnerAware       vs ppo_potential      0.5600 [0.53, 0.59]
+  [127/325] PartnerAware       vs nfsp               0.7150 [0.685, 0.745]
+  [128/325] PartnerAware       vs ppo_trick_shaped   0.5417 [0.5067, 0.5767]
+  [129/325] PartnerAware       vs ppo_terminal       0.5533 [0.5183, 0.5867]
+  [130/325] PartnerAware       vs ppo_ten_shaped     0.5183 [0.4867, 0.5517]
+  [131/325] TenAware           vs Adaptive           0.5000 [0.5, 0.5]
+  [132/325] TenAware           vs TensThenTricks     0.4467 [0.4183, 0.4733]
+  [133/325] TenAware           vs AdaptiveGreedy     0.4867 [0.4667, 0.5067]
+  [134/325] TenAware           vs Tuned              0.4267 [0.3967, 0.4583]
+  [135/325] TenAware           vs distill            0.4800 [0.4467, 0.5167]
+  [136/325] TenAware           vs deepcfr            0.5617 [0.5283, 0.595]
+  [137/325] TenAware           vs a2c                0.5583 [0.5217, 0.5933]
+  [138/325] TenAware           vs double             0.6200 [0.5833, 0.655]
+  [139/325] TenAware           vs dqn_potential      0.6200 [0.5867, 0.655]
+  [140/325] TenAware           vs double_dueling     0.6483 [0.6167, 0.68]
+  [141/325] TenAware           vs dqn_ten_shaped     0.6017 [0.5667, 0.6367]
+  [142/325] TenAware           vs dqn_terminal       0.6283 [0.5967, 0.6617]
+  [143/325] TenAware           vs dqn_trick_shaped   0.6017 [0.5667, 0.6367]
+  [144/325] TenAware           vs mappo_potential    0.4967 [0.4667, 0.5283]
+  [145/325] TenAware           vs nfsp               0.7000 [0.6667, 0.7333]
+  [146/325] TenAware           vs ppo_potential      0.4467 [0.415, 0.48]
+  [147/325] TenAware           vs ppo_ten_shaped     0.4600 [0.4267, 0.4967]
+  [148/325] TenAware           vs ppo_terminal       0.4650 [0.43, 0.5017]
+  [149/325] Adaptive           vs AdaptiveGreedy     0.4867 [0.4667, 0.5067]
+  [150/325] TenAware           vs ppo_trick_shaped   0.4650 [0.4317, 0.5]
+  [151/325] Adaptive           vs TensThenTricks     0.4467 [0.4183, 0.475]
+  [152/325] Adaptive           vs Tuned              0.4200 [0.3883, 0.45]
+  [153/325] Adaptive           vs a2c                0.5533 [0.5167, 0.5883]
+  [154/325] Adaptive           vs deepcfr            0.5550 [0.5217, 0.5883]
+  [155/325] Adaptive           vs distill            0.4783 [0.445, 0.515]
+  [156/325] Adaptive           vs double             0.6167 [0.5817, 0.6517]
+  [157/325] Adaptive           vs dqn_potential      0.6117 [0.5783, 0.6467]
+  [158/325] Adaptive           vs double_dueling     0.6400 [0.6067, 0.6733]
+  [159/325] Adaptive           vs dqn_terminal       0.6250 [0.5933, 0.6583]
+  [160/325] Adaptive           vs dqn_ten_shaped     0.5983 [0.5633, 0.6333]
+  [161/325] Adaptive           vs dqn_trick_shaped   0.6017 [0.5667, 0.6367]
+  [162/325] Adaptive           vs nfsp               0.6933 [0.66, 0.725]
+  [163/325] Adaptive           vs mappo_potential    0.4967 [0.4667, 0.5283]
+  [164/325] Adaptive           vs ppo_potential      0.4467 [0.415, 0.48]
+  [165/325] Adaptive           vs ppo_ten_shaped     0.4500 [0.4167, 0.4867]
+  [166/325] Adaptive           vs ppo_terminal       0.4617 [0.4283, 0.4983]
+  [167/325] AdaptiveGreedy     vs TensThenTricks     0.4667 [0.4367, 0.4967]
+  [168/325] AdaptiveGreedy     vs Tuned              0.4167 [0.3867, 0.45]
+  [169/325] Adaptive           vs ppo_trick_shaped   0.4667 [0.4333, 0.5017]
+  [170/325] AdaptiveGreedy     vs a2c                0.5617 [0.525, 0.5967]
+  [171/325] AdaptiveGreedy     vs deepcfr            0.5700 [0.5367, 0.605]
+  [172/325] AdaptiveGreedy     vs distill            0.4800 [0.445, 0.5167]
+  [173/325] AdaptiveGreedy     vs double             0.6317 [0.5967, 0.665]
+  [174/325] AdaptiveGreedy     vs double_dueling     0.6383 [0.605, 0.6733]
+  [175/325] AdaptiveGreedy     vs dqn_potential      0.6200 [0.5883, 0.6533]
+  [176/325] AdaptiveGreedy     vs dqn_trick_shaped   0.5950 [0.56, 0.63]
+  [177/325] AdaptiveGreedy     vs dqn_ten_shaped     0.5917 [0.5583, 0.6283]
+  [178/325] AdaptiveGreedy     vs dqn_terminal       0.6083 [0.5767, 0.6433]
+  [179/325] AdaptiveGreedy     vs mappo_potential    0.5033 [0.4733, 0.535]
+  [180/325] AdaptiveGreedy     vs nfsp               0.7000 [0.6667, 0.7333]
+  [181/325] AdaptiveGreedy     vs ppo_potential      0.4550 [0.4233, 0.4883]
+  [182/325] AdaptiveGreedy     vs ppo_ten_shaped     0.4533 [0.42, 0.4883]
+  [183/325] TensThenTricks     vs Tuned              0.4883 [0.46, 0.5183]
+  [184/325] AdaptiveGreedy     vs ppo_terminal       0.4683 [0.435, 0.505]
+  [185/325] AdaptiveGreedy     vs ppo_trick_shaped   0.4767 [0.4433, 0.5117]
+  [186/325] TensThenTricks     vs deepcfr            0.6400 [0.6083, 0.6733]
+  [187/325] TensThenTricks     vs a2c                0.6167 [0.5833, 0.6483]
+  [188/325] TensThenTricks     vs distill            0.5183 [0.485, 0.55]
+  [189/325] TensThenTricks     vs double_dueling     0.6500 [0.6167, 0.6833]
+  [190/325] TensThenTricks     vs double             0.6417 [0.61, 0.675]
+  [191/325] TensThenTricks     vs dqn_potential      0.6633 [0.6333, 0.6983]
+  [192/325] TensThenTricks     vs dqn_ten_shaped     0.6433 [0.6133, 0.6767]
+  [193/325] TensThenTricks     vs dqn_terminal       0.6533 [0.62, 0.6867]
+  [194/325] TensThenTricks     vs dqn_trick_shaped   0.6600 [0.6267, 0.6917]
+  [195/325] TensThenTricks     vs mappo_potential    0.5433 [0.5133, 0.575]
+  [196/325] TensThenTricks     vs nfsp               0.7317 [0.7, 0.7617]
+  [197/325] TensThenTricks     vs ppo_potential      0.5217 [0.4917, 0.5533]
+  [198/325] TensThenTricks     vs ppo_ten_shaped     0.4783 [0.4483, 0.5117]
+  [199/325] TensThenTricks     vs ppo_terminal       0.5183 [0.4867, 0.55]
+  [200/325] TensThenTricks     vs ppo_trick_shaped   0.5100 [0.4783, 0.5433]
+  [201/325] Tuned              vs deepcfr            0.6167 [0.585, 0.65]
+  [202/325] Tuned              vs a2c                0.6600 [0.6283, 0.6933]
+  [203/325] Tuned              vs distill            0.5617 [0.5267, 0.5967]
+  [204/325] Tuned              vs double_dueling     0.6717 [0.64, 0.7033]
+  [205/325] Tuned              vs double             0.6683 [0.635, 0.7033]
+  [206/325] Tuned              vs dqn_potential      0.6533 [0.62, 0.6867]
+  [207/325] Tuned              vs dqn_ten_shaped     0.6817 [0.6483, 0.715]
+  [208/325] Tuned              vs dqn_terminal       0.6817 [0.6483, 0.715]
+  [209/325] Tuned              vs dqn_trick_shaped   0.7033 [0.6717, 0.735]
+  [210/325] Tuned              vs mappo_potential    0.5933 [0.5617, 0.6267]
+  [211/325] Tuned              vs nfsp               0.7367 [0.705, 0.7683]
+  [212/325] Tuned              vs ppo_potential      0.5583 [0.525, 0.5917]
+  [213/325] Tuned              vs ppo_ten_shaped     0.5400 [0.5067, 0.5733]
+  [214/325] Tuned              vs ppo_terminal       0.5383 [0.5067, 0.5717]
+  [215/325] Tuned              vs ppo_trick_shaped   0.5617 [0.5317, 0.5933]
+  [216/325] a2c                vs deepcfr            0.4700 [0.4367, 0.5033]
+  [217/325] a2c                vs distill            0.3267 [0.295, 0.3567]
+  [218/325] a2c                vs double_dueling     0.4400 [0.405, 0.4733]
+  [219/325] a2c                vs double             0.4600 [0.43, 0.4883]
+  [220/325] a2c                vs dqn_ten_shaped     0.4950 [0.4617, 0.5283]
+  [221/325] a2c                vs dqn_potential      0.4733 [0.4417, 0.5033]
+  [222/325] a2c                vs dqn_terminal       0.4633 [0.4317, 0.4917]
+  [223/325] a2c                vs dqn_trick_shaped   0.4600 [0.4283, 0.4933]
+  [224/325] a2c                vs mappo_potential    0.2783 [0.2483, 0.3067]
+  [225/325] a2c                vs nfsp               0.5650 [0.5333, 0.6]
+  [226/325] a2c                vs ppo_potential      0.4133 [0.3833, 0.4433]
+  [227/325] a2c                vs ppo_ten_shaped     0.4650 [0.435, 0.4933]
+  [228/325] deepcfr            vs distill            0.3867 [0.3567, 0.4167]
+  [229/325] a2c                vs ppo_terminal       0.4267 [0.3983, 0.4567]
+  [230/325] a2c                vs ppo_trick_shaped   0.3917 [0.36, 0.4233]
+  [231/325] deepcfr            vs dqn_potential      0.5300 [0.495, 0.5633]
+  [232/325] deepcfr            vs double_dueling     0.5517 [0.52, 0.585]
+  [233/325] deepcfr            vs double             0.5217 [0.4883, 0.555]
+  [234/325] deepcfr            vs dqn_ten_shaped     0.5317 [0.5, 0.565]
+  [235/325] deepcfr            vs dqn_trick_shaped   0.5450 [0.5133, 0.5767]
+  [236/325] deepcfr            vs dqn_terminal       0.5233 [0.4917, 0.555]
+  [237/325] deepcfr            vs nfsp               0.6100 [0.575, 0.6433]
+  [238/325] deepcfr            vs mappo_potential    0.3917 [0.3617, 0.4217]
+  [239/325] deepcfr            vs ppo_potential      0.4267 [0.395, 0.4583]
+  [240/325] deepcfr            vs ppo_terminal       0.4617 [0.4317, 0.49]
+  [241/325] deepcfr            vs ppo_ten_shaped     0.4517 [0.42, 0.485]
+  [242/325] deepcfr            vs ppo_trick_shaped   0.4150 [0.385, 0.4483]
+  [243/325] distill            vs double_dueling     0.6200 [0.5867, 0.6533]
+  [244/325] distill            vs double             0.6383 [0.6083, 0.67]
+  [245/325] distill            vs dqn_potential      0.6467 [0.6133, 0.6783]
+  [246/325] distill            vs dqn_ten_shaped     0.6083 [0.5767, 0.64]
+  [247/325] distill            vs dqn_trick_shaped   0.6683 [0.6367, 0.7]
+  [248/325] distill            vs dqn_terminal       0.6350 [0.6017, 0.6667]
+  [249/325] distill            vs nfsp               0.7050 [0.6733, 0.7383]
+  [250/325] distill            vs mappo_potential    0.4633 [0.4333, 0.4933]
+  [251/325] distill            vs ppo_potential      0.5683 [0.5383, 0.5983]
+  [252/325] distill            vs ppo_ten_shaped     0.6050 [0.5733, 0.6383]
+  [253/325] distill            vs ppo_terminal       0.5817 [0.5483, 0.615]
+  [254/325] distill            vs ppo_trick_shaped   0.5600 [0.5267, 0.5933]
+  [255/325] double_dueling     vs double             0.5433 [0.5117, 0.575]
+  [256/325] double_dueling     vs dqn_ten_shaped     0.5383 [0.505, 0.57]
+  [257/325] double_dueling     vs dqn_potential      0.5633 [0.53, 0.5967]
+  [258/325] double_dueling     vs dqn_terminal       0.5500 [0.515, 0.5833]
+  [259/325] double_dueling     vs dqn_trick_shaped   0.5567 [0.5267, 0.5883]
+  [260/325] double_dueling     vs mappo_potential    0.3717 [0.34, 0.4017]
+  [261/325] double_dueling     vs nfsp               0.6317 [0.6, 0.665]
+  [262/325] double_dueling     vs ppo_potential      0.4683 [0.4367, 0.5017]
+  [263/325] double_dueling     vs ppo_ten_shaped     0.5533 [0.5217, 0.5833]
+  [264/325] double_dueling     vs ppo_terminal       0.4783 [0.4483, 0.5117]
+  [265/325] double             vs dqn_potential      0.4733 [0.4417, 0.505]
+  [266/325] double_dueling     vs ppo_trick_shaped   0.4300 [0.3967, 0.4633]
+  [267/325] double             vs dqn_ten_shaped     0.5017 [0.47, 0.5333]
+  [268/325] double             vs dqn_terminal       0.4900 [0.46, 0.5217]
+  [269/325] double             vs dqn_trick_shaped   0.5350 [0.5033, 0.5667]
+  [270/325] double             vs mappo_potential    0.3100 [0.28, 0.34]
+  [271/325] double             vs ppo_potential      0.4317 [0.4, 0.4633]
+  [272/325] double             vs nfsp               0.5817 [0.5533, 0.6133]
+  [273/325] double             vs ppo_ten_shaped     0.4700 [0.44, 0.5017]
+  [274/325] double             vs ppo_trick_shaped   0.3500 [0.3183, 0.3817]
+  [275/325] double             vs ppo_terminal       0.4383 [0.4083, 0.4667]
+  [276/325] dqn_potential      vs dqn_ten_shaped     0.5117 [0.4817, 0.5417]
+  [277/325] dqn_potential      vs dqn_trick_shaped   0.5233 [0.4917, 0.5567]
+  [278/325] dqn_potential      vs dqn_terminal       0.5233 [0.49, 0.555]
+  [279/325] dqn_potential      vs nfsp               0.5600 [0.525, 0.5967]
+  [280/325] dqn_potential      vs mappo_potential    0.2817 [0.2517, 0.3133]
+  [281/325] dqn_potential      vs ppo_potential      0.4567 [0.425, 0.4883]
+  [282/325] dqn_potential      vs ppo_terminal       0.4383 [0.4067, 0.4683]
+  [283/325] dqn_potential      vs ppo_ten_shaped     0.5067 [0.4767, 0.5367]
+  [284/325] dqn_potential      vs ppo_trick_shaped   0.4217 [0.39, 0.4533]
+  [285/325] dqn_ten_shaped     vs dqn_terminal       0.5017 [0.4683, 0.5367]
+  [286/325] dqn_ten_shaped     vs dqn_trick_shaped   0.4850 [0.4517, 0.52]
+  [287/325] dqn_ten_shaped     vs mappo_potential    0.3400 [0.3083, 0.3717]
+  [288/325] dqn_ten_shaped     vs nfsp               0.5700 [0.5367, 0.6017]
+  [289/325] dqn_ten_shaped     vs ppo_ten_shaped     0.4350 [0.4033, 0.465]
+  [290/325] dqn_ten_shaped     vs ppo_potential      0.3983 [0.3667, 0.43]
+  [291/325] dqn_ten_shaped     vs ppo_terminal       0.4067 [0.375, 0.4367]
+  [292/325] dqn_ten_shaped     vs ppo_trick_shaped   0.3850 [0.3533, 0.4167]
+  [293/325] dqn_terminal       vs dqn_trick_shaped   0.5050 [0.4733, 0.535]
+  [294/325] dqn_terminal       vs mappo_potential    0.3383 [0.305, 0.3717]
+  [295/325] dqn_terminal       vs ppo_potential      0.4467 [0.4133, 0.4783]
+  [296/325] dqn_terminal       vs nfsp               0.5650 [0.5317, 0.5983]
+  [297/325] dqn_terminal       vs ppo_ten_shaped     0.5167 [0.485, 0.5467]
+  [298/325] dqn_terminal       vs ppo_terminal       0.4267 [0.395, 0.4583]
+  [299/325] dqn_terminal       vs ppo_trick_shaped   0.3850 [0.3533, 0.4183]
+  [300/325] dqn_trick_shaped   vs mappo_potential    0.2900 [0.2583, 0.3217]
+  [301/325] nfsp               vs PIMC16             0.2117 [0.1892, 0.2342]
+  [302/325] dqn_trick_shaped   vs nfsp               0.5583 [0.525, 0.5917]
+  [303/325] dqn_trick_shaped   vs ppo_potential      0.4617 [0.43, 0.4933]
+  [304/325] dqn_trick_shaped   vs ppo_ten_shaped     0.4783 [0.4483, 0.5067]
+  [305/325] dqn_trick_shaped   vs ppo_terminal       0.4417 [0.4117, 0.4717]
+  [306/325] mappo_potential    vs nfsp               0.7067 [0.675, 0.7367]
+  [307/325] dqn_trick_shaped   vs ppo_trick_shaped   0.4017 [0.37, 0.4333]
+  [308/325] mappo_potential    vs ppo_potential      0.6117 [0.5783, 0.645]
+  [309/325] mappo_potential    vs ppo_ten_shaped     0.6183 [0.5883, 0.65]
+  [310/325] mappo_potential    vs ppo_terminal       0.6167 [0.585, 0.6483]
+  [311/325] mappo_potential    vs ppo_trick_shaped   0.5917 [0.5617, 0.6233]
+  [312/325] nfsp               vs ppo_potential      0.3767 [0.345, 0.4083]
+  [313/325] nfsp               vs ppo_ten_shaped     0.3833 [0.3533, 0.415]
+  [314/325] nfsp               vs ppo_terminal       0.3550 [0.3217, 0.3883]
+  [315/325] nfsp               vs ppo_trick_shaped   0.3383 [0.305, 0.37]
+  [316/325] ppo_potential      vs ppo_ten_shaped     0.5417 [0.5133, 0.5683]
+  [317/325] ppo_potential      vs ppo_terminal       0.5167 [0.49, 0.5433]
+  [318/325] ppo_potential      vs ppo_trick_shaped   0.4683 [0.44, 0.495]
+  [319/325] ppo_ten_shaped     vs ppo_terminal       0.4617 [0.435, 0.4867]
+  [320/325] ppo_ten_shaped     vs ppo_trick_shaped   0.4183 [0.3917, 0.4433]
+  [321/325] ppo_terminal       vs ppo_trick_shaped   0.4617 [0.4333, 0.49]
+  [322/325] ppo_potential      vs PIMC16             0.3467 [0.3225, 0.3717]
+  [323/325] ppo_terminal       vs PIMC16             0.3192 [0.2958, 0.345]
+  [324/325] ppo_trick_shaped   vs PIMC16             0.3367 [0.3142, 0.36]
+  [325/325] ppo_ten_shaped     vs PIMC16             0.3375 [0.3117, 0.3633]
+
+================================================================
+LEADERBOARD (mean win rate, all pairings)
+================================================================
+   1. ISMCTS250            0.7214
+   2. PIMC16               0.6971
+   3. Tuned                0.5910
+   4. AlphaDJ60            0.5767
+   5. mappo_potential      0.5711
+   6. TensThenTricks       0.5686
+   7. PartnerAware         0.5567
+   8. distill              0.5537
+   9. GreedyTricks         0.5440
+  10. ppo_trick_shaped     0.5286
+  11. AdaptiveGreedy       0.5236
+  12. TenAware             0.5215
+  13. Adaptive             0.5173
+  14. ppo_potential        0.5070
+  15. ppo_terminal         0.5017
+  16. ppo_ten_shaped       0.4866
+  17. deepcfr              0.4481
+  18. double_dueling       0.4413
+  19. dqn_potential        0.4161
+  20. dqn_terminal         0.4157
+  21. dqn_ten_shaped       0.4140
+  22. double               0.4117
+  23. a2c                  0.4109
+  24. dqn_trick_shaped     0.4099
+  25. nfsp                 0.3421
+  26. Random               0.3239
+
+8067s -> final_tournament.json
+  [ok] final_tournament.json
+  [ok] per-deal vectors present
+
+########## 9/9  statistics, figures, archive, compute record  2026-09-02 23:09:21 ##########
+[23:09:21] STEP .venv/bin/python analyse_tournament.py
+  325 pairings, 300 deals each, 26 agents
+  significant: raw 263  ->  Holm 208  BH 260   (expected false positives uncorrected: 16.2)
+  3-cycles: 66/2600 (2.5%)   cyclic energy 0.052
+  cyclic energy 0.0518 vs noise floor 0.0154 (95th pct 0.0175) -- ABOVE the floor: evidence of real intransitivity  (p=0.005, rho=0.0974)
+  power: median per-deal SD 0.2778; to detect delta=0.05 at 80% needs 243 deals
+  -> stats_corrections.json / ratings.json / power.json
+  [ok] stats_corrections.json
+  [ok] ratings.json
+  [ok] power.json
+[23:10:03] STEP .venv/bin/python aggregate_seeds.py
+  15 methods, 15 with all 3 seeds
+  -> seed_summary.json / seed_summary.md
+  [ok] seed_summary.json
+[23:10:03] STEP .venv/bin/python make_figures.py
+generating figures -> ../08-figures
+  wrote fig1_agent_hierarchy.pdf / .png  — the headline ranking
+  wrote fig2_objective_tension.pdf / .png  — n=10,000 hands, from decomposition.json
+  wrote fig3_latency_vs_strength.pdf / .png  — the efficiency result
+  wrote fig4_reward_ablation.pdf / .png  — 3 seed(s), source eval_rl.json
+  wrote fig5_learning_curves.pdf / .png  — scaling with training
+  wrote fig6_game_statistics.pdf / .png  — n=30,000 random-play hands
+  wrote fig7_distillation.pdf / .png  — why model selection must use win rate
+  wrote fig8_exploitability.pdf / .png  — the brittleness test
+  wrote fig9_encoding_ablation.pdf / .png  — does the encoding matter?
+  wrote fig10_seed_variance.pdf / .png  — why single-seed results are not enough
+done
+  [ok] 10 artifact(s) matching '../08-figures/*.png'
+[23:10:08] STEP .venv/bin/python archive_models.py
+  alphadj_s0.pt                         2.4 MB  AlphaDJ
+  alphadj_s1.pt                         2.4 MB  AlphaDJ
+  alphadj_s2.pt                         2.4 MB  AlphaDJ
+  br_Adaptive_s0.pt                     2.4 MB  best-response vs Adaptive
+  br_GreedyTricks_s0.pt                 2.4 MB  best-response vs GreedyTricks
+  br_TensThenTricks_s0.pt               2.4 MB  best-response vs TensThenTricks
+  br_Tuned_s0.pt                        2.4 MB  best-response vs Tuned
+  gen_dqn_Adaptive_s0.pt                2.4 MB  DQN
+  gen_dqn_Adaptive_s1.pt                2.4 MB  DQN
+  gen_dqn_Adaptive_s2.pt                2.4 MB  DQN
+  gen_dqn_GreedyTricks_s0.pt            2.4 MB  DQN
+  gen_dqn_GreedyTricks_s1.pt            2.4 MB  DQN
+  gen_dqn_GreedyTricks_s2.pt            2.4 MB  DQN
+  gen_dqn_Random_s0.pt                  2.4 MB  DQN
+  gen_dqn_Random_s1.pt                  2.4 MB  DQN
+  gen_dqn_Random_s2.pt                  2.4 MB  DQN
+  gen_dqn_TenAware_s0.pt                2.4 MB  DQN
+  gen_dqn_TenAware_s1.pt                2.4 MB  DQN
+  gen_dqn_TenAware_s2.pt                2.4 MB  DQN
+  gen_dqn_TensThenTricks_s0.pt          2.4 MB  DQN
+  gen_dqn_TensThenTricks_s1.pt          2.4 MB  DQN
+  gen_dqn_TensThenTricks_s2.pt          2.4 MB  DQN
+  gen_dqn_league_s0.pt                  2.4 MB  DQN
+  gen_dqn_league_s1.pt                  2.4 MB  DQN
+  gen_dqn_league_s2.pt                  2.4 MB  DQN
+  gen_dqn_self_s0.pt                    2.4 MB  DQN
+  gen_dqn_self_s1.pt                    2.4 MB  DQN
+  gen_dqn_self_s2.pt                    2.4 MB  DQN
+  gen_ppo_Adaptive_s0.pt                2.4 MB  PPO
+  gen_ppo_Adaptive_s1.pt                2.4 MB  PPO
+  gen_ppo_Adaptive_s2.pt                2.4 MB  PPO
+  gen_ppo_GreedyTricks_s0.pt            2.4 MB  PPO
+  gen_ppo_GreedyTricks_s1.pt            2.4 MB  PPO
+  gen_ppo_GreedyTricks_s2.pt            2.4 MB  PPO
+  gen_ppo_Random_s0.pt                  2.4 MB  PPO
+  gen_ppo_Random_s1.pt                  2.4 MB  PPO
+  gen_ppo_Random_s2.pt                  2.4 MB  PPO
+  gen_ppo_TenAware_s0.pt                2.4 MB  PPO
+  gen_ppo_TenAware_s1.pt                2.4 MB  PPO
+  gen_ppo_TenAware_s2.pt                2.4 MB  PPO
+  gen_ppo_TensThenTricks_s0.pt          2.4 MB  PPO
+  gen_ppo_TensThenTricks_s1.pt          2.4 MB  PPO
+  gen_ppo_TensThenTricks_s2.pt          2.4 MB  PPO
+  gen_ppo_league_s0.pt                  2.4 MB  PPO
+  gen_ppo_league_s1.pt                  2.4 MB  PPO
+  gen_ppo_league_s2.pt                  2.4 MB  PPO
+  gen_ppo_self_s0.pt                    2.4 MB  PPO
+  gen_ppo_self_s1.pt                    2.4 MB  PPO
+  gen_ppo_self_s2.pt                    2.4 MB  PPO
+  rl_a2c_s0.pt                          2.4 MB  A2C
+  rl_a2c_s1.pt                          2.4 MB  A2C
+  rl_a2c_s2.pt                          2.4 MB  A2C
+  rl_deepcfr_s0.pt                      2.4 MB  Deep CFR
+  rl_deepcfr_s1.pt                      2.4 MB  Deep CFR
+  rl_deepcfr_s2.pt                      2.4 MB  Deep CFR
+  rl_distill_s0.pt                      2.4 MB  Distilled ISMCTS
+  rl_distill_s1.pt                      2.4 MB  Distilled ISMCTS
+  rl_distill_s2.pt                      2.4 MB  Distilled ISMCTS
+  rl_double_dueling_s0.pt               2.4 MB  Double+Dueling DQN
+  rl_double_dueling_s1.pt               2.4 MB  Double+Dueling DQN
+  rl_double_dueling_s2.pt               2.4 MB  Double+Dueling DQN
+  rl_double_s0.pt                       2.4 MB  Double DQN
+  rl_double_s1.pt                       2.4 MB  Double DQN
+  rl_double_s2.pt                       2.4 MB  Double DQN
+  rl_dqn_potential_s0.pt                2.4 MB  DQN
+  rl_dqn_potential_s1.pt                2.4 MB  DQN
+  rl_dqn_potential_s2.pt                2.4 MB  DQN
+  rl_dqn_ten_shaped_s0.pt               2.4 MB  DQN
+  rl_dqn_ten_shaped_s1.pt               2.4 MB  DQN
+  rl_dqn_ten_shaped_s2.pt               2.4 MB  DQN
+  rl_dqn_terminal_s0.pt                 2.4 MB  DQN
+  rl_dqn_terminal_s1.pt                 2.4 MB  DQN
+  rl_dqn_terminal_s2.pt                 2.4 MB  DQN
+  rl_dqn_trick_shaped_s0.pt             2.4 MB  DQN
+  rl_dqn_trick_shaped_s1.pt             2.4 MB  DQN
+  rl_dqn_trick_shaped_s2.pt             2.4 MB  DQN
+  rl_mappo_potential_s0.pt              2.4 MB  MAPPO (CTDE)
+  rl_mappo_potential_s1.pt              2.4 MB  MAPPO (CTDE)
+  rl_mappo_potential_s2.pt              2.4 MB  MAPPO (CTDE)
+  rl_nfsp_s0.pt                         2.4 MB  NFSP
+  rl_nfsp_s1.pt                         2.4 MB  NFSP
+  rl_nfsp_s2.pt                         2.4 MB  NFSP
+  rl_ppo_potential_s0.pt                2.4 MB  PPO
+  rl_ppo_potential_s1.pt                2.4 MB  PPO
+  rl_ppo_potential_s2.pt                2.4 MB  PPO
+  rl_ppo_ten_shaped_s0.pt               2.4 MB  PPO
+  rl_ppo_ten_shaped_s1.pt               2.4 MB  PPO
+  rl_ppo_ten_shaped_s2.pt               2.4 MB  PPO
+  rl_ppo_terminal_s0.pt                 2.4 MB  PPO
+  rl_ppo_terminal_s1.pt                 2.4 MB  PPO
+  rl_ppo_terminal_s2.pt                 2.4 MB  PPO
+  rl_ppo_trick_shaped_s0.pt             2.4 MB  PPO
+  rl_ppo_trick_shaped_s1.pt             2.4 MB  PPO
+  rl_ppo_trick_shaped_s2.pt             2.4 MB  PPO
+
+  94 models, 223.1 MB -> ../10-models/
+[23:10:09] STEP .venv/bin/python archive_models.py --verify
+
+  94/94 verified
+[23:10:09] STEP .venv/bin/python record_compute.py
+  63 artifacts, 99.8 CPU-hours recorded
+  -> ../12-compute/compute.json and compute.md
+  [ok] ../12-compute/compute.json
+
+########## COMPLETE 2026-09-02 23:10:10 ##########

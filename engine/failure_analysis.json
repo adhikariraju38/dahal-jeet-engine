@@ -1,0 +1,108 @@
+{
+  "env": {
+    "started": "2026-09-01T09:01:10",
+    "pid": 52620,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "unset",
+    "VECLIB_MAXIMUM_THREADS": "unset",
+    "argv": "failure_analysis.py --deals 1200 --agents TensThenTricks",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "deals": 1200,
+  "opponent": "TensThenTricks",
+  "results": {
+    "TensThenTricks": {
+      "decided_by": {
+        "tens": {
+          "win_rate": 0.5,
+          "hands": 3092
+        },
+        "tiebreak": {
+          "win_rate": 0.5,
+          "hands": 1708
+        }
+      },
+      "holds_trump": {
+        "False": {
+          "win_rate": 0.4992,
+          "hands": 2400
+        },
+        "True": {
+          "win_rate": 0.5008,
+          "hands": 2400
+        }
+      },
+      "overall": {
+        "all": {
+          "win_rate": 0.5,
+          "hands": 4800
+        }
+      },
+      "tens_dealt": {
+        "0": {
+          "win_rate": 0.3732,
+          "hands": 284
+        },
+        "1": {
+          "win_rate": 0.4332,
+          "hands": 1182
+        },
+        "2": {
+          "win_rate": 0.5,
+          "hands": 1868
+        },
+        "3": {
+          "win_rate": 0.5668,
+          "hands": 1182
+        },
+        "4": {
+          "win_rate": 0.6268,
+          "hands": 284
+        }
+      },
+      "trump_length": {
+        "2": {
+          "win_rate": 0.0,
+          "hands": 24
+        },
+        "3": {
+          "win_rate": 0.0612,
+          "hands": 98
+        },
+        "4": {
+          "win_rate": 0.193,
+          "hands": 342
+        },
+        "5": {
+          "win_rate": 0.2488,
+          "hands": 812
+        },
+        "6": {
+          "win_rate": 0.4537,
+          "hands": 1124
+        },
+        "7": {
+          "win_rate": 0.5463,
+          "hands": 1124
+        },
+        "8": {
+          "win_rate": 0.7853,
+          "hands": 1276
+        }
+      }
+    }
+  },
+  "seconds": 3.5864708749577403,
+  "note": "Buckets are properties of the DEAL, fixed before play, so a low win rate in a bucket is a weakness of the policy in that situation rather than a consequence of how it played."
+}

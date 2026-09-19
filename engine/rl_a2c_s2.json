@@ -1,0 +1,60 @@
+{
+  "env": {
+    "started": "2026-09-01T09:33:09",
+    "pid": 50847,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "train_more.py --method a2c --episodes 60000 --seed 2",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "method": "a2c",
+  "final": {
+    "Random": 0.6558,
+    "TensThenTricks": 0.4133
+  },
+  "curve": [
+    {
+      "ep": 10000,
+      "Random": 0.5733,
+      "TensThenTricks": 0.2867
+    },
+    {
+      "ep": 20000,
+      "Random": 0.5333,
+      "TensThenTricks": 0.2567
+    },
+    {
+      "ep": 30000,
+      "Random": 0.5233,
+      "TensThenTricks": 0.2567
+    },
+    {
+      "ep": 40000,
+      "Random": 0.52,
+      "TensThenTricks": 0.2367
+    },
+    {
+      "ep": 50000,
+      "Random": 0.5817,
+      "TensThenTricks": 0.3067
+    },
+    {
+      "ep": 60000,
+      "Random": 0.6267,
+      "TensThenTricks": 0.4233
+    }
+  ],
+  "seconds": 2126.205239916977
+}

@@ -1,0 +1,1564 @@
+{
+  "project": "Dahal Jeet \u2014 traditional Terai-Madhesh card game",
+  "built": "2026-09-19T10:05:34",
+  "engine_commit": null,
+  "obs_size": 360,
+  "action_size": 52,
+  "note": "All checkpoints are PyTorch state_dicts. Architectures are defined in the engine source; see README.md for the mapping from each file to its class.",
+  "count": 94,
+  "total_bytes": 223082366,
+  "models": [
+    {
+      "file": "checkpoints/alphadj_s0.pt",
+      "family": "neural search",
+      "method": "AlphaDJ",
+      "description": "Policy+value network used as prior and leaf evaluator inside determinized information-set search.",
+      "bytes": 2374005,
+      "sha256": "45229a8d173871727a7c3f4884c38b006096544d33ffb4d4a7d2717b0e276cda",
+      "modified": "2026-09-01 15:52"
+    },
+    {
+      "file": "checkpoints/alphadj_s1.pt",
+      "family": "neural search",
+      "method": "AlphaDJ",
+      "description": "Policy+value network used as prior and leaf evaluator inside determinized information-set search.",
+      "bytes": 2374005,
+      "sha256": "e56626c0cfaf2c7182cbe2d740989053904d5539c95f0a34a79f3327683e064b",
+      "modified": "2026-09-01 16:08"
+    },
+    {
+      "file": "checkpoints/alphadj_s2.pt",
+      "family": "neural search",
+      "method": "AlphaDJ",
+      "description": "Policy+value network used as prior and leaf evaluator inside determinized information-set search.",
+      "bytes": 2374005,
+      "sha256": "8cf8d8cc1747a39c4a4943a67af425b1be7b023862ca7e1c7fa38e11558bbbc8",
+      "modified": "2026-09-01 16:23"
+    },
+    {
+      "file": "checkpoints/br_Adaptive_s0.pt",
+      "family": "exploiter",
+      "method": "best-response vs Adaptive",
+      "description": "DQN trained solely to exploit Adaptive. Used for the exploitability analysis, not as a general agent.",
+      "bytes": 2372463,
+      "sha256": "b1b5db987f12c064b49cddd24f1af16f4f1c4bcf83452ddffcdf0485b7038383",
+      "modified": "2026-09-01 17:25",
+      "config": {
+        "episodes": 50000,
+        "seed": 0
+      },
+      "results": {
+        "best_response_win": 0.386,
+        "generic_baseline": 0.58,
+        "exploitability": -0.194,
+        "generic_agent": "TensThenTricks"
+      }
+    },
+    {
+      "file": "checkpoints/br_GreedyTricks_s0.pt",
+      "family": "exploiter",
+      "method": "best-response vs GreedyTricks",
+      "description": "DQN trained solely to exploit GreedyTricks. Used for the exploitability analysis, not as a general agent.",
+      "bytes": 2372519,
+      "sha256": "e97ecee023109be84e368df0ea0596d80af4b2a18350b290aa518913ef3f4a57",
+      "modified": "2026-09-01 17:25",
+      "config": {
+        "episodes": 50000,
+        "seed": 0
+      },
+      "results": {
+        "best_response_win": 0.361,
+        "generic_baseline": 0.55,
+        "exploitability": -0.189,
+        "generic_agent": "TensThenTricks"
+      }
+    },
+    {
+      "file": "checkpoints/br_TensThenTricks_s0.pt",
+      "family": "exploiter",
+      "method": "best-response vs TensThenTricks",
+      "description": "DQN trained solely to exploit TensThenTricks. Used for the exploitability analysis, not as a general agent.",
+      "bytes": 2372547,
+      "sha256": "1cf6f7672e0f5889adea6fd2e67edebabe7ec426106f4bb57339b9357f84de0a",
+      "modified": "2026-09-01 17:25",
+      "config": {
+        "episodes": 50000,
+        "seed": 0
+      },
+      "results": {
+        "best_response_win": 0.3395,
+        "generic_baseline": 0.45,
+        "exploitability": -0.1105,
+        "generic_agent": "GreedyTricks"
+      }
+    },
+    {
+      "file": "checkpoints/br_Tuned_s0.pt",
+      "family": "exploiter",
+      "method": "best-response vs Tuned",
+      "description": "DQN trained solely to exploit Tuned. Used for the exploitability analysis, not as a general agent.",
+      "bytes": 2372421,
+      "sha256": "835e8abb571c113bfe7982e228b0fd048f9d30d603541f052788b1ad7e4c6a5a",
+      "modified": "2026-09-01 17:24",
+      "config": {
+        "episodes": 50000,
+        "seed": 0
+      },
+      "results": {
+        "best_response_win": 0.308,
+        "generic_baseline": 0.5067,
+        "exploitability": -0.1987,
+        "generic_agent": "TensThenTricks"
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_Adaptive_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "fb1583b4f9d64c9e96ba0efc11b9b516e2301e550d75e94b41f9cff28695bc60",
+      "modified": "2026-09-02 11:16",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_Adaptive_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "0ee3fffa2a677943575372c93839217248e5507ba8a8fd3255179ae636e851d1",
+      "modified": "2026-09-02 13:09",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_Adaptive_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "57e1e9b8ebf826ed1c9e6ca5a8cb4e39803b5b69f29ef1efdd273d71479b2760",
+      "modified": "2026-09-02 15:01",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_GreedyTricks_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372653,
+      "sha256": "eda7aa15aa4e1556151c9a35f619244b2e5f7909a261cb086a9d04e194092866",
+      "modified": "2026-09-02 11:16",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_GreedyTricks_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372653,
+      "sha256": "7f114a5db792a8716301ca1001c6479c78d04f70eba831305a82acfa34a9543f",
+      "modified": "2026-09-02 13:09",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_GreedyTricks_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372653,
+      "sha256": "906d2b9e2ec6833be34e4f2b38bcf3f033fbb2404ff80032be584bdb6eb07d79",
+      "modified": "2026-09-02 15:01",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_Random_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372505,
+      "sha256": "87ad8643164d8ce30d9bdd29be1e9fc21b466e913ee09a4fc1965d50d4c82a8e",
+      "modified": "2026-08-31 18:36",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 300,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_Random_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372505,
+      "sha256": "01c339349580777039e7ebf5d0a15c457691753839887d8b208dee577c694285",
+      "modified": "2026-09-02 13:08",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_Random_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372505,
+      "sha256": "3a5b031b2a372c310378f2c2c51b62114738f56ad13834e3f9ecc7cfcd478b0d",
+      "modified": "2026-09-02 15:00",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_TenAware_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "e6369e95df2e72b5428cb9a35a5d17741658535253265caf43c8431862a39994",
+      "modified": "2026-09-02 11:16",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_TenAware_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "b44e9e400fd3292d96b2304508b9b3330c2c83f949e0add079bd2f7251fbb6b2",
+      "modified": "2026-09-02 13:09",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_TenAware_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "8f4e9b4cdebb56e0ec2ab3110596040978ffc0cdf3151073d37ab129b32cf1e4",
+      "modified": "2026-09-02 15:01",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_TensThenTricks_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372681,
+      "sha256": "8baf3e14b77df56e6cf8c049586419cc4c0fdb2ccf0ccc911065f9beeb5600da",
+      "modified": "2026-09-02 11:16",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_TensThenTricks_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372681,
+      "sha256": "db83a17016dd2166161d563c7ac20c6914feb99078e9ac688d6d41fb9b3e9eac",
+      "modified": "2026-09-02 13:09",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_TensThenTricks_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372681,
+      "sha256": "e656697bace5457ffbde7f9170e86b76b6001c0e4a17809f37078d6bf1f285d5",
+      "modified": "2026-09-02 15:01",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_league_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372505,
+      "sha256": "2a5df8890a22c2c9c665905c53489a5250a64968b47e72028fcf831eafbf7100",
+      "modified": "2026-09-02 11:21",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_league_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372505,
+      "sha256": "b6d60a417af8aa263a59cf344a16a53a018e8383217fb27343f5d18380b8d1b7",
+      "modified": "2026-09-02 13:13",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_league_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372505,
+      "sha256": "25e1e4f2a27c6d26344470a010a2d16f51688661f2013ea34f1beaf8046889e8",
+      "modified": "2026-09-02 15:05",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_self_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372477,
+      "sha256": "b5140a20d9be6e99a21c79042dd51a69490e044399bd6e23b5300d9f006de50c",
+      "modified": "2026-09-02 11:21",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_self_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372477,
+      "sha256": "dcce3291dcd1aa0805f7a2383ecdfe1848ab187314aaad8276b75b277fb9dd8d",
+      "modified": "2026-09-02 13:13",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_dqn_self_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372477,
+      "sha256": "8de60c0ef1a6b6ee93a2317bff6844e99139e3064f35460013031584a96b2696",
+      "modified": "2026-09-02 15:05",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_Adaptive_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "dc99b8593a2bdc31673ea0f9a911b8a1d1983c2a3153a7ddcccf4800b4c277e4",
+      "modified": "2026-09-02 09:56",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_Adaptive_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "44dd14298fafddadb678d525c7abffcdf77d90b304fe0a0c636c0a1fd0f96a57",
+      "modified": "2026-09-02 11:40",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_Adaptive_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "e39d4f2eb2a08b0b9df33a7d6c50fc99f6570ba931d9b2d5e6b915e5885efe93",
+      "modified": "2026-09-02 13:32",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_GreedyTricks_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374213,
+      "sha256": "0680409195df986d5219b23f816f80bc356df262fac5ad65eae9451d6f34ebe8",
+      "modified": "2026-09-02 09:55",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_GreedyTricks_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374213,
+      "sha256": "1459b3755174c98b19d77b2519e59346f5727a73a99749a6df84e344f733448b",
+      "modified": "2026-09-02 11:40",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_GreedyTricks_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374213,
+      "sha256": "47d29f7be557a1e786f2397fac5f26d3ab9b72dbee49dae089fed82a469745b6",
+      "modified": "2026-09-02 13:32",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_Random_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374053,
+      "sha256": "554231368f3a498f3d3fbffed67b04823832f1ef0b29a544076228c6ee36b547",
+      "modified": "2026-09-02 09:56",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_Random_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374053,
+      "sha256": "f3c03831bddfef8b340d3046176a50171083bd330d7ed2a63f3363519c3d6251",
+      "modified": "2026-09-02 11:40",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_Random_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374053,
+      "sha256": "e3c19a5c4940a72cade31c8dc1baffcc376e59b45f06fef587751fe4947bf1d0",
+      "modified": "2026-09-02 13:31",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_TenAware_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "6d706359f7a866db9225e5acd0b611b498e397e025464ad360442b24783b0597",
+      "modified": "2026-09-02 09:55",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_TenAware_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "90a1f04a2f21c8a1e92a88abd67de40723bf412632231faccc3f7530ff5de634",
+      "modified": "2026-09-02 11:40",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_TenAware_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "11b005072be93c160fedd30b97f1274fc4d64789a628fd473857a9f29be72ff7",
+      "modified": "2026-09-02 13:32",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_TensThenTricks_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374245,
+      "sha256": "d7eb089fa87c8122c234397cb570b94b710dd509205404d301a7a4c18a286796",
+      "modified": "2026-09-02 09:56",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_TensThenTricks_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374245,
+      "sha256": "5678dfe70b82fcd8794f474f3c910954976b80666e3ee7520b0e878478c3e870",
+      "modified": "2026-09-02 11:40",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_TensThenTricks_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374245,
+      "sha256": "24d275f831f90d1fb0013a84184c3b51e965879edc57586ddb4747f9fad9ef41",
+      "modified": "2026-09-02 13:32",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_league_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374053,
+      "sha256": "1b0aa8611d94f70d25be5fa49e6d5d22c79995d2b03dbec71dc8e0da6dcaf646",
+      "modified": "2026-09-02 10:00",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_league_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374053,
+      "sha256": "9f56aabbdf083137873f7742153aed3e23bf9ce7f81462f74f558c54f05d7bca",
+      "modified": "2026-09-02 11:45",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_league_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374053,
+      "sha256": "d492aa741f2839b4b50f1dfb1ce26ec62df12c326c464cd258d9370acf22d6c8",
+      "modified": "2026-09-02 13:37",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_self_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374021,
+      "sha256": "d248dbb20c197a5fc9b918ab697110484e0fa201eb127bebf61ac17d23a0478b",
+      "modified": "2026-08-31 18:36",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 300,
+        "seed": 0
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_self_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374021,
+      "sha256": "37b3d55ed92518a6508b8268eb4d36bdd474ea8c63daa5db5164d61c99c7cb1b",
+      "modified": "2026-09-02 11:45",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      }
+    },
+    {
+      "file": "checkpoints/gen_ppo_self_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374021,
+      "sha256": "0e9b7b7dccc9020ae33d113b71cf3e833e7e99d62b0f591e900d7dc0b36c1eb1",
+      "modified": "2026-09-02 13:37",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      }
+    },
+    {
+      "file": "checkpoints/rl_a2c_s0.pt",
+      "family": "single-agent RL",
+      "method": "A2C",
+      "description": "A2C agent. Reward scheme is recorded in `config`.",
+      "bytes": 2373925,
+      "sha256": "6f9efb4809d01fc2451b64f27fefffc45d500bdd59213bc3f78834c9881b0240",
+      "modified": "2026-08-31 19:06",
+      "config": {
+        "method": "a2c"
+      },
+      "results": {
+        "Random": 0.6108,
+        "TensThenTricks": 0.3967
+      }
+    },
+    {
+      "file": "checkpoints/rl_a2c_s1.pt",
+      "family": "single-agent RL",
+      "method": "A2C",
+      "description": "A2C agent. Reward scheme is recorded in `config`.",
+      "bytes": 2373925,
+      "sha256": "8d594f779f799c7248712df0b8d541a03f47159dee22bd308a8b24a8dc5c90b0",
+      "modified": "2026-09-01 09:33",
+      "config": {
+        "method": "a2c"
+      },
+      "results": {
+        "Random": 0.5988,
+        "TensThenTricks": 0.345
+      }
+    },
+    {
+      "file": "checkpoints/rl_a2c_s2.pt",
+      "family": "single-agent RL",
+      "method": "A2C",
+      "description": "A2C agent. Reward scheme is recorded in `config`.",
+      "bytes": 2373925,
+      "sha256": "14d850cdd5a38453260ee99a62d7bcb2f805633ea2205d5d82ae2ef9a617b9c6",
+      "modified": "2026-09-01 09:33",
+      "config": {
+        "method": "a2c"
+      },
+      "results": {
+        "Random": 0.6558,
+        "TensThenTricks": 0.4133
+      }
+    },
+    {
+      "file": "checkpoints/rl_deepcfr_s0.pt",
+      "family": "equilibrium",
+      "method": "Deep CFR",
+      "description": "Average-strategy network. No equilibrium guarantee in a 4-player partnership game -- a baseline, not a solution.",
+      "bytes": 2372385,
+      "sha256": "97cf2cd1d7bdfaed6fcb427413200d0c895aa44ea62a0610dac243df2245c3cb",
+      "modified": "2026-09-01 15:44",
+      "config": {
+        "method": "deepcfr",
+        "iters": 40,
+        "traversals": 120,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.6433,
+        "TensThenTricks": 0.3867
+      }
+    },
+    {
+      "file": "checkpoints/rl_deepcfr_s1.pt",
+      "family": "equilibrium",
+      "method": "Deep CFR",
+      "description": "Average-strategy network. No equilibrium guarantee in a 4-player partnership game -- a baseline, not a solution.",
+      "bytes": 2372385,
+      "sha256": "f5b099d38e585213fbb66d5c375e081d08886283b5144fa68c05b350bbadbc2f",
+      "modified": "2026-09-01 15:39",
+      "config": {
+        "method": "deepcfr",
+        "iters": 40,
+        "traversals": 120,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.6267,
+        "TensThenTricks": 0.395
+      }
+    },
+    {
+      "file": "checkpoints/rl_deepcfr_s2.pt",
+      "family": "equilibrium",
+      "method": "Deep CFR",
+      "description": "Average-strategy network. No equilibrium guarantee in a 4-player partnership game -- a baseline, not a solution.",
+      "bytes": 2372385,
+      "sha256": "ae50ca1f61a471ca975397822f7c38930295bbb0173e52c9d81d57da64b2dd55",
+      "modified": "2026-09-01 15:50",
+      "config": {
+        "method": "deepcfr",
+        "iters": 40,
+        "traversals": 120,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.6242,
+        "TensThenTricks": 0.3642
+      }
+    },
+    {
+      "file": "checkpoints/rl_distill_s0.pt",
+      "family": "distillation",
+      "method": "Distilled ISMCTS",
+      "description": "Supervised imitation of ISMCTS. Search-quality play at roughly 0.1 ms per decision.",
+      "bytes": 2372449,
+      "sha256": "368977f37923327e9eabc329cde0eb492753b8ef917838d43dccdf0ecf7a820f",
+      "modified": "2026-09-01 15:52",
+      "config": {
+        "method": "distill"
+      },
+      "results": {
+        "Random": 0.7262,
+        "TensThenTricks": 0.5142
+      }
+    },
+    {
+      "file": "checkpoints/rl_distill_s1.pt",
+      "family": "distillation",
+      "method": "Distilled ISMCTS",
+      "description": "Supervised imitation of ISMCTS. Search-quality play at roughly 0.1 ms per decision.",
+      "bytes": 2372449,
+      "sha256": "e42e4164dd85062505b7faa7b56ac958e2cf0e73c700583196127c88fe734659",
+      "modified": "2026-09-01 15:51",
+      "config": {
+        "method": "distill"
+      },
+      "results": {
+        "Random": 0.74,
+        "TensThenTricks": 0.5375
+      }
+    },
+    {
+      "file": "checkpoints/rl_distill_s2.pt",
+      "family": "distillation",
+      "method": "Distilled ISMCTS",
+      "description": "Supervised imitation of ISMCTS. Search-quality play at roughly 0.1 ms per decision.",
+      "bytes": 2372449,
+      "sha256": "b3ded64ab7b7e6f33f182bee599e9437434c4a7ff903cd651635ef18b748ed43",
+      "modified": "2026-09-01 15:51",
+      "config": {
+        "method": "distill"
+      },
+      "results": {
+        "Random": 0.7412,
+        "TensThenTricks": 0.5292
+      }
+    },
+    {
+      "file": "checkpoints/rl_double_dueling_s0.pt",
+      "family": "single-agent RL",
+      "method": "Double+Dueling DQN",
+      "description": "Double+Dueling DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374101,
+      "sha256": "201ee46f80829a017fa5c747768f23c944fa1171dea08ff97d38d33706bed4fe",
+      "modified": "2026-08-31 19:41",
+      "config": {
+        "method": "double_dueling"
+      },
+      "results": {
+        "Random": 0.6142,
+        "TensThenTricks": 0.3642
+      }
+    },
+    {
+      "file": "checkpoints/rl_double_dueling_s1.pt",
+      "family": "single-agent RL",
+      "method": "Double+Dueling DQN",
+      "description": "Double+Dueling DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374101,
+      "sha256": "6a144bf953f690e6c94f6c8bed35882d7646709b0ff90911098204d8bd1671c7",
+      "modified": "2026-09-01 10:19",
+      "config": {
+        "method": "double_dueling"
+      },
+      "results": {
+        "Random": 0.6188,
+        "TensThenTricks": 0.35
+      }
+    },
+    {
+      "file": "checkpoints/rl_double_dueling_s2.pt",
+      "family": "single-agent RL",
+      "method": "Double+Dueling DQN",
+      "description": "Double+Dueling DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374101,
+      "sha256": "1e8e3458b2d664fde33ec8ff0ba9881f1dd5fbbcb8b3b6bfd5e8b9ef984c3c72",
+      "modified": "2026-09-01 10:20",
+      "config": {
+        "method": "double_dueling"
+      },
+      "results": {
+        "Random": 0.6067,
+        "TensThenTricks": 0.3375
+      }
+    },
+    {
+      "file": "checkpoints/rl_double_s0.pt",
+      "family": "single-agent RL",
+      "method": "Double DQN",
+      "description": "Double DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372435,
+      "sha256": "d33e48cf118364e185e78bd68c1fde99ff373cdbe1e95701b91a3e718c37fdd6",
+      "modified": "2026-08-31 19:40",
+      "config": {
+        "method": "double"
+      },
+      "results": {
+        "Random": 0.6021,
+        "TensThenTricks": 0.3525
+      }
+    },
+    {
+      "file": "checkpoints/rl_double_s1.pt",
+      "family": "single-agent RL",
+      "method": "Double DQN",
+      "description": "Double DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372435,
+      "sha256": "9c06996b00385c3a65ee79ef6cee554269e2193a56ba0ba83e156d752965d326",
+      "modified": "2026-09-01 10:18",
+      "config": {
+        "method": "double"
+      },
+      "results": {
+        "Random": 0.5758,
+        "TensThenTricks": 0.3392
+      }
+    },
+    {
+      "file": "checkpoints/rl_double_s2.pt",
+      "family": "single-agent RL",
+      "method": "Double DQN",
+      "description": "Double DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372435,
+      "sha256": "a995b46b0a141d194506cd3ec245ccebabd9fa480f9d44a35298c7724110aa80",
+      "modified": "2026-09-01 10:18",
+      "config": {
+        "method": "double"
+      },
+      "results": {
+        "Random": 0.6029,
+        "TensThenTricks": 0.3192
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_potential_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "acd0ad0ec69352054841dcd01cb6ecab640b515f319086386bc9f1de1303d68c",
+      "modified": "2026-08-31 14:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.6183,
+        "TensThenTricks": 0.3375
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_potential_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "ba7326ab10f8007499618af39bf33d9ee4466bef2052f68c7f0cbdfa33c158fd",
+      "modified": "2026-08-31 16:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.6054,
+        "TensThenTricks": 0.3308
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_potential_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372533,
+      "sha256": "59154c3e2dcd4059f1c37d1a5bbc3e2d5d05631351bbe1e5f191afa035831659",
+      "modified": "2026-08-31 18:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.6183,
+        "TensThenTricks": 0.3533
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_ten_shaped_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372547,
+      "sha256": "760fc6103e3e05e92f41e1f7f00dfc3731927b3e894bcf78ba9c1be46245485a",
+      "modified": "2026-08-31 14:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.5996,
+        "TensThenTricks": 0.3558
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_ten_shaped_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372547,
+      "sha256": "f5f95847456e6e69a4a461605c5df8d386be0e0c3e46a499e75dcb8c14dca54c",
+      "modified": "2026-08-31 16:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.6283,
+        "TensThenTricks": 0.3733
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_ten_shaped_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372547,
+      "sha256": "03cf1fdb2da1bf389742b4c12f80db4ff5d79fac3ae9fbafe59a1454089b8e1b",
+      "modified": "2026-08-31 18:36",
+      "config": {
+        "algo": "dqn",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.6029,
+        "TensThenTricks": 0.4025
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_terminal_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372519,
+      "sha256": "59612508dac0b9e2fd20444ffd97cfca7b23163dfc158aaccc75a2a8d5b971b5",
+      "modified": "2026-08-31 14:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.5988,
+        "TensThenTricks": 0.3417
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_terminal_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372519,
+      "sha256": "f871c902eb15f39bb439e809d87055c4adc01d15add579a71a286ca874b2f3e6",
+      "modified": "2026-08-31 16:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.5733,
+        "TensThenTricks": 0.3133
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_terminal_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372519,
+      "sha256": "d90916ed002a45cf76cefa470e53e2fe924336122767f1316b4092f6e82591f7",
+      "modified": "2026-08-31 18:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.625,
+        "TensThenTricks": 0.3825
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_trick_shaped_s0.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372639,
+      "sha256": "059dd974417e7fd44ff4c5d5e5d77d3b9f6b9ae25a28387669ec1d45326a2bb5",
+      "modified": "2026-08-31 14:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.5983,
+        "TensThenTricks": 0.33
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_trick_shaped_s1.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372639,
+      "sha256": "453c8f827994f5647a4d17b632d68ac857a24e382dd05d2e356ef4c198cde4f6",
+      "modified": "2026-08-31 16:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.5713,
+        "TensThenTricks": 0.3292
+      }
+    },
+    {
+      "file": "checkpoints/rl_dqn_trick_shaped_s2.pt",
+      "family": "single-agent RL",
+      "method": "DQN",
+      "description": "DQN agent. Reward scheme is recorded in `config`.",
+      "bytes": 2372639,
+      "sha256": "33a0470f903caeb73a168c344a54266134e5b4bc0c040003aab6e77368533848",
+      "modified": "2026-08-31 18:35",
+      "config": {
+        "algo": "dqn",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.6021,
+        "TensThenTricks": 0.3417
+      }
+    },
+    {
+      "file": "checkpoints/rl_mappo_potential_s0.pt",
+      "family": "multi-agent RL",
+      "method": "MAPPO (CTDE)",
+      "description": "Shared actor across both partner seats; trained with a centralised critic and self-play.",
+      "bytes": 2372497,
+      "sha256": "b0739b87ea579334b807139035d973c96ff0e09ad8e1eb49e8426abba025e8c8",
+      "modified": "2026-08-31 19:24",
+      "config": {
+        "algo": "mappo",
+        "reward": "potential",
+        "episodes": 200000
+      },
+      "results": {
+        "Random": 0.7208,
+        "TensThenTricks": 0.4483,
+        "GreedyTricks": 0.4475
+      }
+    },
+    {
+      "file": "checkpoints/rl_mappo_potential_s1.pt",
+      "family": "multi-agent RL",
+      "method": "MAPPO (CTDE)",
+      "description": "Shared actor across both partner seats; trained with a centralised critic and self-play.",
+      "bytes": 2372497,
+      "sha256": "86b53c72c9213ce5986666fc224f9f7afba33da968f25a9790f61bf955dcd0f8",
+      "modified": "2026-09-01 10:06",
+      "config": {
+        "algo": "mappo",
+        "reward": "potential",
+        "episodes": 200000
+      },
+      "results": {
+        "Random": 0.715,
+        "TensThenTricks": 0.485,
+        "GreedyTricks": 0.47
+      }
+    },
+    {
+      "file": "checkpoints/rl_mappo_potential_s2.pt",
+      "family": "multi-agent RL",
+      "method": "MAPPO (CTDE)",
+      "description": "Shared actor across both partner seats; trained with a centralised critic and self-play.",
+      "bytes": 2372497,
+      "sha256": "390c9131a772edb3146943f1ee415808395152f7198b5640b3e3b531836e0e35",
+      "modified": "2026-09-01 10:05",
+      "config": {
+        "algo": "mappo",
+        "reward": "potential",
+        "episodes": 200000
+      },
+      "results": {
+        "Random": 0.7204,
+        "TensThenTricks": 0.4433,
+        "GreedyTricks": 0.4333
+      }
+    },
+    {
+      "file": "checkpoints/rl_nfsp_s0.pt",
+      "family": "equilibrium",
+      "method": "NFSP",
+      "description": "Neural Fictitious Self-Play. The released network is the AVERAGE policy, which is the agent.",
+      "bytes": 2372343,
+      "sha256": "3264605716568ae3c89082b866688e6b091c7604b6263b9af7ca80461a6a800f",
+      "modified": "2026-08-31 19:02",
+      "config": {
+        "method": "nfsp",
+        "eta": 0.1,
+        "episodes": 80000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.5358,
+        "TensThenTricks": 0.265
+      }
+    },
+    {
+      "file": "checkpoints/rl_nfsp_s1.pt",
+      "family": "equilibrium",
+      "method": "NFSP",
+      "description": "Neural Fictitious Self-Play. The released network is the AVERAGE policy, which is the agent.",
+      "bytes": 2372343,
+      "sha256": "20732440121b723381ccae4c2dcf448b6424a58f0ec4b36c4474458248dea25f",
+      "modified": "2026-09-01 09:29",
+      "config": {
+        "method": "nfsp",
+        "eta": 0.1,
+        "episodes": 80000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.5337,
+        "TensThenTricks": 0.2583
+      }
+    },
+    {
+      "file": "checkpoints/rl_nfsp_s2.pt",
+      "family": "equilibrium",
+      "method": "NFSP",
+      "description": "Neural Fictitious Self-Play. The released network is the AVERAGE policy, which is the agent.",
+      "bytes": 2372343,
+      "sha256": "2d2e90821dbf8e3580160740fd47941dcc46da5d57703a4abec155d6aaac4c52",
+      "modified": "2026-09-01 09:29",
+      "config": {
+        "method": "nfsp",
+        "eta": 0.1,
+        "episodes": 80000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.5304,
+        "TensThenTricks": 0.2658
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_potential_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "ba3fa96bf4d9522d956019ef9d5cc646b72428509aeed542211775ee277a4a2b",
+      "modified": "2026-08-31 14:47",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.6971,
+        "TensThenTricks": 0.5
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_potential_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "5d05134ac806ddba89cd726a5a5b5c157cc175a39e5f8fcef44da6242b7e5620",
+      "modified": "2026-08-31 16:47",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.6879,
+        "TensThenTricks": 0.4958
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_potential_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374085,
+      "sha256": "9e365f22a8a5e8ce5b01de9317557e5e5e1b4eb554c90ba169e7489bb0990296",
+      "modified": "2026-08-31 18:48",
+      "config": {
+        "algo": "ppo",
+        "reward": "potential",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.6913,
+        "TensThenTricks": 0.5158
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_ten_shaped_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374101,
+      "sha256": "ec63a4c1bc53c8469258867cf6aa4a87000b3b6a62bac549f612b038eb097f08",
+      "modified": "2026-08-31 14:47",
+      "config": {
+        "algo": "ppo",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.6825,
+        "TensThenTricks": 0.5083
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_ten_shaped_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374101,
+      "sha256": "029fb2257a31ffc28fb9807266599f6465f7946f402d61caae896092f761cf0c",
+      "modified": "2026-08-31 16:47",
+      "config": {
+        "algo": "ppo",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.6908,
+        "TensThenTricks": 0.5008
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_ten_shaped_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374101,
+      "sha256": "eced318e85aeb2c0f0ace6b388cbc2021e435b25065b85a8a423c3366809c5d6",
+      "modified": "2026-08-31 18:48",
+      "config": {
+        "algo": "ppo",
+        "reward": "ten_shaped",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.6825,
+        "TensThenTricks": 0.4992
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_terminal_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374069,
+      "sha256": "ad383f1614c59c6ca39355e711caf451a4081edddb2c327be440ed1fc3c0fbb9",
+      "modified": "2026-08-31 14:47",
+      "config": {
+        "algo": "ppo",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.6933,
+        "TensThenTricks": 0.5017
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_terminal_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374069,
+      "sha256": "8dbc02e847c06b2e8fb52be534b719a0bacd19012deb5f0f5381c812bddff04e",
+      "modified": "2026-08-31 16:47",
+      "config": {
+        "algo": "ppo",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.6821,
+        "TensThenTricks": 0.4775
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_terminal_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374069,
+      "sha256": "1bcbcb5347f936a263287d32a409d2cfaf8d20fd0982bb7cab7b52aa97c22f07",
+      "modified": "2026-08-31 18:48",
+      "config": {
+        "algo": "ppo",
+        "reward": "terminal",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.6779,
+        "TensThenTricks": 0.4858
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_trick_shaped_s0.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374197,
+      "sha256": "5fc3194b52ca4c86d0c223260f78cfb60d9b50c232907a7645e76e42b591e255",
+      "modified": "2026-08-31 14:47",
+      "config": {
+        "algo": "ppo",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 0
+      },
+      "results": {
+        "Random": 0.7063,
+        "TensThenTricks": 0.5067
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_trick_shaped_s1.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374197,
+      "sha256": "5e13df2aadbe03d62b23d41751c9f5dd2ff6706639042dc4f58e89357dd47ddb",
+      "modified": "2026-08-31 16:47",
+      "config": {
+        "algo": "ppo",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 1
+      },
+      "results": {
+        "Random": 0.6892,
+        "TensThenTricks": 0.5033
+      }
+    },
+    {
+      "file": "checkpoints/rl_ppo_trick_shaped_s2.pt",
+      "family": "single-agent RL",
+      "method": "PPO",
+      "description": "PPO agent. Reward scheme is recorded in `config`.",
+      "bytes": 2374197,
+      "sha256": "a8fb85a70fa6114b3cfd5c0d295b4c4c065907594e8ccc4d7533168cdb49851b",
+      "modified": "2026-08-31 18:48",
+      "config": {
+        "algo": "ppo",
+        "reward": "trick_shaped",
+        "episodes": 120000,
+        "seed": 2
+      },
+      "results": {
+        "Random": 0.6883,
+        "TensThenTricks": 0.4917
+      }
+    }
+  ]
+}

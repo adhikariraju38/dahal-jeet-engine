@@ -1,0 +1,38 @@
+=== tuner done ===
+
+BEST fitness 0.6119 after 182s
+genome: Genome(free_trick_max_rank=8, trump_on_empty_trick=2, lead_trump_after=13, ten_dump_min_pos=1, late_switch=2, lead_from_longest=1, contest_last_seat=1)
+saved -> tuned_genome.json
+
+loaded tuned genome (fitness 0.6119)
+
+================================================================================================
+STAGE 1 - rule-based round robin (1200 deals x4 = 4800 hands per matchup)
+================================================================================================
+   1. Tuned            0.6147
+   2. TensThenTricks   0.5979
+   3. GreedyTricks     0.5446
+   4. AdaptiveGreedy   0.5446
+   5. Balanced         0.5281
+   6. TenAware         0.5268
+   7. Adaptive         0.5243
+   8. PartnerAware     0.5193
+   9. TenHunter        0.4514
+  10. TenDefender      0.4363
+  11. Random           0.3571
+  12. Lowest           0.3550
+  [104s]
+
+================================================================================================
+STAGE 2 - search vs top heuristics (130 deals x4 = 520 hands per matchup)
+================================================================================================
+  PIMC12       vs GreedyTricks     win=0.6885 [0.6558,0.7212] d=+0.95    9.12ms  WINS
+  PIMC12       vs TensThenTricks   win=0.6269 [0.5904,0.6635] d=+0.61    9.37ms  WINS
+  PIMC12       vs Tuned            win=0.6192 [0.5846,0.6538] d=+0.58    9.49ms  WINS
+  PIMC12       vs Random           win=0.8019 [0.7692,0.8327] d=+1.65    9.38ms  WINS
+  ISMCTS250    vs GreedyTricks     win=0.6731 [0.6346,0.7115] d=+0.78   41.36ms  WINS
+  ISMCTS250    vs TensThenTricks   win=0.6615 [0.6212,0.7019] d=+0.72   42.36ms  WINS
+  ISMCTS250    vs Tuned            win=0.6442 [0.6096,0.6788] d=+0.70   41.55ms  WINS
+  ISMCTS250    vs Random           win=0.8635 [0.8308,0.8942] d=+2.01   42.86ms  WINS
+
+Total 2884s -> championship_results.json

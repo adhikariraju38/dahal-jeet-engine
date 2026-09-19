@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Regenerate with: python engine/gen_expert_data.py
+engine/expert_data.pkl

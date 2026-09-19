@@ -1,0 +1,322 @@
+{
+  "deals_per_pair": 300,
+  "n_agents": 26,
+  "scale_note": "Elo here is a monotone transform of the Bradley-Terry fit on THIS agent pool. It is not comparable to Elo from any other pool.",
+  "ratings": [
+    {
+      "agent": "ISMCTS250",
+      "elo": 1663.2,
+      "ci95": [
+        1654.2,
+        1673.2
+      ],
+      "bt_strength": 2.558838
+    },
+    {
+      "agent": "PIMC16",
+      "elo": 1643.2,
+      "ci95": [
+        1634.4,
+        1652.4
+      ],
+      "bt_strength": 2.280077
+    },
+    {
+      "agent": "Tuned",
+      "elo": 1563.4,
+      "ci95": [
+        1555.7,
+        1571.7
+      ],
+      "bt_strength": 1.440291
+    },
+    {
+      "agent": "AlphaDJ60",
+      "elo": 1553.2,
+      "ci95": [
+        1547.8,
+        1558.5
+      ],
+      "bt_strength": 1.358257
+    },
+    {
+      "agent": "mappo_potential",
+      "elo": 1549.2,
+      "ci95": [
+        1542.4,
+        1555.1
+      ],
+      "bt_strength": 1.32767
+    },
+    {
+      "agent": "TensThenTricks",
+      "elo": 1547.4,
+      "ci95": [
+        1540.2,
+        1556.7
+      ],
+      "bt_strength": 1.314089
+    },
+    {
+      "agent": "PartnerAware",
+      "elo": 1539.1,
+      "ci95": [
+        1532.0,
+        1548.2
+      ],
+      "bt_strength": 1.252345
+    },
+    {
+      "agent": "distill",
+      "elo": 1537.0,
+      "ci95": [
+        1530.3,
+        1543.3
+      ],
+      "bt_strength": 1.237292
+    },
+    {
+      "agent": "GreedyTricks",
+      "elo": 1530.2,
+      "ci95": [
+        1523.2,
+        1537.7
+      ],
+      "bt_strength": 1.190119
+    },
+    {
+      "agent": "ppo_trick_shaped",
+      "elo": 1519.5,
+      "ci95": [
+        1512.1,
+        1526.5
+      ],
+      "bt_strength": 1.118777
+    },
+    {
+      "agent": "AdaptiveGreedy",
+      "elo": 1516.0,
+      "ci95": [
+        1507.9,
+        1524.0
+      ],
+      "bt_strength": 1.096647
+    },
+    {
+      "agent": "TenAware",
+      "elo": 1514.6,
+      "ci95": [
+        1506.2,
+        1522.7
+      ],
+      "bt_strength": 1.087779
+    },
+    {
+      "agent": "Adaptive",
+      "elo": 1511.7,
+      "ci95": [
+        1503.3,
+        1519.2
+      ],
+      "bt_strength": 1.069413
+    },
+    {
+      "agent": "ppo_potential",
+      "elo": 1504.5,
+      "ci95": [
+        1497.5,
+        1511.3
+      ],
+      "bt_strength": 1.026515
+    },
+    {
+      "agent": "ppo_terminal",
+      "elo": 1500.9,
+      "ci95": [
+        1492.2,
+        1508.0
+      ],
+      "bt_strength": 1.004926
+    },
+    {
+      "agent": "ppo_ten_shaped",
+      "elo": 1490.4,
+      "ci95": [
+        1483.5,
+        1497.3
+      ],
+      "bt_strength": 0.946358
+    },
+    {
+      "agent": "deepcfr",
+      "elo": 1463.7,
+      "ci95": [
+        1456.4,
+        1471.8
+      ],
+      "bt_strength": 0.811257
+    },
+    {
+      "agent": "double_dueling",
+      "elo": 1458.9,
+      "ci95": [
+        1451.8,
+        1465.5
+      ],
+      "bt_strength": 0.789235
+    },
+    {
+      "agent": "dqn_potential",
+      "elo": 1441.2,
+      "ci95": [
+        1433.5,
+        1447.7
+      ],
+      "bt_strength": 0.712721
+    },
+    {
+      "agent": "dqn_terminal",
+      "elo": 1440.8,
+      "ci95": [
+        1434.0,
+        1447.6
+      ],
+      "bt_strength": 0.711364
+    },
+    {
+      "agent": "dqn_ten_shaped",
+      "elo": 1439.6,
+      "ci95": [
+        1431.7,
+        1446.2
+      ],
+      "bt_strength": 0.706437
+    },
+    {
+      "agent": "double",
+      "elo": 1438.0,
+      "ci95": [
+        1430.2,
+        1444.2
+      ],
+      "bt_strength": 0.699912
+    },
+    {
+      "agent": "a2c",
+      "elo": 1437.4,
+      "ci95": [
+        1428.8,
+        1446.0
+      ],
+      "bt_strength": 0.697622
+    },
+    {
+      "agent": "dqn_trick_shaped",
+      "elo": 1436.7,
+      "ci95": [
+        1428.6,
+        1444.9
+      ],
+      "bt_strength": 0.694767
+    },
+    {
+      "agent": "nfsp",
+      "elo": 1387.0,
+      "ci95": [
+        1378.1,
+        1395.2
+      ],
+      "bt_strength": 0.521855
+    },
+    {
+      "agent": "Random",
+      "elo": 1373.0,
+      "ci95": [
+        1366.4,
+        1381.6
+      ],
+      "bt_strength": 0.481415
+    }
+  ],
+  "intransitivity": {
+    "n_triples": 2600,
+    "n_3cycles": 66,
+    "cycle_rate": 0.0254,
+    "cyclic_energy_ratio": 0.0518,
+    "transitive_energy_ratio": 0.9482,
+    "examples": [
+      [
+        "GreedyTricks",
+        "distill",
+        "TenAware"
+      ],
+      [
+        "GreedyTricks",
+        "mappo_potential",
+        "TenAware"
+      ],
+      [
+        "GreedyTricks",
+        "ppo_potential",
+        "TenAware"
+      ],
+      [
+        "GreedyTricks",
+        "ppo_ten_shaped",
+        "TenAware"
+      ],
+      [
+        "GreedyTricks",
+        "ppo_terminal",
+        "TenAware"
+      ],
+      [
+        "GreedyTricks",
+        "ppo_trick_shaped",
+        "TenAware"
+      ],
+      [
+        "GreedyTricks",
+        "distill",
+        "Adaptive"
+      ],
+      [
+        "GreedyTricks",
+        "mappo_potential",
+        "Adaptive"
+      ],
+      [
+        "GreedyTricks",
+        "ppo_potential",
+        "Adaptive"
+      ],
+      [
+        "GreedyTricks",
+        "ppo_ten_shaped",
+        "Adaptive"
+      ],
+      [
+        "GreedyTricks",
+        "ppo_terminal",
+        "Adaptive"
+      ],
+      [
+        "GreedyTricks",
+        "ppo_trick_shaped",
+        "Adaptive"
+      ]
+    ],
+    "interpretation": "cyclic_energy_ratio is the share of pairwise-margin variance NOT explained by any single strength ordering. Near 0 means the agents form a clean ladder; a large value means genuine rock-paper-scissors structure, which would be a fact about the game rather than a defect of the agents.",
+    "noise_floor": {
+      "reps": 200,
+      "intra_deal_correlation_rho": 0.0974,
+      "null_mean": 0.0154,
+      "null_p95": 0.0175,
+      "null_max": 0.019,
+      "model": "Bradley-Terry strengths (transitive by construction); per-deal counts beta-binomial with rho estimated from the observed per-deal vectors"
+    },
+    "p_value_vs_transitive_null": 0.005,
+    "exceeds_noise": true,
+    "verdict": "cyclic energy 0.0518 vs noise floor 0.0154 (95th pct 0.0175) -- ABOVE the floor: evidence of real intransitivity"
+  }
+}

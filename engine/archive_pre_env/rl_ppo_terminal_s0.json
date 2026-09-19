@@ -1,0 +1,53 @@
+{
+  "algo": "ppo",
+  "reward": "terminal",
+  "episodes": 9000,
+  "seed": 0,
+  "final": {
+    "Random": 0.525,
+    "TensThenTricks": 0.2667
+  },
+  "curve": [
+    {
+      "ep": 1125,
+      "Random": 0.49,
+      "TensThenTricks": 0.2533
+    },
+    {
+      "ep": 2250,
+      "Random": 0.5067,
+      "TensThenTricks": 0.28
+    },
+    {
+      "ep": 3375,
+      "Random": 0.5333,
+      "TensThenTricks": 0.2467
+    },
+    {
+      "ep": 4500,
+      "Random": 0.505,
+      "TensThenTricks": 0.2533
+    },
+    {
+      "ep": 5625,
+      "Random": 0.4967,
+      "TensThenTricks": 0.25
+    },
+    {
+      "ep": 6750,
+      "Random": 0.545,
+      "TensThenTricks": 0.2333
+    },
+    {
+      "ep": 7875,
+      "Random": 0.515,
+      "TensThenTricks": 0.3167
+    },
+    {
+      "ep": 9000,
+      "Random": 0.495,
+      "TensThenTricks": 0.2467
+    }
+  ],
+  "seconds": 148.31222733401228
+}

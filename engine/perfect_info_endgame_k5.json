@@ -1,0 +1,57 @@
+{
+  "env": {
+    "started": "2026-08-31T17:18:33",
+    "pid": 16859,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "unset",
+    "VECLIB_MAXIMUM_THREADS": "unset",
+    "argv": "perfect_info.py --endgame 5 --deals 40 --agents Random,TensThenTricks",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "tricks_remaining": 5,
+  "deals": 40,
+  "opponent": "TensThenTricks",
+  "results": [
+    {
+      "agent": "Random",
+      "opponent": "TensThenTricks",
+      "tricks_remaining": 5,
+      "positions": 160,
+      "aborted": 0,
+      "theoretical_win_rate": 0.3375,
+      "actual_win_rate": 0.2625,
+      "gap": 0.075,
+      "conversion": 0.6667,
+      "conversion_n": 54,
+      "steal": 0.0566,
+      "steal_n": 106
+    },
+    {
+      "agent": "TensThenTricks",
+      "opponent": "TensThenTricks",
+      "tricks_remaining": 5,
+      "positions": 160,
+      "aborted": 0,
+      "theoretical_win_rate": 0.5,
+      "actual_win_rate": 0.5,
+      "gap": 0.0,
+      "conversion": 0.825,
+      "conversion_n": 80,
+      "steal": 0.175,
+      "steal_n": 80
+    }
+  ],
+  "seconds": 1.2988407500088215,
+  "scope_note": "ENDGAME result. Positions are the ones each agent's own play reaches, then solved exactly. This is NOT a whole-game optimality ceiling and must not be described as one."
+}

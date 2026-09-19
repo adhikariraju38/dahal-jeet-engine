@@ -1,0 +1,73 @@
+{
+  "env": {
+    "started": "2026-08-31T14:47:30",
+    "pid": 71243,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "train_rl.py --algo ppo --reward terminal --episodes 120000 --seed 0",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "algo": "ppo",
+  "reward": "terminal",
+  "episodes": 120000,
+  "seed": 0,
+  "final": {
+    "Random": 0.6933,
+    "TensThenTricks": 0.5017
+  },
+  "curve": [
+    {
+      "ep": 15000,
+      "Random": 0.5317,
+      "TensThenTricks": 0.2967
+    },
+    {
+      "ep": 30000,
+      "Random": 0.6517,
+      "TensThenTricks": 0.4133
+    },
+    {
+      "ep": 45000,
+      "Random": 0.655,
+      "TensThenTricks": 0.4567
+    },
+    {
+      "ep": 60000,
+      "Random": 0.675,
+      "TensThenTricks": 0.47
+    },
+    {
+      "ep": 75000,
+      "Random": 0.6683,
+      "TensThenTricks": 0.4433
+    },
+    {
+      "ep": 90000,
+      "Random": 0.6633,
+      "TensThenTricks": 0.45
+    },
+    {
+      "ep": 105000,
+      "Random": 0.6617,
+      "TensThenTricks": 0.4667
+    },
+    {
+      "ep": 120000,
+      "Random": 0.7,
+      "TensThenTricks": 0.4733
+    }
+  ],
+  "seconds": 724.2812580000027
+}

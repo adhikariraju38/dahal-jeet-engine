@@ -1,0 +1,4 @@
+[dqn | reward=potential | 150000 episodes | seed 0]
+    ep  18750 eps=0.050 {'Random': 0.61, 'TensThenTricks': 0.3133}
+    ep  37500 eps=0.050 {'Random': 0.5883, 'TensThenTricks': 0.3133}
+    ep  56250 eps=0.050 {'Random': 0.5633, 'TensThenTricks': 0.3233}

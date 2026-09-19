@@ -1,0 +1,5 @@
+# Versions the recorded results were produced with (see compute/compute.json).
+# Newer releases will very likely work; these are what was actually run.
+numpy==2.5.2
+torch==2.13.0
+matplotlib==3.11.1

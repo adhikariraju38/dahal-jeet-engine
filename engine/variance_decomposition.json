@@ -1,0 +1,62 @@
+{
+  "env": {
+    "started": "2026-09-01T08:59:42",
+    "pid": 51396,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "unset",
+    "VECLIB_MAXIMUM_THREADS": "unset",
+    "argv": "variance_decomposition.py --deals 120 --pairs TensThenTricks:Random,TensThenTricks:TenAware",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "deals": 120,
+  "results": [
+    {
+      "n_deals": 120,
+      "n_rotations": 4,
+      "grand_mean": 0.7417,
+      "ss_total": 91.967,
+      "share_deal": 0.3911,
+      "share_rotation": 0.0004,
+      "share_residual": 0.6086,
+      "rotation_means": [
+        0.75,
+        0.7333,
+        0.75,
+        0.7333
+      ],
+      "reading": "share_deal is the fraction of outcome variation attributable to which cards were dealt -- luck. share_rotation is structural seat advantage, which duplicate dealing removes from agent comparisons. share_residual is where the matchup actually played out.",
+      "agent_a": "TensThenTricks",
+      "agent_b": "Random"
+    },
+    {
+      "n_deals": 120,
+      "n_rotations": 4,
+      "grand_mean": 0.5208,
+      "ss_total": 119.792,
+      "share_deal": 0.2904,
+      "share_rotation": 0.0017,
+      "share_residual": 0.7078,
+      "rotation_means": [
+        0.5417,
+        0.5,
+        0.5417,
+        0.5
+      ],
+      "reading": "share_deal is the fraction of outcome variation attributable to which cards were dealt -- luck. share_rotation is structural seat advantage, which duplicate dealing removes from agent comparisons. share_residual is where the matchup actually played out.",
+      "agent_a": "TensThenTricks",
+      "agent_b": "TenAware"
+    }
+  ],
+  "seconds": 0.527990167029202
+}

@@ -1,0 +1,65 @@
+{
+  "env": {
+    "started": "2026-09-01T15:44:16",
+    "pid": 93002,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "deepcfr.py --iters 40 --traversals 120 --depth 10 --seed 0",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "method": "deepcfr",
+  "iters": 40,
+  "traversals": 120,
+  "seed": 0,
+  "max_depth": 10,
+  "sampling_scheme": "Depth-limited external sampling. All traverser actions are expanded for the first `max_depth` plies; beyond that the hand is completed by a fixed heuristic rollout (TensThenTricks) and the true terminal payoff is returned. This is an APPROXIMATION of external-sampling Deep CFR, not the exact algorithm: values past the cutoff are the rollout policy's, not the current strategy's. Unbounded expansion is ~4^26 per traversal and is not computable.",
+  "final": {
+    "Random": 0.6433,
+    "TensThenTricks": 0.3867
+  },
+  "curve": [
+    {
+      "iter": 6,
+      "Random": 0.6433,
+      "TensThenTricks": 0.3567
+    },
+    {
+      "iter": 12,
+      "Random": 0.63,
+      "TensThenTricks": 0.37
+    },
+    {
+      "iter": 18,
+      "Random": 0.63,
+      "TensThenTricks": 0.3567
+    },
+    {
+      "iter": 24,
+      "Random": 0.5983,
+      "TensThenTricks": 0.36
+    },
+    {
+      "iter": 30,
+      "Random": 0.6267,
+      "TensThenTricks": 0.3733
+    },
+    {
+      "iter": 36,
+      "Random": 0.64,
+      "TensThenTricks": 0.3467
+    }
+  ],
+  "seconds": 19455.30651216698
+}

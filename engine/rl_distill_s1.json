@@ -1,0 +1,102 @@
+{
+  "env": {
+    "started": "2026-09-01T15:51:58",
+    "pid": 2341,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "train_more.py --method distill --epochs 30 --seed 1",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "method": "distill",
+  "final": {
+    "Random": 0.74,
+    "TensThenTricks": 0.5375
+  },
+  "curve": [
+    {
+      "epoch": 1,
+      "loss": 1.0255149748634738,
+      "val_acc": 0.5106833577156067,
+      "is_best": true,
+      "Random": 0.702,
+      "TensThenTricks": 0.526
+    },
+    {
+      "epoch": 2,
+      "loss": 0.9995182246454866,
+      "val_acc": 0.5192492604255676,
+      "is_best": false,
+      "Random": 0.757,
+      "TensThenTricks": 0.518
+    },
+    {
+      "epoch": 3,
+      "loss": 0.9711910057439628,
+      "val_acc": 0.5175168514251709,
+      "is_best": true,
+      "Random": 0.738,
+      "TensThenTricks": 0.55
+    },
+    {
+      "epoch": 4,
+      "loss": 0.9259921722347549,
+      "val_acc": 0.5193455219268799,
+      "is_best": false,
+      "Random": 0.733,
+      "TensThenTricks": 0.47
+    },
+    {
+      "epoch": 5,
+      "loss": 0.8615564776902949,
+      "val_acc": 0.5154956579208374,
+      "is_best": false,
+      "Random": 0.716,
+      "TensThenTricks": 0.494
+    },
+    {
+      "epoch": 6,
+      "loss": 0.7768467961855807,
+      "val_acc": 0.5138594508171082,
+      "is_best": false,
+      "Random": 0.728,
+      "TensThenTricks": 0.452
+    },
+    {
+      "epoch": 7,
+      "loss": 0.6803117846546639,
+      "val_acc": 0.5050048232078552,
+      "is_best": false,
+      "Random": 0.703,
+      "TensThenTricks": 0.444
+    },
+    {
+      "epoch": 8,
+      "loss": 0.575471277780345,
+      "val_acc": 0.5066410303115845,
+      "is_best": false,
+      "Random": 0.686,
+      "TensThenTricks": 0.434
+    },
+    {
+      "epoch": 9,
+      "loss": 0.4757903125751027,
+      "val_acc": 0.5022136569023132,
+      "is_best": false,
+      "Random": 0.707,
+      "TensThenTricks": 0.468
+    }
+  ],
+  "seconds": 64.78125345800072
+}

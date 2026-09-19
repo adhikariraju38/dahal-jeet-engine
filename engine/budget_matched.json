@@ -1,0 +1,503 @@
+{
+  "env": {
+    "started": "2026-09-01T13:09:05",
+    "pid": 97368,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "unset",
+    "VECLIB_MAXIMUM_THREADS": "unset",
+    "argv": "budget_matched.py --budgets 300,900 --update-budgets 5000,15000 --seeds 2 --deals 400",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "calibration": {
+    "dqn": {
+      "seconds_per_episode": 0.02060492291668197,
+      "updates_per_episode": 5.668333333333333
+    },
+    "ppo": {
+      "seconds_per_episode": 0.005836247361633772,
+      "updates_per_episode": 0.04666666666666667
+    }
+  },
+  "updates_per_episode_ratio_dqn_over_ppo": 121.5,
+  "deals": 400,
+  "runs": [
+    {
+      "algo": "dqn",
+      "seed": 0,
+      "episodes": 14559,
+      "seconds": 355.1,
+      "gradient_updates": 94134,
+      "samples_seen": 12049152,
+      "eval": {
+        "Random": {
+          "win": 0.5763,
+          "ci": [
+            0.5569,
+            0.5969
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3387,
+          "ci": [
+            0.3125,
+            0.3688
+          ]
+        }
+      },
+      "matched_on": "wall_clock",
+      "target": 300.0,
+      "achieved": 355.1,
+      "episode_floor_bound": false,
+      "match_error_pct": 18.4
+    },
+    {
+      "algo": "dqn",
+      "seed": 1,
+      "episodes": 14559,
+      "seconds": 369.9,
+      "gradient_updates": 94134,
+      "samples_seen": 12049152,
+      "eval": {
+        "Random": {
+          "win": 0.5994,
+          "ci": [
+            0.5775,
+            0.6212
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3337,
+          "ci": [
+            0.305,
+            0.3638
+          ]
+        }
+      },
+      "matched_on": "wall_clock",
+      "target": 300.0,
+      "achieved": 369.9,
+      "episode_floor_bound": false,
+      "match_error_pct": 23.3
+    },
+    {
+      "algo": "ppo",
+      "seed": 0,
+      "episodes": 51402,
+      "seconds": 263.1,
+      "gradient_updates": 2600,
+      "samples_seen": 5340400,
+      "eval": {
+        "Random": {
+          "win": 0.6931,
+          "ci": [
+            0.6725,
+            0.7137
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.48,
+          "ci": [
+            0.4512,
+            0.5075
+          ]
+        }
+      },
+      "matched_on": "wall_clock",
+      "target": 300.0,
+      "achieved": 263.1,
+      "episode_floor_bound": false,
+      "match_error_pct": -12.3
+    },
+    {
+      "algo": "ppo",
+      "seed": 1,
+      "episodes": 51402,
+      "seconds": 260.1,
+      "gradient_updates": 2600,
+      "samples_seen": 5340400,
+      "eval": {
+        "Random": {
+          "win": 0.6737,
+          "ci": [
+            0.6525,
+            0.695
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4713,
+          "ci": [
+            0.4425,
+            0.4988
+          ]
+        }
+      },
+      "matched_on": "wall_clock",
+      "target": 300.0,
+      "achieved": 260.1,
+      "episode_floor_bound": false,
+      "match_error_pct": -13.3
+    },
+    {
+      "algo": "dqn",
+      "seed": 0,
+      "episodes": 43678,
+      "seconds": 1071.4,
+      "gradient_updates": 283408,
+      "samples_seen": 36276224,
+      "eval": {
+        "Random": {
+          "win": 0.6144,
+          "ci": [
+            0.5938,
+            0.6344
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3387,
+          "ci": [
+            0.3125,
+            0.365
+          ]
+        }
+      },
+      "matched_on": "wall_clock",
+      "target": 900.0,
+      "achieved": 1071.4,
+      "episode_floor_bound": false,
+      "match_error_pct": 19.0
+    },
+    {
+      "algo": "dqn",
+      "seed": 1,
+      "episodes": 43678,
+      "seconds": 1026.9,
+      "gradient_updates": 283408,
+      "samples_seen": 36276224,
+      "eval": {
+        "Random": {
+          "win": 0.6212,
+          "ci": [
+            0.6012,
+            0.6431
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3837,
+          "ci": [
+            0.3563,
+            0.4113
+          ]
+        }
+      },
+      "matched_on": "wall_clock",
+      "target": 900.0,
+      "achieved": 1026.9,
+      "episode_floor_bound": false,
+      "match_error_pct": 14.1
+    },
+    {
+      "algo": "ppo",
+      "seed": 0,
+      "episodes": 154208,
+      "seconds": 771.8,
+      "gradient_updates": 7808,
+      "samples_seen": 16037632,
+      "eval": {
+        "Random": {
+          "win": 0.6987,
+          "ci": [
+            0.6775,
+            0.7188
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4938,
+          "ci": [
+            0.4662,
+            0.52
+          ]
+        }
+      },
+      "matched_on": "wall_clock",
+      "target": 900.0,
+      "achieved": 771.8,
+      "episode_floor_bound": false,
+      "match_error_pct": -14.2
+    },
+    {
+      "algo": "ppo",
+      "seed": 1,
+      "episodes": 154208,
+      "seconds": 772.7,
+      "gradient_updates": 7808,
+      "samples_seen": 16037632,
+      "eval": {
+        "Random": {
+          "win": 0.7244,
+          "ci": [
+            0.705,
+            0.7431
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.51,
+          "ci": [
+            0.4813,
+            0.5375
+          ]
+        }
+      },
+      "matched_on": "wall_clock",
+      "target": 900.0,
+      "achieved": 772.7,
+      "episode_floor_bound": false,
+      "match_error_pct": -14.1
+    },
+    {
+      "algo": "dqn",
+      "seed": 0,
+      "episodes": 882,
+      "seconds": 16.6,
+      "gradient_updates": 5234,
+      "samples_seen": 669952,
+      "eval": {
+        "Random": {
+          "win": 0.5869,
+          "ci": [
+            0.5669,
+            0.6069
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3438,
+          "ci": [
+            0.3162,
+            0.3725
+          ]
+        }
+      },
+      "matched_on": "gradient_steps",
+      "target": 5000.0,
+      "achieved": 5234,
+      "episode_floor_bound": false,
+      "match_error_pct": 4.7
+    },
+    {
+      "algo": "dqn",
+      "seed": 1,
+      "episodes": 882,
+      "seconds": 15.7,
+      "gradient_updates": 5234,
+      "samples_seen": 669952,
+      "eval": {
+        "Random": {
+          "win": 0.5725,
+          "ci": [
+            0.5513,
+            0.5944
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3175,
+          "ci": [
+            0.2888,
+            0.3463
+          ]
+        }
+      },
+      "matched_on": "gradient_steps",
+      "target": 5000.0,
+      "achieved": 5234,
+      "episode_floor_bound": false,
+      "match_error_pct": 4.7
+    },
+    {
+      "algo": "ppo",
+      "seed": 0,
+      "episodes": 107142,
+      "seconds": 536.6,
+      "gradient_updates": 5424,
+      "samples_seen": 11140896,
+      "eval": {
+        "Random": {
+          "win": 0.7025,
+          "ci": [
+            0.6794,
+            0.7225
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.5062,
+          "ci": [
+            0.4763,
+            0.5363
+          ]
+        }
+      },
+      "matched_on": "gradient_steps",
+      "target": 5000.0,
+      "achieved": 5424,
+      "episode_floor_bound": false,
+      "match_error_pct": 8.5
+    },
+    {
+      "algo": "ppo",
+      "seed": 1,
+      "episodes": 107142,
+      "seconds": 539.6,
+      "gradient_updates": 5424,
+      "samples_seen": 11140896,
+      "eval": {
+        "Random": {
+          "win": 0.7063,
+          "ci": [
+            0.6856,
+            0.7269
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.505,
+          "ci": [
+            0.4775,
+            0.5337
+          ]
+        }
+      },
+      "matched_on": "gradient_steps",
+      "target": 5000.0,
+      "achieved": 5424,
+      "episode_floor_bound": false,
+      "match_error_pct": 8.5
+    },
+    {
+      "algo": "dqn",
+      "seed": 0,
+      "episodes": 2646,
+      "seconds": 56.5,
+      "gradient_updates": 16700,
+      "samples_seen": 2137600,
+      "eval": {
+        "Random": {
+          "win": 0.5988,
+          "ci": [
+            0.5781,
+            0.6212
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3362,
+          "ci": [
+            0.3113,
+            0.3638
+          ]
+        }
+      },
+      "matched_on": "gradient_steps",
+      "target": 15000.0,
+      "achieved": 16700,
+      "episode_floor_bound": false,
+      "match_error_pct": 11.3
+    },
+    {
+      "algo": "dqn",
+      "seed": 1,
+      "episodes": 2646,
+      "seconds": 53.6,
+      "gradient_updates": 16700,
+      "samples_seen": 2137600,
+      "eval": {
+        "Random": {
+          "win": 0.6062,
+          "ci": [
+            0.585,
+            0.6269
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3613,
+          "ci": [
+            0.335,
+            0.3887
+          ]
+        }
+      },
+      "matched_on": "gradient_steps",
+      "target": 15000.0,
+      "achieved": 16700,
+      "episode_floor_bound": false,
+      "match_error_pct": 11.3
+    },
+    {
+      "algo": "ppo",
+      "seed": 0,
+      "episodes": 321428,
+      "seconds": 1636.2,
+      "gradient_updates": 16272,
+      "samples_seen": 33422688,
+      "eval": {
+        "Random": {
+          "win": 0.7194,
+          "ci": [
+            0.6981,
+            0.74
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.5138,
+          "ci": [
+            0.4863,
+            0.5425
+          ]
+        }
+      },
+      "matched_on": "gradient_steps",
+      "target": 15000.0,
+      "achieved": 16272,
+      "episode_floor_bound": false,
+      "match_error_pct": 8.5
+    },
+    {
+      "algo": "ppo",
+      "seed": 1,
+      "episodes": 321428,
+      "seconds": 1731.0,
+      "gradient_updates": 16272,
+      "samples_seen": 33422688,
+      "eval": {
+        "Random": {
+          "win": 0.7031,
+          "ci": [
+            0.6837,
+            0.7225
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4913,
+          "ci": [
+            0.4637,
+            0.5188
+          ]
+        }
+      },
+      "matched_on": "gradient_steps",
+      "target": 15000.0,
+      "achieved": 16272,
+      "episode_floor_bound": false,
+      "match_error_pct": 8.5
+    }
+  ],
+  "seconds": 9628.534444041026,
+  "validity_note": "Runs with episode_floor_bound=true hit the 200-episode minimum and did NOT reach the target budget; they are not valid matched comparisons and must be excluded or re-run at a larger budget.",
+  "reading": "Matched on EPISODES (the rest of this project) DQN and PPO receive wildly different optimisation budgets. Here they are matched on wall-clock and again on gradient steps, and both are reported because they can disagree and each answers a different reviewer's question."
+}

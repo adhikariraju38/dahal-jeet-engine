@@ -1,0 +1,412 @@
+run started Mon Aug 31 11:54:34 +0545 2026
+env: OMP_NUM_THREADS=1 MAX_WORKERS=5
+
+########## 1/7  heuristics: metaheuristic tuning + championship  2026-08-31 11:54:34 ##########
+panel=['GreedyTricks', 'TenAware', 'PartnerAware', 'AdaptiveGreedy', 'Random']  deals/match=260
+  restart 0: fitness 0.5987  Genome(free_trick_max_rank=0, trump_on_empty_trick=2, lead_trump_after=11, ten_dump_min_pos=3, late_switch=3, lead_from_longest=0, contest_last_seat=1)
+  restart 1: fitness 0.6119  Genome(free_trick_max_rank=8, trump_on_empty_trick=2, lead_trump_after=13, ten_dump_min_pos=1, late_switch=2, lead_from_longest=1, contest_last_seat=1)
+  restart 2: fitness 0.6096  Genome(free_trick_max_rank=9, trump_on_empty_trick=2, lead_trump_after=12, ten_dump_min_pos=0, late_switch=2, lead_from_longest=1, contest_last_seat=1)
+  restart 3: fitness 0.5942  Genome(free_trick_max_rank=11, trump_on_empty_trick=2, lead_trump_after=9, ten_dump_min_pos=0, late_switch=13, lead_from_longest=1, contest_last_seat=1)
+
+BEST fitness 0.6119 after 191s
+genome: Genome(free_trick_max_rank=8, trump_on_empty_trick=2, lead_trump_after=13, ten_dump_min_pos=1, late_switch=2, lead_from_longest=1, contest_last_seat=1)
+saved -> tuned_genome.json
+loaded tuned genome (fitness 0.6119)
+
+================================================================================================
+STAGE 1 - rule-based round robin (1200 deals x4 = 4800 hands per matchup)
+================================================================================================
+   1. Tuned            0.6147
+   2. TensThenTricks   0.5979
+   3. GreedyTricks     0.5446
+   4. AdaptiveGreedy   0.5446
+   5. Balanced         0.5281
+   6. TenAware         0.5268
+   7. Adaptive         0.5243
+   8. PartnerAware     0.5193
+   9. TenHunter        0.4514
+  10. TenDefender      0.4363
+  11. Random           0.3571
+  12. Lowest           0.3550
+  [107s]
+
+================================================================================================
+STAGE 2 - search vs top heuristics (130 deals x4 = 520 hands per matchup)
+================================================================================================
+  PIMC12       vs GreedyTricks     win=0.6885 [0.6558,0.7212] d=+0.95    9.54ms  WINS
+  PIMC12       vs TensThenTricks   win=0.6269 [0.5904,0.6635] d=+0.61    9.79ms  WINS
+  PIMC12       vs Tuned            win=0.6192 [0.5846,0.6538] d=+0.58    9.87ms  WINS
+  PIMC12       vs Random           win=0.8019 [0.7692,0.8327] d=+1.65    9.78ms  WINS
+  ISMCTS250    vs GreedyTricks     win=0.6731 [0.6346,0.7115] d=+0.78   42.84ms  WINS
+  ISMCTS250    vs TensThenTricks   win=0.6615 [0.6212,0.7019] d=+0.72   42.95ms  WINS
+  ISMCTS250    vs Tuned            win=0.6442 [0.6096,0.6788] d=+0.70   42.64ms  WINS
+  ISMCTS250    vs Random           win=0.8635 [0.8308,0.8942] d=+2.01   43.28ms  WINS
+
+Total 2957s -> championship_results.json
+
+########## 2/7  search: PIMC + ISMCTS latency/strength curve  2026-08-31 12:47:03 ##########
+====================================================================================================
+PART 1 - REWARD ABLATION, evaluated at 1000 deals x4 = 4000 hands, bootstrap CI over deals
+====================================================================================================
+Traceback (most recent call last):
+  File "/Users/rajuyadav/Desktop/Card/05-engine/eval_final.py", line 25, in <module>
+    a = load(algo, rew)
+  File "/Users/rajuyadav/Desktop/Card/05-engine/eval_final.py", line 15, in load
+    net.load_state_dict(torch.load(f"rl_{algo}_{reward}_s0.pt"))
+                        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajuyadav/Desktop/Card/05-engine/.venv/lib/python3.14/site-packages/torch/serialization.py", line 1561, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/rajuyadav/Desktop/Card/05-engine/.venv/lib/python3.14/site-packages/torch/serialization.py", line 795, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/Users/rajuyadav/Desktop/Card/05-engine/.venv/lib/python3.14/site-packages/torch/serialization.py", line 776, in __init__
+    super().__init__(open(name, mode))  # noqa: SIM115
+                     ~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'rl_dqn_terminal_s0.pt'
+
+########## 3/7  reinforcement learning, 3 seeds x 4 rewards x 2 algos  2026-08-31 12:47:04 ##########
+[12:47:04] START .venv/bin/python train_rl.py --algo dqn --reward terminal --episodes 120000 --seed 0
+[12:47:04] START .venv/bin/python train_rl.py --algo dqn --reward ten_shaped --episodes 120000 --seed 0
+[12:47:04] START .venv/bin/python train_rl.py --algo dqn --reward potential --episodes 120000 --seed 0
+[12:47:04] START .venv/bin/python train_rl.py --algo dqn --reward trick_shaped --episodes 120000 --seed 0
+[dqn | reward=ten_shaped | 120000 episodes | seed 0]
+[dqn | reward=terminal | 120000 episodes | seed 0]
+[dqn | reward=potential | 120000 episodes | seed 0]
+[dqn | reward=trick_shaped | 120000 episodes | seed 0]
+    ep  15000 eps=0.050 {'Random': 0.5967, 'TensThenTricks': 0.3}
+    ep  15000 eps=0.050 {'Random': 0.545, 'TensThenTricks': 0.2767}
+    ep  15000 eps=0.050 {'Random': 0.5917, 'TensThenTricks': 0.3433}
+    ep  15000 eps=0.050 {'Random': 0.525, 'TensThenTricks': 0.3}
+    ep  30000 eps=0.050 {'Random': 0.57, 'TensThenTricks': 0.34}
+    ep  30000 eps=0.050 {'Random': 0.5667, 'TensThenTricks': 0.3233}
+    ep  30000 eps=0.050 {'Random': 0.5633, 'TensThenTricks': 0.2767}
+    ep  30000 eps=0.050 {'Random': 0.5833, 'TensThenTricks': 0.3367}
+    ep  45000 eps=0.050 {'Random': 0.5883, 'TensThenTricks': 0.32}
+    ep  45000 eps=0.050 {'Random': 0.5667, 'TensThenTricks': 0.3067}
+    ep  45000 eps=0.050 {'Random': 0.525, 'TensThenTricks': 0.2867}
+    ep  45000 eps=0.050 {'Random': 0.565, 'TensThenTricks': 0.3567}
+    ep  60000 eps=0.050 {'Random': 0.5633, 'TensThenTricks': 0.3333}
+    ep  60000 eps=0.050 {'Random': 0.5867, 'TensThenTricks': 0.33}
+    ep  60000 eps=0.050 {'Random': 0.5733, 'TensThenTricks': 0.2967}
+    ep  60000 eps=0.050 {'Random': 0.5817, 'TensThenTricks': 0.3467}
+    ep  75000 eps=0.050 {'Random': 0.5833, 'TensThenTricks': 0.2967}
+    ep  75000 eps=0.050 {'Random': 0.6067, 'TensThenTricks': 0.3533}
+    ep  75000 eps=0.050 {'Random': 0.57, 'TensThenTricks': 0.32}
+    ep  75000 eps=0.050 {'Random': 0.62, 'TensThenTricks': 0.3767}
+    ep  90000 eps=0.050 {'Random': 0.5983, 'TensThenTricks': 0.3667}
+    ep  90000 eps=0.050 {'Random': 0.5917, 'TensThenTricks': 0.2933}
+    ep  90000 eps=0.050 {'Random': 0.5483, 'TensThenTricks': 0.3433}
+    ep  90000 eps=0.050 {'Random': 0.6267, 'TensThenTricks': 0.3767}
+    ep 105000 eps=0.050 {'Random': 0.615, 'TensThenTricks': 0.3067}
+    ep 105000 eps=0.050 {'Random': 0.5983, 'TensThenTricks': 0.3267}
+    ep 105000 eps=0.050 {'Random': 0.5983, 'TensThenTricks': 0.32}
+    ep 105000 eps=0.050 {'Random': 0.615, 'TensThenTricks': 0.3567}
+    ep 120000 eps=0.050 {'Random': 0.5967, 'TensThenTricks': 0.34}
+    ep 120000 eps=0.050 {'Random': 0.5833, 'TensThenTricks': 0.3433}
+    ep 120000 eps=0.050 {'Random': 0.615, 'TensThenTricks': 0.33}
+FINAL dqn/trick_shaped: {'Random': 0.5983, 'TensThenTricks': 0.33}  (6482s)
+saved rl_dqn_trick_shaped_s0.pt / .json
+FINAL dqn/terminal: {'Random': 0.5988, 'TensThenTricks': 0.3417}  (6485s)
+saved rl_dqn_terminal_s0.pt / .json
+    ep 120000 eps=0.050 {'Random': 0.6, 'TensThenTricks': 0.3467}
+FINAL dqn/potential: {'Random': 0.6183, 'TensThenTricks': 0.3375}  (6489s)
+saved rl_dqn_potential_s0.pt / .json
+FINAL dqn/ten_shaped: {'Random': 0.5996, 'TensThenTricks': 0.3558}  (6500s)
+saved rl_dqn_ten_shaped_s0.pt / .json
+[14:35:24] START .venv/bin/python train_rl.py --algo ppo --reward terminal --episodes 120000 --seed 0
+[14:35:24] START .venv/bin/python train_rl.py --algo ppo --reward ten_shaped --episodes 120000 --seed 0
+[14:35:24] START .venv/bin/python train_rl.py --algo ppo --reward potential --episodes 120000 --seed 0
+[14:35:24] START .venv/bin/python train_rl.py --algo ppo --reward trick_shaped --episodes 120000 --seed 0
+[ppo | reward=potential | 120000 episodes | seed 0]
+[ppo | reward=ten_shaped | 120000 episodes | seed 0]
+[ppo | reward=terminal | 120000 episodes | seed 0]
+[ppo | reward=trick_shaped | 120000 episodes | seed 0]
+    ep  15000 {'Random': 0.5317, 'TensThenTricks': 0.2967}
+    ep  15000 {'Random': 0.495, 'TensThenTricks': 0.2533}
+    ep  15000 {'Random': 0.5817, 'TensThenTricks': 0.2933}
+    ep  15000 {'Random': 0.5783, 'TensThenTricks': 0.3033}
+    ep  30000 {'Random': 0.5983, 'TensThenTricks': 0.4167}
+    ep  30000 {'Random': 0.6517, 'TensThenTricks': 0.4133}
+    ep  30000 {'Random': 0.5917, 'TensThenTricks': 0.4033}
+    ep  30000 {'Random': 0.5667, 'TensThenTricks': 0.3767}
+    ep  45000 {'Random': 0.655, 'TensThenTricks': 0.4567}
+    ep  45000 {'Random': 0.675, 'TensThenTricks': 0.4433}
+    ep  45000 {'Random': 0.6817, 'TensThenTricks': 0.4733}
+    ep  45000 {'Random': 0.66, 'TensThenTricks': 0.46}
+    ep  60000 {'Random': 0.675, 'TensThenTricks': 0.47}
+    ep  60000 {'Random': 0.6633, 'TensThenTricks': 0.49}
+    ep  60000 {'Random': 0.6733, 'TensThenTricks': 0.4533}
+    ep  60000 {'Random': 0.685, 'TensThenTricks': 0.5033}
+    ep  75000 {'Random': 0.6483, 'TensThenTricks': 0.4433}
+    ep  75000 {'Random': 0.675, 'TensThenTricks': 0.5033}
+    ep  75000 {'Random': 0.6683, 'TensThenTricks': 0.4433}
+    ep  75000 {'Random': 0.6883, 'TensThenTricks': 0.51}
+    ep  90000 {'Random': 0.6633, 'TensThenTricks': 0.45}
+    ep  90000 {'Random': 0.68, 'TensThenTricks': 0.48}
+    ep  90000 {'Random': 0.67, 'TensThenTricks': 0.4967}
+    ep  90000 {'Random': 0.7083, 'TensThenTricks': 0.5}
+    ep 105000 {'Random': 0.6617, 'TensThenTricks': 0.4667}
+    ep 105000 {'Random': 0.685, 'TensThenTricks': 0.49}
+    ep 105000 {'Random': 0.6867, 'TensThenTricks': 0.5167}
+    ep 105000 {'Random': 0.7017, 'TensThenTricks': 0.49}
+    ep 120000 {'Random': 0.7, 'TensThenTricks': 0.4733}
+    ep 120000 {'Random': 0.6717, 'TensThenTricks': 0.4833}
+    ep 120000 {'Random': 0.69, 'TensThenTricks': 0.4667}
+    ep 120000 {'Random': 0.7083, 'TensThenTricks': 0.4933}
+FINAL ppo/terminal: {'Random': 0.6933, 'TensThenTricks': 0.5017}  (724s)
+saved rl_ppo_terminal_s0.pt / .json
+FINAL ppo/ten_shaped: {'Random': 0.6825, 'TensThenTricks': 0.5083}  (727s)
+saved rl_ppo_ten_shaped_s0.pt / .json
+FINAL ppo/potential: {'Random': 0.6971, 'TensThenTricks': 0.5}  (728s)
+saved rl_ppo_potential_s0.pt / .json
+FINAL ppo/trick_shaped: {'Random': 0.7063, 'TensThenTricks': 0.5067}  (730s)
+saved rl_ppo_trick_shaped_s0.pt / .json
+[14:47:35] START .venv/bin/python train_rl.py --algo dqn --reward terminal --episodes 120000 --seed 1
+[14:47:35] START .venv/bin/python train_rl.py --algo dqn --reward ten_shaped --episodes 120000 --seed 1
+[14:47:35] START .venv/bin/python train_rl.py --algo dqn --reward potential --episodes 120000 --seed 1
+[14:47:35] START .venv/bin/python train_rl.py --algo dqn --reward trick_shaped --episodes 120000 --seed 1
+[dqn | reward=trick_shaped | 120000 episodes | seed 1]
+[dqn | reward=potential | 120000 episodes | seed 1]
+[dqn | reward=terminal | 120000 episodes | seed 1]
+[dqn | reward=ten_shaped | 120000 episodes | seed 1]
+    ep  15000 eps=0.050 {'Random': 0.54, 'TensThenTricks': 0.2933}
+    ep  15000 eps=0.050 {'Random': 0.585, 'TensThenTricks': 0.3167}
+    ep  15000 eps=0.050 {'Random': 0.565, 'TensThenTricks': 0.3033}
+    ep  15000 eps=0.050 {'Random': 0.5883, 'TensThenTricks': 0.34}
+    ep  30000 eps=0.050 {'Random': 0.605, 'TensThenTricks': 0.33}
+    ep  30000 eps=0.050 {'Random': 0.565, 'TensThenTricks': 0.3167}
+    ep  30000 eps=0.050 {'Random': 0.55, 'TensThenTricks': 0.3067}
+    ep  30000 eps=0.050 {'Random': 0.5733, 'TensThenTricks': 0.3367}
+    ep  45000 eps=0.050 {'Random': 0.575, 'TensThenTricks': 0.3533}
+    ep  45000 eps=0.050 {'Random': 0.5667, 'TensThenTricks': 0.31}
+    ep  45000 eps=0.050 {'Random': 0.565, 'TensThenTricks': 0.3}
+    ep  45000 eps=0.050 {'Random': 0.5717, 'TensThenTricks': 0.3933}
+    ep  60000 eps=0.050 {'Random': 0.585, 'TensThenTricks': 0.3533}
+    ep  60000 eps=0.050 {'Random': 0.575, 'TensThenTricks': 0.34}
+    ep  60000 eps=0.050 {'Random': 0.575, 'TensThenTricks': 0.32}
+    ep  60000 eps=0.050 {'Random': 0.5933, 'TensThenTricks': 0.3533}
+    ep  75000 eps=0.050 {'Random': 0.57, 'TensThenTricks': 0.3133}
+    ep  75000 eps=0.050 {'Random': 0.5867, 'TensThenTricks': 0.3067}
+    ep  75000 eps=0.050 {'Random': 0.5833, 'TensThenTricks': 0.3033}
+    ep  75000 eps=0.050 {'Random': 0.5933, 'TensThenTricks': 0.3567}
+    ep  90000 eps=0.050 {'Random': 0.6017, 'TensThenTricks': 0.3433}
+    ep  90000 eps=0.050 {'Random': 0.565, 'TensThenTricks': 0.3167}
+    ep  90000 eps=0.050 {'Random': 0.59, 'TensThenTricks': 0.37}
+    ep  90000 eps=0.050 {'Random': 0.6, 'TensThenTricks': 0.3467}
+    ep 105000 eps=0.050 {'Random': 0.6117, 'TensThenTricks': 0.36}
+    ep 105000 eps=0.050 {'Random': 0.575, 'TensThenTricks': 0.3067}
+    ep 105000 eps=0.050 {'Random': 0.6083, 'TensThenTricks': 0.33}
+    ep 105000 eps=0.050 {'Random': 0.605, 'TensThenTricks': 0.3533}
+    ep 120000 eps=0.050 {'Random': 0.6267, 'TensThenTricks': 0.3633}
+    ep 120000 eps=0.050 {'Random': 0.5817, 'TensThenTricks': 0.31}
+    ep 120000 eps=0.050 {'Random': 0.5367, 'TensThenTricks': 0.3267}
+FINAL dqn/ten_shaped: {'Random': 0.6283, 'TensThenTricks': 0.3733}  (6465s)
+saved rl_dqn_ten_shaped_s1.pt / .json
+    ep 120000 eps=0.050 {'Random': 0.595, 'TensThenTricks': 0.3167}
+FINAL dqn/terminal: {'Random': 0.5733, 'TensThenTricks': 0.3133}  (6469s)
+saved rl_dqn_terminal_s1.pt / .json
+FINAL dqn/trick_shaped: {'Random': 0.5713, 'TensThenTricks': 0.3292}  (6475s)
+saved rl_dqn_trick_shaped_s1.pt / .json
+FINAL dqn/potential: {'Random': 0.6054, 'TensThenTricks': 0.3308}  (6479s)
+saved rl_dqn_potential_s1.pt / .json
+[16:35:35] START .venv/bin/python train_rl.py --algo ppo --reward terminal --episodes 120000 --seed 1
+[16:35:35] START .venv/bin/python train_rl.py --algo ppo --reward ten_shaped --episodes 120000 --seed 1
+[16:35:35] START .venv/bin/python train_rl.py --algo ppo --reward potential --episodes 120000 --seed 1
+[16:35:35] START .venv/bin/python train_rl.py --algo ppo --reward trick_shaped --episodes 120000 --seed 1
+[ppo | reward=terminal | 120000 episodes | seed 1]
+[ppo | reward=ten_shaped | 120000 episodes | seed 1]
+[ppo | reward=potential | 120000 episodes | seed 1]
+[ppo | reward=trick_shaped | 120000 episodes | seed 1]
+    ep  15000 {'Random': 0.5267, 'TensThenTricks': 0.2633}
+    ep  15000 {'Random': 0.515, 'TensThenTricks': 0.3033}
+    ep  15000 {'Random': 0.565, 'TensThenTricks': 0.29}
+    ep  15000 {'Random': 0.5783, 'TensThenTricks': 0.2633}
+    ep  30000 {'Random': 0.5567, 'TensThenTricks': 0.38}
+    ep  30000 {'Random': 0.5983, 'TensThenTricks': 0.41}
+    ep  30000 {'Random': 0.6133, 'TensThenTricks': 0.4033}
+    ep  30000 {'Random': 0.59, 'TensThenTricks': 0.3633}
+    ep  45000 {'Random': 0.6383, 'TensThenTricks': 0.4633}
+    ep  45000 {'Random': 0.6367, 'TensThenTricks': 0.4133}
+    ep  45000 {'Random': 0.6433, 'TensThenTricks': 0.4333}
+    ep  45000 {'Random': 0.655, 'TensThenTricks': 0.4233}
+    ep  60000 {'Random': 0.65, 'TensThenTricks': 0.4967}
+    ep  60000 {'Random': 0.6333, 'TensThenTricks': 0.5033}
+    ep  60000 {'Random': 0.705, 'TensThenTricks': 0.45}
+    ep  60000 {'Random': 0.6417, 'TensThenTricks': 0.4667}
+    ep  75000 {'Random': 0.6367, 'TensThenTricks': 0.5133}
+    ep  75000 {'Random': 0.6483, 'TensThenTricks': 0.5133}
+    ep  75000 {'Random': 0.6583, 'TensThenTricks': 0.4467}
+    ep  75000 {'Random': 0.6867, 'TensThenTricks': 0.4833}
+    ep  90000 {'Random': 0.665, 'TensThenTricks': 0.4533}
+    ep  90000 {'Random': 0.655, 'TensThenTricks': 0.4867}
+    ep  90000 {'Random': 0.6883, 'TensThenTricks': 0.4667}
+    ep  90000 {'Random': 0.6733, 'TensThenTricks': 0.4833}
+    ep 105000 {'Random': 0.68, 'TensThenTricks': 0.5}
+    ep 105000 {'Random': 0.655, 'TensThenTricks': 0.4933}
+    ep 105000 {'Random': 0.6917, 'TensThenTricks': 0.4767}
+    ep 105000 {'Random': 0.6567, 'TensThenTricks': 0.49}
+    ep 120000 {'Random': 0.6733, 'TensThenTricks': 0.4733}
+    ep 120000 {'Random': 0.6817, 'TensThenTricks': 0.4933}
+    ep 120000 {'Random': 0.6967, 'TensThenTricks': 0.4567}
+    ep 120000 {'Random': 0.68, 'TensThenTricks': 0.49}
+FINAL ppo/terminal: {'Random': 0.6821, 'TensThenTricks': 0.4775}  (685s)
+saved rl_ppo_terminal_s1.pt / .json
+FINAL ppo/ten_shaped: {'Random': 0.6908, 'TensThenTricks': 0.5008}  (685s)
+saved rl_ppo_ten_shaped_s1.pt / .json
+FINAL ppo/trick_shaped: {'Random': 0.6892, 'TensThenTricks': 0.5033}  (686s)
+saved rl_ppo_trick_shaped_s1.pt / .json
+FINAL ppo/potential: {'Random': 0.6879, 'TensThenTricks': 0.4958}  (687s)
+saved rl_ppo_potential_s1.pt / .json
+[16:47:03] START .venv/bin/python train_rl.py --algo dqn --reward terminal --episodes 120000 --seed 2
+[16:47:03] START .venv/bin/python train_rl.py --algo dqn --reward ten_shaped --episodes 120000 --seed 2
+[16:47:03] START .venv/bin/python train_rl.py --algo dqn --reward potential --episodes 120000 --seed 2
+[16:47:03] START .venv/bin/python train_rl.py --algo dqn --reward trick_shaped --episodes 120000 --seed 2
+[dqn | reward=potential | 120000 episodes | seed 2]
+[dqn | reward=terminal | 120000 episodes | seed 2]
+[dqn | reward=trick_shaped | 120000 episodes | seed 2]
+[dqn | reward=ten_shaped | 120000 episodes | seed 2]
+    ep  15000 eps=0.050 {'Random': 0.5317, 'TensThenTricks': 0.3033}
+    ep  15000 eps=0.050 {'Random': 0.5933, 'TensThenTricks': 0.33}
+    ep  15000 eps=0.050 {'Random': 0.545, 'TensThenTricks': 0.3267}
+    ep  15000 eps=0.050 {'Random': 0.5683, 'TensThenTricks': 0.3567}
+    ep  30000 eps=0.050 {'Random': 0.5533, 'TensThenTricks': 0.28}
+    ep  30000 eps=0.050 {'Random': 0.5567, 'TensThenTricks': 0.2833}
+    ep  30000 eps=0.050 {'Random': 0.5883, 'TensThenTricks': 0.3033}
+    ep  30000 eps=0.050 {'Random': 0.5817, 'TensThenTricks': 0.3567}
+    ep  45000 eps=0.050 {'Random': 0.5933, 'TensThenTricks': 0.3233}
+    ep  45000 eps=0.050 {'Random': 0.5767, 'TensThenTricks': 0.2833}
+    ep  45000 eps=0.050 {'Random': 0.5717, 'TensThenTricks': 0.32}
+    ep  45000 eps=0.050 {'Random': 0.6167, 'TensThenTricks': 0.35}
+    ep  60000 eps=0.050 {'Random': 0.56, 'TensThenTricks': 0.3233}
+    ep  60000 eps=0.050 {'Random': 0.5767, 'TensThenTricks': 0.3767}
+    ep  60000 eps=0.050 {'Random': 0.5817, 'TensThenTricks': 0.2867}
+    ep  60000 eps=0.050 {'Random': 0.5867, 'TensThenTricks': 0.3233}
+    ep  75000 eps=0.050 {'Random': 0.5767, 'TensThenTricks': 0.33}
+    ep  75000 eps=0.050 {'Random': 0.6, 'TensThenTricks': 0.3167}
+    ep  75000 eps=0.050 {'Random': 0.5867, 'TensThenTricks': 0.3333}
+    ep  75000 eps=0.050 {'Random': 0.6183, 'TensThenTricks': 0.36}
+    ep  90000 eps=0.050 {'Random': 0.6183, 'TensThenTricks': 0.3333}
+    ep  90000 eps=0.050 {'Random': 0.6033, 'TensThenTricks': 0.3167}
+    ep  90000 eps=0.050 {'Random': 0.6183, 'TensThenTricks': 0.3967}
+    ep  90000 eps=0.050 {'Random': 0.5617, 'TensThenTricks': 0.3367}
+    ep 105000 eps=0.050 {'Random': 0.6283, 'TensThenTricks': 0.3967}
+    ep 105000 eps=0.050 {'Random': 0.5967, 'TensThenTricks': 0.3467}
+    ep 105000 eps=0.050 {'Random': 0.5983, 'TensThenTricks': 0.34}
+    ep 105000 eps=0.050 {'Random': 0.6217, 'TensThenTricks': 0.3867}
+    ep 120000 eps=0.050 {'Random': 0.61, 'TensThenTricks': 0.38}
+    ep 120000 eps=0.050 {'Random': 0.6333, 'TensThenTricks': 0.3367}
+FINAL dqn/terminal: {'Random': 0.625, 'TensThenTricks': 0.3825}  (6519s)
+saved rl_dqn_terminal_s2.pt / .json
+FINAL dqn/potential: {'Random': 0.6183, 'TensThenTricks': 0.3533}  (6521s)
+saved rl_dqn_potential_s2.pt / .json
+    ep 120000 eps=0.050 {'Random': 0.6117, 'TensThenTricks': 0.32}
+    ep 120000 eps=0.050 {'Random': 0.61, 'TensThenTricks': 0.4067}
+FINAL dqn/trick_shaped: {'Random': 0.6021, 'TensThenTricks': 0.3417}  (6535s)
+saved rl_dqn_trick_shaped_s2.pt / .json
+FINAL dqn/ten_shaped: {'Random': 0.6029, 'TensThenTricks': 0.4025}  (6541s)
+saved rl_dqn_ten_shaped_s2.pt / .json
+[18:36:05] START .venv/bin/python train_rl.py --algo ppo --reward terminal --episodes 120000 --seed 2
+[18:36:05] START .venv/bin/python train_rl.py --algo ppo --reward ten_shaped --episodes 120000 --seed 2
+[18:36:05] START .venv/bin/python train_rl.py --algo ppo --reward potential --episodes 120000 --seed 2
+[18:36:05] START .venv/bin/python train_rl.py --algo ppo --reward trick_shaped --episodes 120000 --seed 2
+[ppo | reward=terminal | 120000 episodes | seed 2]
+[ppo | reward=trick_shaped | 120000 episodes | seed 2]
+[ppo | reward=ten_shaped | 120000 episodes | seed 2]
+[ppo | reward=potential | 120000 episodes | seed 2]
+    ep  15000 {'Random': 0.5133, 'TensThenTricks': 0.2633}
+    ep  15000 {'Random': 0.5433, 'TensThenTricks': 0.2867}
+    ep  15000 {'Random': 0.5717, 'TensThenTricks': 0.3133}
+    ep  15000 {'Random': 0.5467, 'TensThenTricks': 0.2667}
+    ep  30000 {'Random': 0.585, 'TensThenTricks': 0.3833}
+    ep  30000 {'Random': 0.6533, 'TensThenTricks': 0.43}
+    ep  30000 {'Random': 0.585, 'TensThenTricks': 0.35}
+    ep  30000 {'Random': 0.62, 'TensThenTricks': 0.4267}
+    ep  45000 {'Random': 0.6417, 'TensThenTricks': 0.4067}
+    ep  45000 {'Random': 0.6217, 'TensThenTricks': 0.44}
+    ep  45000 {'Random': 0.6517, 'TensThenTricks': 0.4767}
+    ep  45000 {'Random': 0.645, 'TensThenTricks': 0.4467}
+    ep  60000 {'Random': 0.6717, 'TensThenTricks': 0.4667}
+    ep  60000 {'Random': 0.6517, 'TensThenTricks': 0.4567}
+    ep  60000 {'Random': 0.6667, 'TensThenTricks': 0.49}
+    ep  60000 {'Random': 0.6433, 'TensThenTricks': 0.5033}
+    ep  75000 {'Random': 0.6483, 'TensThenTricks': 0.48}
+    ep  75000 {'Random': 0.665, 'TensThenTricks': 0.51}
+    ep  75000 {'Random': 0.6833, 'TensThenTricks': 0.4467}
+    ep  75000 {'Random': 0.6617, 'TensThenTricks': 0.4767}
+    ep  90000 {'Random': 0.68, 'TensThenTricks': 0.4933}
+    ep  90000 {'Random': 0.6917, 'TensThenTricks': 0.4667}
+    ep  90000 {'Random': 0.6933, 'TensThenTricks': 0.42}
+    ep  90000 {'Random': 0.6567, 'TensThenTricks': 0.4767}
+    ep 105000 {'Random': 0.7033, 'TensThenTricks': 0.5033}
+    ep 105000 {'Random': 0.685, 'TensThenTricks': 0.4533}
+    ep 105000 {'Random': 0.6767, 'TensThenTricks': 0.51}
+    ep 105000 {'Random': 0.6583, 'TensThenTricks': 0.4767}
+    ep 120000 {'Random': 0.67, 'TensThenTricks': 0.4533}
+    ep 120000 {'Random': 0.6783, 'TensThenTricks': 0.46}
+    ep 120000 {'Random': 0.7067, 'TensThenTricks': 0.48}
+    ep 120000 {'Random': 0.685, 'TensThenTricks': 0.45}
+FINAL ppo/ten_shaped: {'Random': 0.6825, 'TensThenTricks': 0.4992}  (722s)
+saved rl_ppo_ten_shaped_s2.pt / .json
+FINAL ppo/trick_shaped: {'Random': 0.6883, 'TensThenTricks': 0.4917}  (723s)
+saved rl_ppo_trick_shaped_s2.pt / .json
+FINAL ppo/potential: {'Random': 0.6913, 'TensThenTricks': 0.5158}  (729s)
+saved rl_ppo_potential_s2.pt / .json
+FINAL ppo/terminal: {'Random': 0.6779, 'TensThenTricks': 0.4858}  (731s)
+saved rl_ppo_terminal_s2.pt / .json
+
+########## 4/7  DQN variants, A2C, MAPPO, NFSP, Deep CFR — 3 seeds  2026-08-31 18:48:17 ##########
+[18:48:17] START .venv/bin/python train_more.py --method double --episodes 60000 --seed 0
+[18:48:17] START .venv/bin/python train_more.py --method double_dueling --episodes 60000 --seed 0
+[18:48:17] START .venv/bin/python train_more.py --method a2c --episodes 60000 --seed 0
+[18:48:17] START .venv/bin/python train_mappo.py --reward potential --episodes 200000 --seed 0
+[18:48:17] START .venv/bin/python nfsp.py --episodes 80000 --seed 0
+[a2c]
+[double_dueling]
+[MAPPO CTDE self-play | reward=potential | 200000 eps]
+[double]
+[NFSP | eta=0.1 | 80000 episodes | seed 0]
+    ep  10000 reservoir=26,494 {'Random': 0.4888, 'TensThenTricks': 0.23}
+    a2c ep 10000: {'Random': 0.5717, 'TensThenTricks': 0.2967}
+    ep  20000 reservoir=52,416 {'Random': 0.5325, 'TensThenTricks': 0.24}
+    ep  20000 {'Random': 0.5783, 'TensThenTricks': 0.3167}
+    ep  30000 reservoir=78,936 {'Random': 0.5337, 'TensThenTricks': 0.2475}
+    a2c ep 20000: {'Random': 0.5517, 'TensThenTricks': 0.28}
+    ep  40000 reservoir=104,936 {'Random': 0.56, 'TensThenTricks': 0.2525}
+    ep  40000 {'Random': 0.6433, 'TensThenTricks': 0.3833}
+    ep  50000 reservoir=131,040 {'Random': 0.5337, 'TensThenTricks': 0.225}
+    a2c ep 30000: {'Random': 0.5217, 'TensThenTricks': 0.2467}
+    double ep 10000: {'Random': 0.5667, 'TensThenTricks': 0.35}
+    double_dueling ep 10000: {'Random': 0.6, 'TensThenTricks': 0.3267}
+    ep  60000 reservoir=150,000 {'Random': 0.5587, 'TensThenTricks': 0.2375}
+    a2c ep 40000: {'Random': 0.525, 'TensThenTricks': 0.2467}
+    ep  60000 {'Random': 0.6267, 'TensThenTricks': 0.3533}
+    ep  70000 reservoir=150,000 {'Random': 0.5425, 'TensThenTricks': 0.2675}
+    ep  80000 reservoir=150,000 {'Random': 0.5425, 'TensThenTricks': 0.255}
+FINAL nfsp: {'Random': 0.5358, 'TensThenTricks': 0.265} (874s)
+    a2c ep 50000: {'Random': 0.5467, 'TensThenTricks': 0.2967}
+    ep  80000 {'Random': 0.6633, 'TensThenTricks': 0.4033}
+    a2c ep 60000: {'Random': 0.59, 'TensThenTricks': 0.39}
+FINAL a2c: {'Random': 0.6108, 'TensThenTricks': 0.3967} (1089s)
+    double ep 20000: {'Random': 0.585, 'TensThenTricks': 0.34}
+    double_dueling ep 20000: {'Random': 0.585, 'TensThenTricks': 0.3433}
+    ep 100000 {'Random': 0.6867, 'TensThenTricks': 0.4033}
+    ep 120000 {'Random': 0.6933, 'TensThenTricks': 0.3867}
+    ep 140000 {'Random': 0.7133, 'TensThenTricks': 0.45}
+    double ep 30000: {'Random': 0.6133, 'TensThenTricks': 0.31}
+    double_dueling ep 30000: {'Random': 0.5517, 'TensThenTricks': 0.3167}
+    ep 160000 {'Random': 0.71, 'TensThenTricks': 0.43}
+    ep 180000 {'Random': 0.73, 'TensThenTricks': 0.4467}
+    ep 200000 {'Random': 0.7083, 'TensThenTricks': 0.46}
+FINAL mappo/potential: {'Random': 0.7208, 'TensThenTricks': 0.4483, 'GreedyTricks': 0.4475}  (2178s)
+saved
+    double ep 40000: {'Random': 0.5983, 'TensThenTricks': 0.34}
+    double_dueling ep 40000: {'Random': 0.605, 'TensThenTricks': 0.3533}
+    double ep 50000: {'Random': 0.6033, 'TensThenTricks': 0.32}
+    double_dueling ep 50000: {'Random': 0.605, 'TensThenTricks': 0.33}
+    double ep 60000: {'Random': 0.5867, 'TensThenTricks': 0.3733}
+FINAL double: {'Random': 0.6021, 'TensThenTricks': 0.3525} (3149s)
+    double_dueling ep 60000: {'Random': 0.615, 'TensThenTricks': 0.37}
+FINAL double_dueling: {'Random': 0.6142, 'TensThenTricks': 0.3642} (3211s)
+[19:41:49] START .venv/bin/python deepcfr.py --iters 40 --traversals 120 --seed 0
+[Deep CFR | 40 iters x 120 traversals | seed 0]
+  NOTE: no equilibrium guarantee in a 4-player partnership game — reported as a baseline, not a solution.

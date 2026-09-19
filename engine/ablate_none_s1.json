@@ -1,0 +1,46 @@
+{
+  "env": {
+    "started": "2026-09-03T10:19:05",
+    "pid": 7951,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "ablate_encoding.py --block none --episodes 120000 --seed 1",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2",
+    "peak_rss_mb": 667.2,
+    "peak_rss_children_mb": 4.3,
+    "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+  },
+  "block": "none",
+  "features_zeroed": 0,
+  "episodes": 120000,
+  "seed": 1,
+  "final": {
+    "Random": {
+      "win": 0.5978,
+      "ci": [
+        0.5822,
+        0.6138
+      ]
+    },
+    "TensThenTricks": {
+      "win": 0.3494,
+      "ci": [
+        0.3287,
+        0.3694
+      ]
+    }
+  },
+  "seconds": 5519.0928644579835
+}

@@ -1,0 +1,19 @@
+[distill]
+    distilling from 103,896 ISMCTS decisions
+/Users/rajuyadav/Desktop/Card/05-engine/train_more.py:216: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  tot += float(loss) * len(b)
+    distill epoch 1: loss 1.0248 val-acc 0.5020 {'Random': 0.715, 'TensThenTricks': 0.508}   <- best
+    distill epoch 2: loss 0.9999 val-acc 0.5142 {'Random': 0.737, 'TensThenTricks': 0.524}   <- best
+    distill epoch 3: loss 0.9726 val-acc 0.5144 {'Random': 0.756, 'TensThenTricks': 0.506}
+    distill epoch 4: loss 0.9279 val-acc 0.5029 {'Random': 0.736, 'TensThenTricks': 0.5}
+    distill epoch 5: loss 0.8619 val-acc 0.5094 {'Random': 0.724, 'TensThenTricks': 0.534}   <- best
+    distill epoch 6: loss 0.7804 val-acc 0.4977 {'Random': 0.705, 'TensThenTricks': 0.476}
+    distill epoch 7: loss 0.6873 val-acc 0.4999 {'Random': 0.734, 'TensThenTricks': 0.482}
+    distill epoch 8: loss 0.5887 val-acc 0.5024 {'Random': 0.698, 'TensThenTricks': 0.48}
+    distill epoch 9: loss 0.4910 val-acc 0.4987 {'Random': 0.692, 'TensThenTricks': 0.428}
+    distill epoch 10: loss 0.3984 val-acc 0.4968 {'Random': 0.685, 'TensThenTricks': 0.438}
+    distill epoch 11: loss 0.3207 val-acc 0.5003 {'Random': 0.68, 'TensThenTricks': 0.442}
+    early stop: no gain in 6 epochs
+    restored best checkpoint: epoch 5 (0.5340 vs TensThenTricks)
+FINAL distill: {'Random': 0.7262, 'TensThenTricks': 0.5142} (111s)

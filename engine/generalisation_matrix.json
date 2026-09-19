@@ -1,0 +1,2653 @@
+{
+  "env": {
+    "started": "2026-09-02T19:46:08",
+    "pid": 44085,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "generalise.py --matrix --deals 600 --deals-search 150",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "deals": 600,
+  "deals_vs_search": 150,
+  "train_opponents": [
+    "Random",
+    "GreedyTricks",
+    "TenAware",
+    "Adaptive",
+    "TensThenTricks",
+    "self",
+    "league"
+  ],
+  "held_out": [
+    "PIMC:8",
+    "ISMCTS:100"
+  ],
+  "rows": [
+    {
+      "algo": "dqn",
+      "train_opponent": "Adaptive",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.5883,
+          "ci": [
+            0.5713,
+            0.6058
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3567,
+          "ci": [
+            0.3333,
+            0.38
+          ]
+        },
+        "TenAware": {
+          "win": 0.3792,
+          "ci": [
+            0.3533,
+            0.4033
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3833,
+          "ci": [
+            0.3583,
+            0.4075
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3375,
+          "ci": [
+            0.3167,
+            0.3583
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2883,
+          "ci": [
+            0.2567,
+            0.3233
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2417,
+          "ci": [
+            0.2117,
+            0.2767
+          ]
+        }
+      },
+      "held_out_mean": 0.265,
+      "fixed_mean": 0.409,
+      "vs_train_opponent": 0.3833,
+      "overfitting_gap": 0.1183
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "Adaptive",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.5238,
+          "ci": [
+            0.5067,
+            0.5392
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3358,
+          "ci": [
+            0.3133,
+            0.3592
+          ]
+        },
+        "TenAware": {
+          "win": 0.3833,
+          "ci": [
+            0.36,
+            0.4067
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3925,
+          "ci": [
+            0.3692,
+            0.4158
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3058,
+          "ci": [
+            0.2833,
+            0.3292
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2933,
+          "ci": [
+            0.26,
+            0.3267
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2417,
+          "ci": [
+            0.2083,
+            0.275
+          ]
+        }
+      },
+      "held_out_mean": 0.2675,
+      "fixed_mean": 0.3882,
+      "vs_train_opponent": 0.3925,
+      "overfitting_gap": 0.125
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "Adaptive",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.5875,
+          "ci": [
+            0.57,
+            0.6054
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3667,
+          "ci": [
+            0.345,
+            0.39
+          ]
+        },
+        "TenAware": {
+          "win": 0.3667,
+          "ci": [
+            0.3442,
+            0.3892
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3692,
+          "ci": [
+            0.3458,
+            0.3917
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3342,
+          "ci": [
+            0.31,
+            0.3583
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2417,
+          "ci": [
+            0.2083,
+            0.2733
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2167,
+          "ci": [
+            0.1867,
+            0.2467
+          ]
+        }
+      },
+      "held_out_mean": 0.2292,
+      "fixed_mean": 0.4049,
+      "vs_train_opponent": 0.3692,
+      "overfitting_gap": 0.14
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "GreedyTricks",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.6129,
+          "ci": [
+            0.5954,
+            0.6296
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.365,
+          "ci": [
+            0.3417,
+            0.3883
+          ]
+        },
+        "TenAware": {
+          "win": 0.3808,
+          "ci": [
+            0.3575,
+            0.4033
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3892,
+          "ci": [
+            0.365,
+            0.4117
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3467,
+          "ci": [
+            0.3242,
+            0.3692
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2817,
+          "ci": [
+            0.2467,
+            0.3167
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.275,
+          "ci": [
+            0.245,
+            0.3067
+          ]
+        }
+      },
+      "held_out_mean": 0.2783,
+      "fixed_mean": 0.4189,
+      "vs_train_opponent": 0.365,
+      "overfitting_gap": 0.0867
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "GreedyTricks",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.6154,
+          "ci": [
+            0.5992,
+            0.6317
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4075,
+          "ci": [
+            0.3842,
+            0.43
+          ]
+        },
+        "TenAware": {
+          "win": 0.4067,
+          "ci": [
+            0.3842,
+            0.4283
+          ]
+        },
+        "Adaptive": {
+          "win": 0.4067,
+          "ci": [
+            0.3842,
+            0.4283
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3608,
+          "ci": [
+            0.3375,
+            0.3842
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2917,
+          "ci": [
+            0.2567,
+            0.3267
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2517,
+          "ci": [
+            0.22,
+            0.2833
+          ]
+        }
+      },
+      "held_out_mean": 0.2717,
+      "fixed_mean": 0.4394,
+      "vs_train_opponent": 0.4075,
+      "overfitting_gap": 0.1358
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "GreedyTricks",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.5913,
+          "ci": [
+            0.5754,
+            0.6071
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3367,
+          "ci": [
+            0.3133,
+            0.3608
+          ]
+        },
+        "TenAware": {
+          "win": 0.2975,
+          "ci": [
+            0.275,
+            0.32
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3008,
+          "ci": [
+            0.2775,
+            0.3242
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.2858,
+          "ci": [
+            0.2633,
+            0.3067
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2417,
+          "ci": [
+            0.2067,
+            0.2767
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2383,
+          "ci": [
+            0.2083,
+            0.2683
+          ]
+        }
+      },
+      "held_out_mean": 0.24,
+      "fixed_mean": 0.3624,
+      "vs_train_opponent": 0.3367,
+      "overfitting_gap": 0.0967
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "Random",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.5975,
+          "ci": [
+            0.5821,
+            0.615
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3183,
+          "ci": [
+            0.295,
+            0.3408
+          ]
+        },
+        "TenAware": {
+          "win": 0.3483,
+          "ci": [
+            0.3258,
+            0.37
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3617,
+          "ci": [
+            0.3383,
+            0.385
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.2883,
+          "ci": [
+            0.265,
+            0.3108
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2667,
+          "ci": [
+            0.2333,
+            0.3017
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2283,
+          "ci": [
+            0.195,
+            0.2617
+          ]
+        }
+      },
+      "held_out_mean": 0.2475,
+      "fixed_mean": 0.3828,
+      "vs_train_opponent": 0.5975,
+      "overfitting_gap": 0.35
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "Random",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.5596,
+          "ci": [
+            0.5421,
+            0.5767
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3075,
+          "ci": [
+            0.2833,
+            0.3292
+          ]
+        },
+        "TenAware": {
+          "win": 0.3325,
+          "ci": [
+            0.31,
+            0.355
+          ]
+        },
+        "Adaptive": {
+          "win": 0.34,
+          "ci": [
+            0.3167,
+            0.3633
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3,
+          "ci": [
+            0.2767,
+            0.3242
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.215,
+          "ci": [
+            0.1817,
+            0.2483
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2167,
+          "ci": [
+            0.185,
+            0.2483
+          ]
+        }
+      },
+      "held_out_mean": 0.2158,
+      "fixed_mean": 0.3679,
+      "vs_train_opponent": 0.5596,
+      "overfitting_gap": 0.3438
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "Random",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.55,
+          "ci": [
+            0.5329,
+            0.5671
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.295,
+          "ci": [
+            0.2733,
+            0.3158
+          ]
+        },
+        "TenAware": {
+          "win": 0.305,
+          "ci": [
+            0.2825,
+            0.3275
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3133,
+          "ci": [
+            0.2908,
+            0.335
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.275,
+          "ci": [
+            0.2525,
+            0.2975
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.22,
+          "ci": [
+            0.1883,
+            0.2517
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.1717,
+          "ci": [
+            0.1433,
+            0.2017
+          ]
+        }
+      },
+      "held_out_mean": 0.1958,
+      "fixed_mean": 0.3477,
+      "vs_train_opponent": 0.55,
+      "overfitting_gap": 0.3542
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "TenAware",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.5679,
+          "ci": [
+            0.5513,
+            0.5846
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3283,
+          "ci": [
+            0.3058,
+            0.3517
+          ]
+        },
+        "TenAware": {
+          "win": 0.3433,
+          "ci": [
+            0.3217,
+            0.3658
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3492,
+          "ci": [
+            0.3267,
+            0.3725
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3158,
+          "ci": [
+            0.2933,
+            0.3383
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.26,
+          "ci": [
+            0.2283,
+            0.2917
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.19,
+          "ci": [
+            0.16,
+            0.22
+          ]
+        }
+      },
+      "held_out_mean": 0.225,
+      "fixed_mean": 0.3809,
+      "vs_train_opponent": 0.3433,
+      "overfitting_gap": 0.1183
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "TenAware",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.6233,
+          "ci": [
+            0.6071,
+            0.6396
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.365,
+          "ci": [
+            0.3425,
+            0.3867
+          ]
+        },
+        "TenAware": {
+          "win": 0.3892,
+          "ci": [
+            0.3642,
+            0.4125
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3992,
+          "ci": [
+            0.375,
+            0.4225
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.355,
+          "ci": [
+            0.3333,
+            0.3767
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.31,
+          "ci": [
+            0.275,
+            0.345
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.27,
+          "ci": [
+            0.2383,
+            0.3017
+          ]
+        }
+      },
+      "held_out_mean": 0.29,
+      "fixed_mean": 0.4263,
+      "vs_train_opponent": 0.3892,
+      "overfitting_gap": 0.0992
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "TenAware",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.5683,
+          "ci": [
+            0.5513,
+            0.585
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.345,
+          "ci": [
+            0.32,
+            0.3692
+          ]
+        },
+        "TenAware": {
+          "win": 0.3742,
+          "ci": [
+            0.3492,
+            0.3992
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3792,
+          "ci": [
+            0.3542,
+            0.4042
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3342,
+          "ci": [
+            0.3125,
+            0.3575
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.275,
+          "ci": [
+            0.24,
+            0.31
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2367,
+          "ci": [
+            0.205,
+            0.2683
+          ]
+        }
+      },
+      "held_out_mean": 0.2559,
+      "fixed_mean": 0.4002,
+      "vs_train_opponent": 0.3742,
+      "overfitting_gap": 0.1183
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "TensThenTricks",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.615,
+          "ci": [
+            0.5988,
+            0.6321
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3283,
+          "ci": [
+            0.3042,
+            0.3517
+          ]
+        },
+        "TenAware": {
+          "win": 0.3758,
+          "ci": [
+            0.3517,
+            0.3992
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3808,
+          "ci": [
+            0.3575,
+            0.4042
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3308,
+          "ci": [
+            0.3083,
+            0.3525
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2567,
+          "ci": [
+            0.2267,
+            0.2883
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2183,
+          "ci": [
+            0.1867,
+            0.2483
+          ]
+        }
+      },
+      "held_out_mean": 0.2375,
+      "fixed_mean": 0.4061,
+      "vs_train_opponent": 0.3308,
+      "overfitting_gap": 0.0933
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "TensThenTricks",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.6079,
+          "ci": [
+            0.5892,
+            0.625
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3675,
+          "ci": [
+            0.3442,
+            0.3925
+          ]
+        },
+        "TenAware": {
+          "win": 0.38,
+          "ci": [
+            0.355,
+            0.405
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3875,
+          "ci": [
+            0.3625,
+            0.4133
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3433,
+          "ci": [
+            0.32,
+            0.3658
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2933,
+          "ci": [
+            0.26,
+            0.3267
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.245,
+          "ci": [
+            0.2133,
+            0.2783
+          ]
+        }
+      },
+      "held_out_mean": 0.2692,
+      "fixed_mean": 0.4172,
+      "vs_train_opponent": 0.3433,
+      "overfitting_gap": 0.0741
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "TensThenTricks",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.6138,
+          "ci": [
+            0.5979,
+            0.6296
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3992,
+          "ci": [
+            0.3767,
+            0.4225
+          ]
+        },
+        "TenAware": {
+          "win": 0.3983,
+          "ci": [
+            0.3742,
+            0.4225
+          ]
+        },
+        "Adaptive": {
+          "win": 0.4075,
+          "ci": [
+            0.3833,
+            0.4317
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.3567,
+          "ci": [
+            0.3342,
+            0.38
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2867,
+          "ci": [
+            0.2533,
+            0.32
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2433,
+          "ci": [
+            0.2083,
+            0.2783
+          ]
+        }
+      },
+      "held_out_mean": 0.265,
+      "fixed_mean": 0.4351,
+      "vs_train_opponent": 0.3567,
+      "overfitting_gap": 0.0917
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "league",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.5717,
+          "ci": [
+            0.5554,
+            0.5887
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3083,
+          "ci": [
+            0.2858,
+            0.3308
+          ]
+        },
+        "TenAware": {
+          "win": 0.3275,
+          "ci": [
+            0.3042,
+            0.3508
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3342,
+          "ci": [
+            0.3108,
+            0.3575
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.2867,
+          "ci": [
+            0.2633,
+            0.3083
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.24,
+          "ci": [
+            0.2067,
+            0.2717
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.195,
+          "ci": [
+            0.1667,
+            0.225
+          ]
+        }
+      },
+      "held_out_mean": 0.2175,
+      "fixed_mean": 0.3657,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "league",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.5467,
+          "ci": [
+            0.5292,
+            0.5637
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.2925,
+          "ci": [
+            0.27,
+            0.315
+          ]
+        },
+        "TenAware": {
+          "win": 0.295,
+          "ci": [
+            0.2725,
+            0.3175
+          ]
+        },
+        "Adaptive": {
+          "win": 0.2992,
+          "ci": [
+            0.2758,
+            0.3208
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.2592,
+          "ci": [
+            0.2375,
+            0.2808
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.255,
+          "ci": [
+            0.2233,
+            0.2867
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.1917,
+          "ci": [
+            0.1617,
+            0.2217
+          ]
+        }
+      },
+      "held_out_mean": 0.2233,
+      "fixed_mean": 0.3385,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "league",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.5546,
+          "ci": [
+            0.5375,
+            0.5721
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3183,
+          "ci": [
+            0.2975,
+            0.3408
+          ]
+        },
+        "TenAware": {
+          "win": 0.3367,
+          "ci": [
+            0.3133,
+            0.3592
+          ]
+        },
+        "Adaptive": {
+          "win": 0.34,
+          "ci": [
+            0.3167,
+            0.3633
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.29,
+          "ci": [
+            0.2658,
+            0.3133
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.26,
+          "ci": [
+            0.2267,
+            0.295
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.215,
+          "ci": [
+            0.1867,
+            0.2467
+          ]
+        }
+      },
+      "held_out_mean": 0.2375,
+      "fixed_mean": 0.3679,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "self",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.5446,
+          "ci": [
+            0.5271,
+            0.5621
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.2842,
+          "ci": [
+            0.2625,
+            0.3058
+          ]
+        },
+        "TenAware": {
+          "win": 0.2867,
+          "ci": [
+            0.2642,
+            0.3092
+          ]
+        },
+        "Adaptive": {
+          "win": 0.2933,
+          "ci": [
+            0.2717,
+            0.3167
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.2592,
+          "ci": [
+            0.2375,
+            0.2825
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2183,
+          "ci": [
+            0.1867,
+            0.25
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2133,
+          "ci": [
+            0.1833,
+            0.245
+          ]
+        }
+      },
+      "held_out_mean": 0.2158,
+      "fixed_mean": 0.3336,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "self",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.5575,
+          "ci": [
+            0.5413,
+            0.575
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3,
+          "ci": [
+            0.2775,
+            0.3217
+          ]
+        },
+        "TenAware": {
+          "win": 0.2983,
+          "ci": [
+            0.2758,
+            0.3217
+          ]
+        },
+        "Adaptive": {
+          "win": 0.31,
+          "ci": [
+            0.2867,
+            0.3325
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.2933,
+          "ci": [
+            0.2717,
+            0.3142
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2317,
+          "ci": [
+            0.1983,
+            0.265
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.1883,
+          "ci": [
+            0.1583,
+            0.22
+          ]
+        }
+      },
+      "held_out_mean": 0.21,
+      "fixed_mean": 0.3518,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "dqn",
+      "train_opponent": "self",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.5363,
+          "ci": [
+            0.5175,
+            0.5533
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.2867,
+          "ci": [
+            0.2642,
+            0.31
+          ]
+        },
+        "TenAware": {
+          "win": 0.2983,
+          "ci": [
+            0.2775,
+            0.32
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3025,
+          "ci": [
+            0.2808,
+            0.325
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.2608,
+          "ci": [
+            0.2392,
+            0.2817
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.2167,
+          "ci": [
+            0.185,
+            0.2517
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.1833,
+          "ci": [
+            0.155,
+            0.2117
+          ]
+        }
+      },
+      "held_out_mean": 0.2,
+      "fixed_mean": 0.3369,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "Adaptive",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.6954,
+          "ci": [
+            0.6787,
+            0.7117
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4425,
+          "ci": [
+            0.42,
+            0.4658
+          ]
+        },
+        "TenAware": {
+          "win": 0.5425,
+          "ci": [
+            0.5183,
+            0.565
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5517,
+          "ci": [
+            0.5283,
+            0.575
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.5058,
+          "ci": [
+            0.4842,
+            0.5292
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3867,
+          "ci": [
+            0.3533,
+            0.4217
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3,
+          "ci": [
+            0.2633,
+            0.3367
+          ]
+        }
+      },
+      "held_out_mean": 0.3433,
+      "fixed_mean": 0.5476,
+      "vs_train_opponent": 0.5517,
+      "overfitting_gap": 0.2084
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "Adaptive",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.6979,
+          "ci": [
+            0.6808,
+            0.7146
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4625,
+          "ci": [
+            0.4392,
+            0.4858
+          ]
+        },
+        "TenAware": {
+          "win": 0.5458,
+          "ci": [
+            0.5242,
+            0.5667
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5467,
+          "ci": [
+            0.5242,
+            0.5675
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4742,
+          "ci": [
+            0.4517,
+            0.4967
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3633,
+          "ci": [
+            0.33,
+            0.3967
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3233,
+          "ci": [
+            0.2917,
+            0.355
+          ]
+        }
+      },
+      "held_out_mean": 0.3433,
+      "fixed_mean": 0.5454,
+      "vs_train_opponent": 0.5467,
+      "overfitting_gap": 0.2034
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "Adaptive",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.6863,
+          "ci": [
+            0.6708,
+            0.7025
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4475,
+          "ci": [
+            0.4233,
+            0.4708
+          ]
+        },
+        "TenAware": {
+          "win": 0.5325,
+          "ci": [
+            0.5092,
+            0.555
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5417,
+          "ci": [
+            0.5192,
+            0.565
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.48,
+          "ci": [
+            0.4567,
+            0.5033
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.38,
+          "ci": [
+            0.3467,
+            0.4133
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3467,
+          "ci": [
+            0.315,
+            0.38
+          ]
+        }
+      },
+      "held_out_mean": 0.3634,
+      "fixed_mean": 0.5376,
+      "vs_train_opponent": 0.5417,
+      "overfitting_gap": 0.1783
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "GreedyTricks",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.7079,
+          "ci": [
+            0.6917,
+            0.7242
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4725,
+          "ci": [
+            0.4492,
+            0.4975
+          ]
+        },
+        "TenAware": {
+          "win": 0.5275,
+          "ci": [
+            0.5058,
+            0.55
+          ]
+        },
+        "Adaptive": {
+          "win": 0.535,
+          "ci": [
+            0.5125,
+            0.5583
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.5008,
+          "ci": [
+            0.4783,
+            0.5242
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3917,
+          "ci": [
+            0.36,
+            0.4233
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3333,
+          "ci": [
+            0.2983,
+            0.365
+          ]
+        }
+      },
+      "held_out_mean": 0.3625,
+      "fixed_mean": 0.5487,
+      "vs_train_opponent": 0.4725,
+      "overfitting_gap": 0.11
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "GreedyTricks",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.7183,
+          "ci": [
+            0.7008,
+            0.7371
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4675,
+          "ci": [
+            0.4442,
+            0.4908
+          ]
+        },
+        "TenAware": {
+          "win": 0.5542,
+          "ci": [
+            0.53,
+            0.5783
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5592,
+          "ci": [
+            0.535,
+            0.5825
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4692,
+          "ci": [
+            0.445,
+            0.4933
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.385,
+          "ci": [
+            0.355,
+            0.4167
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3233,
+          "ci": [
+            0.2883,
+            0.36
+          ]
+        }
+      },
+      "held_out_mean": 0.3541,
+      "fixed_mean": 0.5537,
+      "vs_train_opponent": 0.4675,
+      "overfitting_gap": 0.1134
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "GreedyTricks",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.7054,
+          "ci": [
+            0.6892,
+            0.7217
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.5067,
+          "ci": [
+            0.4817,
+            0.5308
+          ]
+        },
+        "TenAware": {
+          "win": 0.5392,
+          "ci": [
+            0.5167,
+            0.5633
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5467,
+          "ci": [
+            0.525,
+            0.57
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4925,
+          "ci": [
+            0.4692,
+            0.5158
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3917,
+          "ci": [
+            0.355,
+            0.4267
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.335,
+          "ci": [
+            0.3,
+            0.37
+          ]
+        }
+      },
+      "held_out_mean": 0.3634,
+      "fixed_mean": 0.5581,
+      "vs_train_opponent": 0.5067,
+      "overfitting_gap": 0.1433
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "Random",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.7554,
+          "ci": [
+            0.7388,
+            0.7717
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.46,
+          "ci": [
+            0.4375,
+            0.4842
+          ]
+        },
+        "TenAware": {
+          "win": 0.5092,
+          "ci": [
+            0.4867,
+            0.5317
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5183,
+          "ci": [
+            0.4942,
+            0.5417
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4625,
+          "ci": [
+            0.4417,
+            0.4842
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.4,
+          "ci": [
+            0.3683,
+            0.4317
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3533,
+          "ci": [
+            0.3167,
+            0.3883
+          ]
+        }
+      },
+      "held_out_mean": 0.3767,
+      "fixed_mean": 0.5411,
+      "vs_train_opponent": 0.7554,
+      "overfitting_gap": 0.3787
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "Random",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.7575,
+          "ci": [
+            0.7408,
+            0.7742
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.45,
+          "ci": [
+            0.4267,
+            0.4717
+          ]
+        },
+        "TenAware": {
+          "win": 0.5183,
+          "ci": [
+            0.495,
+            0.5417
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5258,
+          "ci": [
+            0.5025,
+            0.5492
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.47,
+          "ci": [
+            0.4467,
+            0.4942
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3817,
+          "ci": [
+            0.3467,
+            0.4167
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.31,
+          "ci": [
+            0.275,
+            0.345
+          ]
+        }
+      },
+      "held_out_mean": 0.3458,
+      "fixed_mean": 0.5443,
+      "vs_train_opponent": 0.7575,
+      "overfitting_gap": 0.4117
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "Random",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.775,
+          "ci": [
+            0.7596,
+            0.7904
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4658,
+          "ci": [
+            0.4417,
+            0.4908
+          ]
+        },
+        "TenAware": {
+          "win": 0.51,
+          "ci": [
+            0.4867,
+            0.5333
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5192,
+          "ci": [
+            0.4958,
+            0.5425
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4775,
+          "ci": [
+            0.455,
+            0.5025
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.4233,
+          "ci": [
+            0.39,
+            0.46
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.355,
+          "ci": [
+            0.32,
+            0.39
+          ]
+        }
+      },
+      "held_out_mean": 0.3891,
+      "fixed_mean": 0.5495,
+      "vs_train_opponent": 0.775,
+      "overfitting_gap": 0.3859
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "TenAware",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.69,
+          "ci": [
+            0.6737,
+            0.7067
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4517,
+          "ci": [
+            0.4275,
+            0.475
+          ]
+        },
+        "TenAware": {
+          "win": 0.5408,
+          "ci": [
+            0.5175,
+            0.565
+          ]
+        },
+        "Adaptive": {
+          "win": 0.55,
+          "ci": [
+            0.5258,
+            0.5733
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4933,
+          "ci": [
+            0.4692,
+            0.5175
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3683,
+          "ci": [
+            0.3317,
+            0.4033
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.2783,
+          "ci": [
+            0.245,
+            0.3117
+          ]
+        }
+      },
+      "held_out_mean": 0.3233,
+      "fixed_mean": 0.5452,
+      "vs_train_opponent": 0.5408,
+      "overfitting_gap": 0.2175
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "TenAware",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.6679,
+          "ci": [
+            0.6512,
+            0.6846
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4583,
+          "ci": [
+            0.435,
+            0.4817
+          ]
+        },
+        "TenAware": {
+          "win": 0.5275,
+          "ci": [
+            0.5042,
+            0.5517
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5275,
+          "ci": [
+            0.505,
+            0.5508
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4783,
+          "ci": [
+            0.455,
+            0.5017
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.33,
+          "ci": [
+            0.2933,
+            0.3667
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3217,
+          "ci": [
+            0.2867,
+            0.3567
+          ]
+        }
+      },
+      "held_out_mean": 0.3258,
+      "fixed_mean": 0.5319,
+      "vs_train_opponent": 0.5275,
+      "overfitting_gap": 0.2017
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "TenAware",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.6763,
+          "ci": [
+            0.6592,
+            0.6925
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4642,
+          "ci": [
+            0.44,
+            0.4867
+          ]
+        },
+        "TenAware": {
+          "win": 0.5408,
+          "ci": [
+            0.5167,
+            0.565
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5442,
+          "ci": [
+            0.52,
+            0.5683
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.495,
+          "ci": [
+            0.4708,
+            0.5192
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3667,
+          "ci": [
+            0.3333,
+            0.3983
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.325,
+          "ci": [
+            0.2917,
+            0.36
+          ]
+        }
+      },
+      "held_out_mean": 0.3458,
+      "fixed_mean": 0.5441,
+      "vs_train_opponent": 0.5408,
+      "overfitting_gap": 0.195
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "TensThenTricks",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.6971,
+          "ci": [
+            0.6817,
+            0.7121
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4592,
+          "ci": [
+            0.4358,
+            0.485
+          ]
+        },
+        "TenAware": {
+          "win": 0.5392,
+          "ci": [
+            0.515,
+            0.5617
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5467,
+          "ci": [
+            0.5225,
+            0.5692
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.48,
+          "ci": [
+            0.4567,
+            0.5025
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3583,
+          "ci": [
+            0.3283,
+            0.3883
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.33,
+          "ci": [
+            0.295,
+            0.3633
+          ]
+        }
+      },
+      "held_out_mean": 0.3442,
+      "fixed_mean": 0.5444,
+      "vs_train_opponent": 0.48,
+      "overfitting_gap": 0.1358
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "TensThenTricks",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.6942,
+          "ci": [
+            0.6779,
+            0.7104
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4842,
+          "ci": [
+            0.46,
+            0.5083
+          ]
+        },
+        "TenAware": {
+          "win": 0.5375,
+          "ci": [
+            0.515,
+            0.5608
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5417,
+          "ci": [
+            0.5192,
+            0.565
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.5067,
+          "ci": [
+            0.4825,
+            0.5308
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.385,
+          "ci": [
+            0.35,
+            0.42
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3133,
+          "ci": [
+            0.28,
+            0.3467
+          ]
+        }
+      },
+      "held_out_mean": 0.3492,
+      "fixed_mean": 0.5529,
+      "vs_train_opponent": 0.5067,
+      "overfitting_gap": 0.1575
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "TensThenTricks",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.6904,
+          "ci": [
+            0.6742,
+            0.7067
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4592,
+          "ci": [
+            0.4367,
+            0.4833
+          ]
+        },
+        "TenAware": {
+          "win": 0.5658,
+          "ci": [
+            0.5417,
+            0.59
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5675,
+          "ci": [
+            0.5433,
+            0.5917
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.5117,
+          "ci": [
+            0.4892,
+            0.535
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.4,
+          "ci": [
+            0.3633,
+            0.4383
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3033,
+          "ci": [
+            0.27,
+            0.3367
+          ]
+        }
+      },
+      "held_out_mean": 0.3517,
+      "fixed_mean": 0.5589,
+      "vs_train_opponent": 0.5117,
+      "overfitting_gap": 0.16
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "league",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.7421,
+          "ci": [
+            0.7262,
+            0.7592
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4417,
+          "ci": [
+            0.4175,
+            0.4667
+          ]
+        },
+        "TenAware": {
+          "win": 0.4933,
+          "ci": [
+            0.47,
+            0.5167
+          ]
+        },
+        "Adaptive": {
+          "win": 0.4942,
+          "ci": [
+            0.47,
+            0.5175
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.445,
+          "ci": [
+            0.4217,
+            0.4708
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.42,
+          "ci": [
+            0.3883,
+            0.4533
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.35,
+          "ci": [
+            0.315,
+            0.385
+          ]
+        }
+      },
+      "held_out_mean": 0.385,
+      "fixed_mean": 0.5233,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "league",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.7558,
+          "ci": [
+            0.74,
+            0.7708
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4308,
+          "ci": [
+            0.4067,
+            0.4542
+          ]
+        },
+        "TenAware": {
+          "win": 0.4892,
+          "ci": [
+            0.4658,
+            0.5117
+          ]
+        },
+        "Adaptive": {
+          "win": 0.4975,
+          "ci": [
+            0.4742,
+            0.5208
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4283,
+          "ci": [
+            0.4058,
+            0.4508
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.395,
+          "ci": [
+            0.36,
+            0.4283
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3617,
+          "ci": [
+            0.33,
+            0.3933
+          ]
+        }
+      },
+      "held_out_mean": 0.3784,
+      "fixed_mean": 0.5203,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "league",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.7492,
+          "ci": [
+            0.7325,
+            0.765
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4592,
+          "ci": [
+            0.4367,
+            0.4817
+          ]
+        },
+        "TenAware": {
+          "win": 0.4575,
+          "ci": [
+            0.4342,
+            0.48
+          ]
+        },
+        "Adaptive": {
+          "win": 0.4675,
+          "ci": [
+            0.445,
+            0.49
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4358,
+          "ci": [
+            0.4133,
+            0.4583
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.3767,
+          "ci": [
+            0.3433,
+            0.4083
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3567,
+          "ci": [
+            0.3233,
+            0.3917
+          ]
+        }
+      },
+      "held_out_mean": 0.3667,
+      "fixed_mean": 0.5138,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "self",
+      "seed": 0,
+      "vs": {
+        "Random": {
+          "win": 0.5288,
+          "ci": [
+            0.5112,
+            0.5454
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.3083,
+          "ci": [
+            0.285,
+            0.33
+          ]
+        },
+        "TenAware": {
+          "win": 0.315,
+          "ci": [
+            0.2917,
+            0.3383
+          ]
+        },
+        "Adaptive": {
+          "win": 0.3183,
+          "ci": [
+            0.295,
+            0.3425
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.2733,
+          "ci": [
+            0.2525,
+            0.295
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.24,
+          "ci": [
+            0.2083,
+            0.27
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.1783,
+          "ci": [
+            0.1483,
+            0.21
+          ]
+        }
+      },
+      "held_out_mean": 0.2092,
+      "fixed_mean": 0.3487,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "self",
+      "seed": 1,
+      "vs": {
+        "Random": {
+          "win": 0.7421,
+          "ci": [
+            0.7262,
+            0.7571
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4375,
+          "ci": [
+            0.4158,
+            0.4608
+          ]
+        },
+        "TenAware": {
+          "win": 0.4917,
+          "ci": [
+            0.4683,
+            0.5142
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5017,
+          "ci": [
+            0.4792,
+            0.525
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4567,
+          "ci": [
+            0.4342,
+            0.4792
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.405,
+          "ci": [
+            0.3683,
+            0.4417
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3617,
+          "ci": [
+            0.3283,
+            0.395
+          ]
+        }
+      },
+      "held_out_mean": 0.3834,
+      "fixed_mean": 0.5259,
+      "vs_train_opponent": null
+    },
+    {
+      "algo": "ppo",
+      "train_opponent": "self",
+      "seed": 2,
+      "vs": {
+        "Random": {
+          "win": 0.7442,
+          "ci": [
+            0.7283,
+            0.76
+          ]
+        },
+        "GreedyTricks": {
+          "win": 0.4525,
+          "ci": [
+            0.4283,
+            0.475
+          ]
+        },
+        "TenAware": {
+          "win": 0.5033,
+          "ci": [
+            0.4808,
+            0.525
+          ]
+        },
+        "Adaptive": {
+          "win": 0.5075,
+          "ci": [
+            0.485,
+            0.5292
+          ]
+        },
+        "TensThenTricks": {
+          "win": 0.4567,
+          "ci": [
+            0.4342,
+            0.48
+          ]
+        },
+        "PIMC:8": {
+          "win": 0.4383,
+          "ci": [
+            0.4033,
+            0.4717
+          ]
+        },
+        "ISMCTS:100": {
+          "win": 0.3733,
+          "ci": [
+            0.34,
+            0.4067
+          ]
+        }
+      },
+      "held_out_mean": 0.4058,
+      "fixed_mean": 0.5328,
+      "vs_train_opponent": null
+    }
+  ],
+  "summary": {
+    "raw_gap_CONFOUNDED": {
+      "mean": 0.1849,
+      "sd": 0.1008,
+      "n": 30,
+      "warning": "DO NOT report this as overfitting. own-minus-held-out compares performance against DIFFERENT opponents, so it mostly measures how much stronger the held-out search agents are than the training heuristic. An agent trained on Random scores ~0.61 vs Random and ~0.31 vs PIMC even when barely trained at all. Use opponent_specificity below."
+    },
+    "opponent_specificity": {
+      "mean": 0.0323,
+      "sd": 0.0174,
+      "n": 10,
+      "per_opponent": [
+        {
+          "algo": "dqn",
+          "opponent": "Random",
+          "trained_on_it": 0.569,
+          "trained_elsewhere": 0.5793,
+          "specificity": -0.0102,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "dqn",
+          "opponent": "GreedyTricks",
+          "trained_on_it": 0.3697,
+          "trained_elsewhere": 0.328,
+          "specificity": 0.0418,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "dqn",
+          "opponent": "TenAware",
+          "trained_on_it": 0.3689,
+          "trained_elsewhere": 0.3443,
+          "specificity": 0.0246,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "dqn",
+          "opponent": "Adaptive",
+          "trained_on_it": 0.3817,
+          "trained_elsewhere": 0.3497,
+          "specificity": 0.032,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "dqn",
+          "opponent": "TensThenTricks",
+          "trained_on_it": 0.3436,
+          "trained_elsewhere": 0.3049,
+          "specificity": 0.0387,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "ppo",
+          "opponent": "Random",
+          "trained_on_it": 0.7626,
+          "trained_elsewhere": 0.6994,
+          "specificity": 0.0632,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "ppo",
+          "opponent": "GreedyTricks",
+          "trained_on_it": 0.4822,
+          "trained_elsewhere": 0.4464,
+          "specificity": 0.0358,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "ppo",
+          "opponent": "TenAware",
+          "trained_on_it": 0.5364,
+          "trained_elsewhere": 0.5095,
+          "specificity": 0.0268,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "ppo",
+          "opponent": "Adaptive",
+          "trained_on_it": 0.5467,
+          "trained_elsewhere": 0.5149,
+          "specificity": 0.0318,
+          "n_diag": 3,
+          "n_off": 18
+        },
+        {
+          "algo": "ppo",
+          "opponent": "TensThenTricks",
+          "trained_on_it": 0.4995,
+          "trained_elsewhere": 0.4608,
+          "specificity": 0.0386,
+          "n_diag": 3,
+          "n_off": 18
+        }
+      ],
+      "reading": "Advantage from having trained against this specific opponent, with opponent strength cancelled. Near 0 means the agents learned the game; clearly positive means they learned their training opponent."
+    }
+  }
+}

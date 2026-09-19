@@ -1,0 +1,11 @@
+[dqn | reward=potential | 9000 episodes | seed 0]
+    ep   1125 eps=0.714 {'Random': 0.5633, 'TensThenTricks': 0.34}
+    ep   2250 eps=0.509 {'Random': 0.59, 'TensThenTricks': 0.3533}
+    ep   3375 eps=0.363 {'Random': 0.605, 'TensThenTricks': 0.3333}
+    ep   4500 eps=0.259 {'Random': 0.6, 'TensThenTricks': 0.3933}
+    ep   5625 eps=0.185 {'Random': 0.6117, 'TensThenTricks': 0.3433}
+    ep   6750 eps=0.132 {'Random': 0.58, 'TensThenTricks': 0.34}
+    ep   7875 eps=0.094 {'Random': 0.565, 'TensThenTricks': 0.3333}
+    ep   9000 eps=0.067 {'Random': 0.585, 'TensThenTricks': 0.3467}
+FINAL dqn/potential: {'Random': 0.6025, 'TensThenTricks': 0.3417}  (536s)
+saved rl_dqn_potential_s0.pt / .json

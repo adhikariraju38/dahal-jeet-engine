@@ -1,0 +1,212 @@
+{
+  "env": {
+    "started": "2026-09-19T09:34:10",
+    "pid": 3731,
+    "python": "3.14.5",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "unset",
+    "MKL_NUM_THREADS": "unset",
+    "VECLIB_MAXIMUM_THREADS": "unset",
+    "argv": "verify_equations.py",
+    "torch": "2.13.0",
+    "torch_num_threads": 8,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2",
+    "peak_rss_mb": 219.3,
+    "peak_rss_children_mb": 4.4,
+    "peak_rss_note": "ru_maxrss for this process at save time; excludes shared library pages that `ps` RSS counts, so it reads slightly lower than ps."
+  },
+  "n_checks": 30,
+  "n_pass": 30,
+  "all_pass": true,
+  "tolerance": 0.002,
+  "scope": "Identities asserted by the manuscript's equations, checked by arithmetic over existing result artifacts. No experiment is re-run.",
+  "checks": [
+    {
+      "equation": "E2",
+      "check": "|D| = 52!/(13!)^4",
+      "pass": true,
+      "detail": "formula 53644737765488792839237440000  artifact 53644737765488792839237440000"
+    },
+    {
+      "equation": "E19",
+      "check": "|I_1| = 39!/(13!)^3",
+      "pass": true,
+      "detail": "formula 84478098072866400  artifact 84478098072866400"
+    },
+    {
+      "equation": "E2",
+      "check": "log10|D| matches printed exponent",
+      "pass": true,
+      "detail": "28.7295 vs 28.73"
+    },
+    {
+      "equation": "E10",
+      "check": "w_hat = mean(d)/4 over 325 pairings",
+      "pass": true,
+      "detail": "max |recomputed - reported| = 3.33e-05 (TensThenTricks vs ppo_potential)"
+    },
+    {
+      "equation": "E12",
+      "check": "adjusted p >= raw p",
+      "pass": true,
+      "detail": "0 violations"
+    },
+    {
+      "equation": "E12",
+      "check": "Holm adjusted p non-decreasing in raw order",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E12",
+      "check": "BH adjusted p non-decreasing in raw order",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E12",
+      "check": "Holm >= BH pointwise (FWER no more liberal than FDR)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E12",
+      "check": "significant counts and expected false positives",
+      "pass": true,
+      "detail": "m=325  raw=263  holm=208  bh=260  alpha*m=16.2"
+    },
+    {
+      "equation": "E14",
+      "check": "R_i - R_j = 400 log10(p_i/p_j)",
+      "pass": true,
+      "detail": "max discrepancy 0.0963 Elo (TensThenTricks vs ppo_terminal)"
+    },
+    {
+      "equation": "E15",
+      "check": "cyclic energy ratio kappa recomputed from win rates",
+      "pass": true,
+      "detail": "recomputed 0.0518  artifact 0.0518"
+    },
+    {
+      "equation": "E15",
+      "check": "kappa in [0,1] and kappa + transitive = 1",
+      "pass": true,
+      "detail": "kappa=0.0518  transitive=0.9482"
+    },
+    {
+      "equation": "E15",
+      "check": "three-cycle counts",
+      "pass": true,
+      "detail": "recomputed 66/2600  artifact 66/2600"
+    },
+    {
+      "equation": "E16",
+      "check": "rho-hat = (Var/(4 p (1-p)) - 1)/3",
+      "pass": true,
+      "detail": "recomputed 0.0974  artifact 0.0974"
+    },
+    {
+      "equation": "E16",
+      "check": "rho > 0, so binomial variance understates the truth",
+      "pass": true,
+      "detail": "rho=0.0974; binomial Var would be a factor 1.292 too small"
+    },
+    {
+      "equation": "E17",
+      "check": "required deals from sd and delta",
+      "pass": true,
+      "detail": "all arms reproduce from sd=0.2778 +/- rounding (e.g. delta=0.05 -> 243 deals)"
+    },
+    {
+      "equation": "E18",
+      "check": "shares of SS_total sum to 1",
+      "pass": true,
+      "detail": "2 decompositions, all sum to 1"
+    },
+    {
+      "equation": "E18",
+      "check": "all shares non-negative",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E23",
+      "check": "a = c*theta + s*(1-theta)  [k7]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E23",
+      "check": "gap = theta - a  [k7]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E23",
+      "check": "theta = solved-won / positions  [k7]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E23",
+      "check": "a = c*theta + s*(1-theta)  [k5]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E23",
+      "check": "gap = theta - a  [k5]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E23",
+      "check": "theta = solved-won / positions  [k5]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E24",
+      "check": "the two channels partition the hands",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E24",
+      "check": "P(win) = sum over channels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "equation": "E25",
+      "check": "Phi declares the weights the paper prints",
+      "pass": true,
+      "detail": "expected 0.66 and 0.34 in dahaljeet/rewards.py"
+    },
+    {
+      "equation": "E25",
+      "check": "the two weights sum to 1",
+      "pass": true,
+      "detail": "0.66 + 0.34 = 1.00"
+    },
+    {
+      "equation": "E25",
+      "check": "0.66 lies within the measured tens-share range",
+      "pass": true,
+      "detail": "measured tens share: range [0.6646, 0.7306], mean 0.6929 over 4 pairings; Phi uses 0.66, which is APPROXIMATE, not the measurement"
+    },
+    {
+      "equation": "E27",
+      "check": "opponent specificity",
+      "pass": true,
+      "detail": "no precomputed specificity rows to check (keys: ['env', 'deals', 'deals_vs_search', 'train_opponents', 'held_out', 'rows', 'summary']); table is built by paper_tables.py"
+    }
+  ]
+}

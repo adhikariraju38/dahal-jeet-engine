@@ -1,0 +1,5 @@
+  TenAware        vs GreedyTricks   overall 0.5024 | tens-decided 68.4% -> 0.6460 | tiebreak 31.6% -> 0.1922
+  TensThenTricks  vs GreedyTricks   overall 0.5596 | tens-decided 66.5% -> 0.6512 | tiebreak 33.5% -> 0.3781
+  TenAware        vs Random         overall 0.6723 | tens-decided 73.1% -> 0.8074 | tiebreak 26.9% -> 0.3059
+  GreedyTricks    vs Random         overall 0.7147 | tens-decided 69.3% -> 0.7449 | tiebreak 30.7% -> 0.6466
+saved decomposition.json

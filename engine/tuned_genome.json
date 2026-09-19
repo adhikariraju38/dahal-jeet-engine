@@ -1,0 +1,12 @@
+{
+  "fitness": 0.611923076923077,
+  "genome": {
+    "free_trick_max_rank": 8,
+    "trump_on_empty_trick": 2,
+    "lead_trump_after": 13,
+    "ten_dump_min_pos": 1,
+    "late_switch": 2,
+    "lead_from_longest": 1,
+    "contest_last_seat": 1
+  }
+}

@@ -1,0 +1,6 @@
+[double_dueling]
+    double_dueling ep 10000: {'Random': 0.6, 'TensThenTricks': 0.3267}
+    double_dueling ep 20000: {'Random': 0.585, 'TensThenTricks': 0.3433}
+    double_dueling ep 30000: {'Random': 0.5517, 'TensThenTricks': 0.3167}
+    double_dueling ep 40000: {'Random': 0.605, 'TensThenTricks': 0.3533}
+    double_dueling ep 50000: {'Random': 0.605, 'TensThenTricks': 0.33}

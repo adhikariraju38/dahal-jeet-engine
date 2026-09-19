@@ -1,0 +1,73 @@
+{
+  "env": {
+    "started": "2026-09-01T09:29:38",
+    "pid": 50857,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "nfsp.py --episodes 80000 --seed 2",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "method": "nfsp",
+  "eta": 0.1,
+  "episodes": 80000,
+  "seed": 2,
+  "final": {
+    "Random": 0.5304,
+    "TensThenTricks": 0.2658
+  },
+  "curve": [
+    {
+      "ep": 10000,
+      "Random": 0.5288,
+      "TensThenTricks": 0.225
+    },
+    {
+      "ep": 20000,
+      "Random": 0.5188,
+      "TensThenTricks": 0.255
+    },
+    {
+      "ep": 30000,
+      "Random": 0.5387,
+      "TensThenTricks": 0.23
+    },
+    {
+      "ep": 40000,
+      "Random": 0.5238,
+      "TensThenTricks": 0.255
+    },
+    {
+      "ep": 50000,
+      "Random": 0.555,
+      "TensThenTricks": 0.2475
+    },
+    {
+      "ep": 60000,
+      "Random": 0.5012,
+      "TensThenTricks": 0.2825
+    },
+    {
+      "ep": 70000,
+      "Random": 0.5288,
+      "TensThenTricks": 0.225
+    },
+    {
+      "ep": 80000,
+      "Random": 0.5337,
+      "TensThenTricks": 0.255
+    }
+  ],
+  "seconds": 1914.5703494999907
+}

@@ -1,0 +1,34 @@
+{
+  "deals_used": 300,
+  "per_deal_sd_median": 0.2778,
+  "per_deal_sd_max": 0.3179,
+  "required_deals": {
+    "delta=0.02": {
+      "power80": 1514,
+      "power90": 2027
+    },
+    "delta=0.03": {
+      "power80": 673,
+      "power90": 901
+    },
+    "delta=0.05": {
+      "power80": 243,
+      "power90": 325
+    },
+    "delta=0.1": {
+      "power80": 61,
+      "power90": 82
+    }
+  },
+  "required_deals_worst_case_sd": {
+    "delta=0.02": {
+      "power80": 1983,
+      "power90": 2654
+    },
+    "delta=0.05": {
+      "power80": 318,
+      "power90": 425
+    }
+  },
+  "note": "Computed from the OBSERVED per-deal SD of this tournament, so it answers 'was our sample big enough' with a measurement rather than a convention. Comparisons whose detectable effect exceeds what we can resolve must be reported as inconclusive, not as ties."
+}

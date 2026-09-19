@@ -1,0 +1,98 @@
+{
+  "method": "distill",
+  "final": {
+    "Random": 0.7262,
+    "TensThenTricks": 0.5142
+  },
+  "curve": [
+    {
+      "epoch": 1,
+      "loss": 1.0248276175089632,
+      "val_acc": 0.5020211935043335,
+      "is_best": true,
+      "Random": 0.715,
+      "TensThenTricks": 0.508
+    },
+    {
+      "epoch": 2,
+      "loss": 0.9998883920626352,
+      "val_acc": 0.5142444372177124,
+      "is_best": true,
+      "Random": 0.737,
+      "TensThenTricks": 0.524
+    },
+    {
+      "epoch": 3,
+      "loss": 0.9725896029656649,
+      "val_acc": 0.5144369602203369,
+      "is_best": false,
+      "Random": 0.756,
+      "TensThenTricks": 0.506
+    },
+    {
+      "epoch": 4,
+      "loss": 0.9279398658101047,
+      "val_acc": 0.5028873682022095,
+      "is_best": false,
+      "Random": 0.736,
+      "TensThenTricks": 0.5
+    },
+    {
+      "epoch": 5,
+      "loss": 0.8618679522188034,
+      "val_acc": 0.5094321370124817,
+      "is_best": true,
+      "Random": 0.724,
+      "TensThenTricks": 0.534
+    },
+    {
+      "epoch": 6,
+      "loss": 0.7804169021369154,
+      "val_acc": 0.4976900815963745,
+      "is_best": false,
+      "Random": 0.705,
+      "TensThenTricks": 0.476
+    },
+    {
+      "epoch": 7,
+      "loss": 0.6872867849057589,
+      "val_acc": 0.49990376830101013,
+      "is_best": false,
+      "Random": 0.734,
+      "TensThenTricks": 0.482
+    },
+    {
+      "epoch": 8,
+      "loss": 0.5886921950058002,
+      "val_acc": 0.5024061799049377,
+      "is_best": false,
+      "Random": 0.698,
+      "TensThenTricks": 0.48
+    },
+    {
+      "epoch": 9,
+      "loss": 0.49102637245114866,
+      "val_acc": 0.4987488090991974,
+      "is_best": false,
+      "Random": 0.692,
+      "TensThenTricks": 0.428
+    },
+    {
+      "epoch": 10,
+      "loss": 0.39838459313921687,
+      "val_acc": 0.49682387709617615,
+      "is_best": false,
+      "Random": 0.685,
+      "TensThenTricks": 0.438
+    },
+    {
+      "epoch": 11,
+      "loss": 0.3206764437892339,
+      "val_acc": 0.500288724899292,
+      "is_best": false,
+      "Random": 0.68,
+      "TensThenTricks": 0.442
+    }
+  ],
+  "seconds": 111.36516149999807
+}

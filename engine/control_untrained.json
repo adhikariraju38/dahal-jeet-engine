@@ -1,0 +1,383 @@
+{
+  "env": {
+    "started": "2026-09-01T23:57:54",
+    "pid": 19458,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "control_untrained.py --deals 400 --seeds 3",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "deals_per_pair": 400,
+  "per_run": [
+    {
+      "arch": "dqn",
+      "seed": 0,
+      "Random": {
+        "win": 0.5112,
+        "ci": [
+          0.4894,
+          0.5331
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.3013,
+        "ci": [
+          0.275,
+          0.3275
+        ]
+      },
+      "TenAware": {
+        "win": 0.3212,
+        "ci": [
+          0.2913,
+          0.3513
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.2612,
+        "ci": [
+          0.235,
+          0.2875
+        ]
+      }
+    },
+    {
+      "arch": "dqn",
+      "seed": 1,
+      "Random": {
+        "win": 0.4913,
+        "ci": [
+          0.47,
+          0.5144
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.2625,
+        "ci": [
+          0.2362,
+          0.2888
+        ]
+      },
+      "TenAware": {
+        "win": 0.345,
+        "ci": [
+          0.315,
+          0.3775
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.2537,
+        "ci": [
+          0.2263,
+          0.28
+        ]
+      }
+    },
+    {
+      "arch": "dqn",
+      "seed": 2,
+      "Random": {
+        "win": 0.4925,
+        "ci": [
+          0.4738,
+          0.5119
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.3113,
+        "ci": [
+          0.2838,
+          0.3362
+        ]
+      },
+      "TenAware": {
+        "win": 0.3212,
+        "ci": [
+          0.2938,
+          0.3488
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.265,
+        "ci": [
+          0.2375,
+          0.2913
+        ]
+      }
+    },
+    {
+      "arch": "ppo",
+      "seed": 0,
+      "Random": {
+        "win": 0.5112,
+        "ci": [
+          0.4894,
+          0.5331
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.3013,
+        "ci": [
+          0.275,
+          0.3275
+        ]
+      },
+      "TenAware": {
+        "win": 0.3212,
+        "ci": [
+          0.2913,
+          0.3513
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.2612,
+        "ci": [
+          0.235,
+          0.2875
+        ]
+      }
+    },
+    {
+      "arch": "ppo",
+      "seed": 1,
+      "Random": {
+        "win": 0.4913,
+        "ci": [
+          0.47,
+          0.5144
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.2625,
+        "ci": [
+          0.2362,
+          0.2888
+        ]
+      },
+      "TenAware": {
+        "win": 0.345,
+        "ci": [
+          0.315,
+          0.3775
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.2537,
+        "ci": [
+          0.2263,
+          0.28
+        ]
+      }
+    },
+    {
+      "arch": "ppo",
+      "seed": 2,
+      "Random": {
+        "win": 0.4925,
+        "ci": [
+          0.4738,
+          0.5119
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.3113,
+        "ci": [
+          0.2838,
+          0.3362
+        ]
+      },
+      "TenAware": {
+        "win": 0.3212,
+        "ci": [
+          0.2938,
+          0.3488
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.265,
+        "ci": [
+          0.2375,
+          0.2913
+        ]
+      }
+    },
+    {
+      "arch": "dueling",
+      "seed": 0,
+      "Random": {
+        "win": 0.5138,
+        "ci": [
+          0.4925,
+          0.5344
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.2637,
+        "ci": [
+          0.235,
+          0.2925
+        ]
+      },
+      "TenAware": {
+        "win": 0.35,
+        "ci": [
+          0.3225,
+          0.3787
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.2775,
+        "ci": [
+          0.25,
+          0.3063
+        ]
+      }
+    },
+    {
+      "arch": "dueling",
+      "seed": 1,
+      "Random": {
+        "win": 0.5387,
+        "ci": [
+          0.5175,
+          0.5594
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.29,
+        "ci": [
+          0.2625,
+          0.3162
+        ]
+      },
+      "TenAware": {
+        "win": 0.3287,
+        "ci": [
+          0.3013,
+          0.3563
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.27,
+        "ci": [
+          0.2412,
+          0.2988
+        ]
+      }
+    },
+    {
+      "arch": "dueling",
+      "seed": 2,
+      "Random": {
+        "win": 0.4838,
+        "ci": [
+          0.4619,
+          0.5056
+        ]
+      },
+      "GreedyTricks": {
+        "win": 0.2825,
+        "ci": [
+          0.255,
+          0.31
+        ]
+      },
+      "TenAware": {
+        "win": 0.3475,
+        "ci": [
+          0.32,
+          0.3762
+        ]
+      },
+      "TensThenTricks": {
+        "win": 0.2537,
+        "ci": [
+          0.2263,
+          0.2812
+        ]
+      }
+    }
+  ],
+  "aggregated": {
+    "dqn": {
+      "Random": {
+        "mean": 0.4983,
+        "sd": 0.0091,
+        "n_seeds": 3
+      },
+      "GreedyTricks": {
+        "mean": 0.2917,
+        "sd": 0.021,
+        "n_seeds": 3
+      },
+      "TenAware": {
+        "mean": 0.3291,
+        "sd": 0.0112,
+        "n_seeds": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.26,
+        "sd": 0.0047,
+        "n_seeds": 3
+      }
+    },
+    "dueling": {
+      "Random": {
+        "mean": 0.5121,
+        "sd": 0.0224,
+        "n_seeds": 3
+      },
+      "GreedyTricks": {
+        "mean": 0.2787,
+        "sd": 0.0111,
+        "n_seeds": 3
+      },
+      "TenAware": {
+        "mean": 0.3421,
+        "sd": 0.0095,
+        "n_seeds": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.2671,
+        "sd": 0.0099,
+        "n_seeds": 3
+      }
+    },
+    "ppo": {
+      "Random": {
+        "mean": 0.4983,
+        "sd": 0.0091,
+        "n_seeds": 3
+      },
+      "GreedyTricks": {
+        "mean": 0.2917,
+        "sd": 0.021,
+        "n_seeds": 3
+      },
+      "TenAware": {
+        "mean": 0.3291,
+        "sd": 0.0112,
+        "n_seeds": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.26,
+        "sd": 0.0047,
+        "n_seeds": 3
+      }
+    }
+  },
+  "seconds": 138.69895491597708,
+  "note": "Randomly initialised weights, no training. This is the floor a trained agent must be read against, because architecture and action masking alone are not random play."
+}

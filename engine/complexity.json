@@ -1,0 +1,86 @@
+{
+  "env": {
+    "started": "2026-08-31T17:06:21",
+    "pid": 11165,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "unset",
+    "VECLIB_MAXIMUM_THREADS": "unset",
+    "argv": "complexity.py --hands 3000",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "deals_total": "53644737765488792839237440000",
+  "deals_total_log10": 28.73,
+  "initial_infoset": "84478098072866400",
+  "initial_infoset_log10": 16.927,
+  "mean_branching_factor": 3.8797,
+  "branching_by_trick": {
+    "0": 5.715,
+    "1": 5.465,
+    "2": 5.269,
+    "3": 5.004,
+    "4": 4.737,
+    "5": 4.477,
+    "6": 4.221,
+    "7": 3.841,
+    "8": 3.465,
+    "9": 2.993,
+    "10": 2.453,
+    "11": 1.796,
+    "12": 1.0
+  },
+  "decisions_per_hand": 52.0,
+  "n_decisions_measured": 156000,
+  "game_tree_log10_estimate": 30.62,
+  "game_tree_note": "ESTIMATE: mean branching raised to 52 plies. Branching is not independent across plies (follow-suit correlates them), so treat this as an order-of-magnitude figure only.",
+  "infoset_during_play_exact": [
+    {
+      "trick": 1,
+      "n_samples": 300,
+      "log10_geometric_mean": 16.927,
+      "min": "84478098072866400",
+      "max": "84478098072866400"
+    },
+    {
+      "trick": 4,
+      "n_samples": 300,
+      "log10_geometric_mean": 12.229,
+      "min": "3217404762",
+      "max": "5550996791340"
+    },
+    {
+      "trick": 7,
+      "n_samples": 300,
+      "log10_geometric_mean": 7.846,
+      "min": "55440",
+      "max": "399072960"
+    },
+    {
+      "trick": 10,
+      "n_samples": 300,
+      "log10_geometric_mean": 3.69,
+      "min": "40",
+      "max": "34650"
+    },
+    {
+      "trick": 12,
+      "n_samples": 300,
+      "log10_geometric_mean": 1.314,
+      "min": "1",
+      "max": "90"
+    }
+  ],
+  "infoset_method": "Exact count of void-consistent deals of the unseen cards to the three opponents, by DP over eligibility patterns. Verified against brute-force enumeration in --selftest.",
+  "hands_sampled": 3000,
+  "seconds": 0.9
+}

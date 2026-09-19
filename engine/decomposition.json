@@ -1,0 +1,76 @@
+{
+  "env": {
+    "started": "2026-08-31T11:55:49",
+    "pid": 31300,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "unset",
+    "VECLIB_MAXIMUM_THREADS": "unset",
+    "argv": "decompose.py --deals 2500",
+    "torch": "not imported"
+  },
+  "deals_per_pair": 2500,
+  "seed": 13,
+  "decompositions": [
+    {
+      "agent_a": "TenAware",
+      "agent_b": "GreedyTricks",
+      "hands": 10000,
+      "overall_win_a": 0.5024,
+      "share_decided_by_tens": 0.6836,
+      "share_decided_by_tiebreak": 0.3164,
+      "win_a_when_tens_decide": 0.646,
+      "win_a_when_tiebreak_decides": 0.1922,
+      "mean_tens_a": 2.2862,
+      "mean_tricks_a": 5.4058,
+      "coats_a": 1412,
+      "coats_b": 546
+    },
+    {
+      "agent_a": "TensThenTricks",
+      "agent_b": "GreedyTricks",
+      "hands": 10000,
+      "overall_win_a": 0.5596,
+      "share_decided_by_tens": 0.6646,
+      "share_decided_by_tiebreak": 0.3354,
+      "win_a_when_tens_decide": 0.6512,
+      "win_a_when_tiebreak_decides": 0.3781,
+      "mean_tens_a": 2.2758,
+      "mean_tricks_a": 6.292,
+      "coats_a": 1210,
+      "coats_b": 462
+    },
+    {
+      "agent_a": "TenAware",
+      "agent_b": "Random",
+      "hands": 10000,
+      "overall_win_a": 0.6723,
+      "share_decided_by_tens": 0.7306,
+      "share_decided_by_tiebreak": 0.2694,
+      "win_a_when_tens_decide": 0.8074,
+      "win_a_when_tiebreak_decides": 0.3059,
+      "mean_tens_a": 2.6503,
+      "mean_tricks_a": 6.2997,
+      "coats_a": 2238,
+      "coats_b": 227
+    },
+    {
+      "agent_a": "GreedyTricks",
+      "agent_b": "Random",
+      "hands": 10000,
+      "overall_win_a": 0.7147,
+      "share_decided_by_tens": 0.6927,
+      "share_decided_by_tiebreak": 0.3073,
+      "win_a_when_tens_decide": 0.7449,
+      "win_a_when_tiebreak_decides": 0.6466,
+      "mean_tens_a": 2.4805,
+      "mean_tricks_a": 7.5735,
+      "coats_a": 1721,
+      "coats_b": 309
+    }
+  ],
+  "seconds": 12.5
+}

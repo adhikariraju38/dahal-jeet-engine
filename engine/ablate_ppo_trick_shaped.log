@@ -1,0 +1,11 @@
+[ppo | reward=trick_shaped | 9000 episodes | seed 0]
+    ep   1125 {'Random': 0.5233, 'TensThenTricks': 0.2467}
+    ep   2250 {'Random': 0.5017, 'TensThenTricks': 0.27}
+    ep   3375 {'Random': 0.5767, 'TensThenTricks': 0.29}
+    ep   4500 {'Random': 0.5117, 'TensThenTricks': 0.27}
+    ep   5625 {'Random': 0.475, 'TensThenTricks': 0.2867}
+    ep   6750 {'Random': 0.5583, 'TensThenTricks': 0.28}
+    ep   7875 {'Random': 0.5117, 'TensThenTricks': 0.2933}
+    ep   9000 {'Random': 0.4917, 'TensThenTricks': 0.2933}
+FINAL ppo/trick_shaped: {'Random': 0.4988, 'TensThenTricks': 0.285}  (148s)
+saved rl_ppo_trick_shaped_s0.pt / .json

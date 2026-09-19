@@ -1,0 +1,891 @@
+{
+  "generated": "2026-09-02T23:10:03",
+  "expected_seeds": 3,
+  "methods": [
+    {
+      "method": "a2c",
+      "n_seeds": 3,
+      "seeds": [],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_a2c_s0.json",
+          "seed": null,
+          "seconds": 1088.7597660419997,
+          "env_recorded": true,
+          "Random": 0.6108,
+          "TensThenTricks": 0.3967
+        },
+        {
+          "artifact": "rl_a2c_s1.json",
+          "seed": null,
+          "seconds": 2140.7442072500126,
+          "env_recorded": true,
+          "Random": 0.5988,
+          "TensThenTricks": 0.345
+        },
+        {
+          "artifact": "rl_a2c_s2.json",
+          "seed": null,
+          "seconds": 2126.205239916977,
+          "env_recorded": true,
+          "Random": 0.6558,
+          "TensThenTricks": 0.4133
+        }
+      ],
+      "Random": {
+        "mean": 0.6218,
+        "sd": 0.0245,
+        "min": 0.5988,
+        "max": 0.6558,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.385,
+        "sd": 0.0291,
+        "min": 0.345,
+        "max": 0.4133,
+        "n": 3
+      },
+      "mean_seconds": 1785.2,
+      "total_seconds": 5355.7
+    },
+    {
+      "method": "deepcfr",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_deepcfr_s0.json",
+          "seed": 0,
+          "seconds": 19455.30651216698,
+          "env_recorded": true,
+          "Random": 0.6433,
+          "TensThenTricks": 0.3867
+        },
+        {
+          "artifact": "rl_deepcfr_s1.json",
+          "seed": 1,
+          "seconds": 19149.674310500035,
+          "env_recorded": true,
+          "Random": 0.6267,
+          "TensThenTricks": 0.395
+        },
+        {
+          "artifact": "rl_deepcfr_s2.json",
+          "seed": 2,
+          "seconds": 19851.188762707985,
+          "env_recorded": true,
+          "Random": 0.6242,
+          "TensThenTricks": 0.3642
+        }
+      ],
+      "Random": {
+        "mean": 0.6314,
+        "sd": 0.0085,
+        "min": 0.6242,
+        "max": 0.6433,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.382,
+        "sd": 0.013,
+        "min": 0.3642,
+        "max": 0.395,
+        "n": 3
+      },
+      "mean_seconds": 19485.4,
+      "total_seconds": 58456.2
+    },
+    {
+      "method": "distill",
+      "n_seeds": 3,
+      "seeds": [],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_distill_s0.json",
+          "seed": null,
+          "seconds": 74.51306224998552,
+          "env_recorded": true,
+          "Random": 0.7262,
+          "TensThenTricks": 0.5142
+        },
+        {
+          "artifact": "rl_distill_s1.json",
+          "seed": null,
+          "seconds": 64.78125345800072,
+          "env_recorded": true,
+          "Random": 0.74,
+          "TensThenTricks": 0.5375
+        },
+        {
+          "artifact": "rl_distill_s2.json",
+          "seed": null,
+          "seconds": 62.17795845901128,
+          "env_recorded": true,
+          "Random": 0.7412,
+          "TensThenTricks": 0.5292
+        }
+      ],
+      "Random": {
+        "mean": 0.7358,
+        "sd": 0.0068,
+        "min": 0.7262,
+        "max": 0.7412,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.527,
+        "sd": 0.0096,
+        "min": 0.5142,
+        "max": 0.5375,
+        "n": 3
+      },
+      "mean_seconds": 67.2,
+      "total_seconds": 201.5
+    },
+    {
+      "method": "double",
+      "n_seeds": 3,
+      "seeds": [],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_double_s0.json",
+          "seed": null,
+          "seconds": 3149.3499667500146,
+          "env_recorded": true,
+          "Random": 0.6021,
+          "TensThenTricks": 0.3525
+        },
+        {
+          "artifact": "rl_double_s1.json",
+          "seed": null,
+          "seconds": 4858.293795875041,
+          "env_recorded": true,
+          "Random": 0.5758,
+          "TensThenTricks": 0.3392
+        },
+        {
+          "artifact": "rl_double_s2.json",
+          "seed": null,
+          "seconds": 4865.905191499973,
+          "env_recorded": true,
+          "Random": 0.6029,
+          "TensThenTricks": 0.3192
+        }
+      ],
+      "Random": {
+        "mean": 0.5936,
+        "sd": 0.0126,
+        "min": 0.5758,
+        "max": 0.6029,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.337,
+        "sd": 0.0137,
+        "min": 0.3192,
+        "max": 0.3525,
+        "n": 3
+      },
+      "mean_seconds": 4291.2,
+      "total_seconds": 12873.5
+    },
+    {
+      "method": "double_dueling",
+      "n_seeds": 3,
+      "seeds": [],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_double_dueling_s0.json",
+          "seed": null,
+          "seconds": 3210.7526317080483,
+          "env_recorded": true,
+          "Random": 0.6142,
+          "TensThenTricks": 0.3642
+        },
+        {
+          "artifact": "rl_double_dueling_s1.json",
+          "seed": null,
+          "seconds": 4928.675255207985,
+          "env_recorded": true,
+          "Random": 0.6188,
+          "TensThenTricks": 0.35
+        },
+        {
+          "artifact": "rl_double_dueling_s2.json",
+          "seed": null,
+          "seconds": 4936.442321000039,
+          "env_recorded": true,
+          "Random": 0.6067,
+          "TensThenTricks": 0.3375
+        }
+      ],
+      "Random": {
+        "mean": 0.6132,
+        "sd": 0.005,
+        "min": 0.6067,
+        "max": 0.6188,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.3506,
+        "sd": 0.0109,
+        "min": 0.3375,
+        "max": 0.3642,
+        "n": 3
+      },
+      "mean_seconds": 4358.6,
+      "total_seconds": 13075.9
+    },
+    {
+      "method": "dqn-potential",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_dqn_potential_s0.json",
+          "seed": 0,
+          "seconds": 6489.470799334027,
+          "env_recorded": true,
+          "Random": 0.6183,
+          "TensThenTricks": 0.3375
+        },
+        {
+          "artifact": "rl_dqn_potential_s1.json",
+          "seed": 1,
+          "seconds": 6478.542038457992,
+          "env_recorded": true,
+          "Random": 0.6054,
+          "TensThenTricks": 0.3308
+        },
+        {
+          "artifact": "rl_dqn_potential_s2.json",
+          "seed": 2,
+          "seconds": 6521.441266499984,
+          "env_recorded": true,
+          "Random": 0.6183,
+          "TensThenTricks": 0.3533
+        }
+      ],
+      "Random": {
+        "mean": 0.614,
+        "sd": 0.0061,
+        "min": 0.6054,
+        "max": 0.6183,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.3405,
+        "sd": 0.0094,
+        "min": 0.3308,
+        "max": 0.3533,
+        "n": 3
+      },
+      "mean_seconds": 6496.5,
+      "total_seconds": 19489.5
+    },
+    {
+      "method": "dqn-ten_shaped",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_dqn_ten_shaped_s0.json",
+          "seed": 0,
+          "seconds": 6499.5340493340045,
+          "env_recorded": true,
+          "Random": 0.5996,
+          "TensThenTricks": 0.3558
+        },
+        {
+          "artifact": "rl_dqn_ten_shaped_s1.json",
+          "seed": 1,
+          "seconds": 6464.578427875007,
+          "env_recorded": true,
+          "Random": 0.6283,
+          "TensThenTricks": 0.3733
+        },
+        {
+          "artifact": "rl_dqn_ten_shaped_s2.json",
+          "seed": 2,
+          "seconds": 6540.754544333031,
+          "env_recorded": true,
+          "Random": 0.6029,
+          "TensThenTricks": 0.4025
+        }
+      ],
+      "Random": {
+        "mean": 0.6103,
+        "sd": 0.0128,
+        "min": 0.5996,
+        "max": 0.6283,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.3772,
+        "sd": 0.0193,
+        "min": 0.3558,
+        "max": 0.4025,
+        "n": 3
+      },
+      "mean_seconds": 6501.6,
+      "total_seconds": 19504.9
+    },
+    {
+      "method": "dqn-terminal",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_dqn_terminal_s0.json",
+          "seed": 0,
+          "seconds": 6484.788106457971,
+          "env_recorded": true,
+          "Random": 0.5988,
+          "TensThenTricks": 0.3417
+        },
+        {
+          "artifact": "rl_dqn_terminal_s1.json",
+          "seed": 1,
+          "seconds": 6468.8543991250335,
+          "env_recorded": true,
+          "Random": 0.5733,
+          "TensThenTricks": 0.3133
+        },
+        {
+          "artifact": "rl_dqn_terminal_s2.json",
+          "seed": 2,
+          "seconds": 6519.353825708036,
+          "env_recorded": true,
+          "Random": 0.625,
+          "TensThenTricks": 0.3825
+        }
+      ],
+      "Random": {
+        "mean": 0.599,
+        "sd": 0.0211,
+        "min": 0.5733,
+        "max": 0.625,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.3458,
+        "sd": 0.0284,
+        "min": 0.3133,
+        "max": 0.3825,
+        "n": 3
+      },
+      "mean_seconds": 6491.0,
+      "total_seconds": 19473.0
+    },
+    {
+      "method": "dqn-trick_shaped",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_dqn_trick_shaped_s0.json",
+          "seed": 0,
+          "seconds": 6481.576355041005,
+          "env_recorded": true,
+          "Random": 0.5983,
+          "TensThenTricks": 0.33
+        },
+        {
+          "artifact": "rl_dqn_trick_shaped_s1.json",
+          "seed": 1,
+          "seconds": 6474.657955667004,
+          "env_recorded": true,
+          "Random": 0.5713,
+          "TensThenTricks": 0.3292
+        },
+        {
+          "artifact": "rl_dqn_trick_shaped_s2.json",
+          "seed": 2,
+          "seconds": 6534.723907958018,
+          "env_recorded": true,
+          "Random": 0.6021,
+          "TensThenTricks": 0.3417
+        }
+      ],
+      "Random": {
+        "mean": 0.5906,
+        "sd": 0.0137,
+        "min": 0.5713,
+        "max": 0.6021,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.3336,
+        "sd": 0.0057,
+        "min": 0.3292,
+        "max": 0.3417,
+        "n": 3
+      },
+      "mean_seconds": 6497.0,
+      "total_seconds": 19491.0
+    },
+    {
+      "method": "mappo-potential",
+      "n_seeds": 3,
+      "seeds": [],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_mappo_potential_s0.json",
+          "seed": null,
+          "seconds": 2178.0908690419747,
+          "env_recorded": true,
+          "Random": 0.7208,
+          "TensThenTricks": 0.4483
+        },
+        {
+          "artifact": "rl_mappo_potential_s1.json",
+          "seed": null,
+          "seconds": 4098.23786324996,
+          "env_recorded": true,
+          "Random": 0.715,
+          "TensThenTricks": 0.485
+        },
+        {
+          "artifact": "rl_mappo_potential_s2.json",
+          "seed": null,
+          "seconds": 4091.0589609590243,
+          "env_recorded": true,
+          "Random": 0.7204,
+          "TensThenTricks": 0.4433
+        }
+      ],
+      "Random": {
+        "mean": 0.7187,
+        "sd": 0.0026,
+        "min": 0.715,
+        "max": 0.7208,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.4589,
+        "sd": 0.0186,
+        "min": 0.4433,
+        "max": 0.485,
+        "n": 3
+      },
+      "mean_seconds": 3455.8,
+      "total_seconds": 10367.4
+    },
+    {
+      "method": "nfsp",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_nfsp_s0.json",
+          "seed": 0,
+          "seconds": 873.9411227500532,
+          "env_recorded": true,
+          "Random": 0.5358,
+          "TensThenTricks": 0.265
+        },
+        {
+          "artifact": "rl_nfsp_s1.json",
+          "seed": 1,
+          "seconds": 1915.1883952920325,
+          "env_recorded": true,
+          "Random": 0.5337,
+          "TensThenTricks": 0.2583
+        },
+        {
+          "artifact": "rl_nfsp_s2.json",
+          "seed": 2,
+          "seconds": 1914.5703494999907,
+          "env_recorded": true,
+          "Random": 0.5304,
+          "TensThenTricks": 0.2658
+        }
+      ],
+      "Random": {
+        "mean": 0.5333,
+        "sd": 0.0022,
+        "min": 0.5304,
+        "max": 0.5358,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.263,
+        "sd": 0.0034,
+        "min": 0.2583,
+        "max": 0.2658,
+        "n": 3
+      },
+      "mean_seconds": 1567.9,
+      "total_seconds": 4703.7
+    },
+    {
+      "method": "ppo-potential",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_ppo_potential_s0.json",
+          "seed": 0,
+          "seconds": 728.2471142079448,
+          "env_recorded": true,
+          "Random": 0.6971,
+          "TensThenTricks": 0.5
+        },
+        {
+          "artifact": "rl_ppo_potential_s1.json",
+          "seed": 1,
+          "seconds": 686.5390024160151,
+          "env_recorded": true,
+          "Random": 0.6879,
+          "TensThenTricks": 0.4958
+        },
+        {
+          "artifact": "rl_ppo_potential_s2.json",
+          "seed": 2,
+          "seconds": 728.8905640829471,
+          "env_recorded": true,
+          "Random": 0.6913,
+          "TensThenTricks": 0.5158
+        }
+      ],
+      "Random": {
+        "mean": 0.6921,
+        "sd": 0.0038,
+        "min": 0.6879,
+        "max": 0.6971,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.5039,
+        "sd": 0.0086,
+        "min": 0.4958,
+        "max": 0.5158,
+        "n": 3
+      },
+      "mean_seconds": 714.6,
+      "total_seconds": 2143.7
+    },
+    {
+      "method": "ppo-ten_shaped",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_ppo_ten_shaped_s0.json",
+          "seed": 0,
+          "seconds": 726.9482190830167,
+          "env_recorded": true,
+          "Random": 0.6825,
+          "TensThenTricks": 0.5083
+        },
+        {
+          "artifact": "rl_ppo_ten_shaped_s1.json",
+          "seed": 1,
+          "seconds": 685.4201077920152,
+          "env_recorded": true,
+          "Random": 0.6908,
+          "TensThenTricks": 0.5008
+        },
+        {
+          "artifact": "rl_ppo_ten_shaped_s2.json",
+          "seed": 2,
+          "seconds": 722.2183996249805,
+          "env_recorded": true,
+          "Random": 0.6825,
+          "TensThenTricks": 0.4992
+        }
+      ],
+      "Random": {
+        "mean": 0.6853,
+        "sd": 0.0039,
+        "min": 0.6825,
+        "max": 0.6908,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.5028,
+        "sd": 0.004,
+        "min": 0.4992,
+        "max": 0.5083,
+        "n": 3
+      },
+      "mean_seconds": 711.5,
+      "total_seconds": 2134.6
+    },
+    {
+      "method": "ppo-terminal",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_ppo_terminal_s0.json",
+          "seed": 0,
+          "seconds": 724.2812580000027,
+          "env_recorded": true,
+          "Random": 0.6933,
+          "TensThenTricks": 0.5017
+        },
+        {
+          "artifact": "rl_ppo_terminal_s1.json",
+          "seed": 1,
+          "seconds": 684.8558524170076,
+          "env_recorded": true,
+          "Random": 0.6821,
+          "TensThenTricks": 0.4775
+        },
+        {
+          "artifact": "rl_ppo_terminal_s2.json",
+          "seed": 2,
+          "seconds": 730.8460824579815,
+          "env_recorded": true,
+          "Random": 0.6779,
+          "TensThenTricks": 0.4858
+        }
+      ],
+      "Random": {
+        "mean": 0.6844,
+        "sd": 0.0065,
+        "min": 0.6779,
+        "max": 0.6933,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.4883,
+        "sd": 0.01,
+        "min": 0.4775,
+        "max": 0.5017,
+        "n": 3
+      },
+      "mean_seconds": 713.3,
+      "total_seconds": 2140.0
+    },
+    {
+      "method": "ppo-trick_shaped",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "complete": true,
+      "all_env_recorded": true,
+      "runs": [
+        {
+          "artifact": "rl_ppo_trick_shaped_s0.json",
+          "seed": 0,
+          "seconds": 729.5000213329913,
+          "env_recorded": true,
+          "Random": 0.7063,
+          "TensThenTricks": 0.5067
+        },
+        {
+          "artifact": "rl_ppo_trick_shaped_s1.json",
+          "seed": 1,
+          "seconds": 685.8254966250388,
+          "env_recorded": true,
+          "Random": 0.6892,
+          "TensThenTricks": 0.5033
+        },
+        {
+          "artifact": "rl_ppo_trick_shaped_s2.json",
+          "seed": 2,
+          "seconds": 723.3767904159613,
+          "env_recorded": true,
+          "Random": 0.6883,
+          "TensThenTricks": 0.4917
+        }
+      ],
+      "Random": {
+        "mean": 0.6946,
+        "sd": 0.0083,
+        "min": 0.6883,
+        "max": 0.7063,
+        "n": 3
+      },
+      "TensThenTricks": {
+        "mean": 0.5006,
+        "sd": 0.0064,
+        "min": 0.4917,
+        "max": 0.5067,
+        "n": 3
+      },
+      "mean_seconds": 712.9,
+      "total_seconds": 2138.7
+    }
+  ],
+  "paired_reward_comparison": [
+    {
+      "algo": "dqn",
+      "a": "dqn-potential",
+      "b": "dqn-ten_shaped",
+      "n_pairs": 3,
+      "mean_diff": -0.0367,
+      "sd_diff": 0.0133,
+      "all_same_sign": true
+    },
+    {
+      "algo": "dqn",
+      "a": "dqn-potential",
+      "b": "dqn-terminal",
+      "n_pairs": 3,
+      "mean_diff": -0.0053,
+      "sd_diff": 0.0191,
+      "all_same_sign": false
+    },
+    {
+      "algo": "dqn",
+      "a": "dqn-potential",
+      "b": "dqn-trick_shaped",
+      "n_pairs": 3,
+      "mean_diff": 0.0069,
+      "sd_diff": 0.0041,
+      "all_same_sign": true
+    },
+    {
+      "algo": "dqn",
+      "a": "dqn-ten_shaped",
+      "b": "dqn-terminal",
+      "n_pairs": 3,
+      "mean_diff": 0.0314,
+      "sd_diff": 0.0204,
+      "all_same_sign": true
+    },
+    {
+      "algo": "dqn",
+      "a": "dqn-ten_shaped",
+      "b": "dqn-trick_shaped",
+      "n_pairs": 3,
+      "mean_diff": 0.0436,
+      "sd_diff": 0.0143,
+      "all_same_sign": true
+    },
+    {
+      "algo": "dqn",
+      "a": "dqn-terminal",
+      "b": "dqn-trick_shaped",
+      "n_pairs": 3,
+      "mean_diff": 0.0122,
+      "sd_diff": 0.0232,
+      "all_same_sign": false
+    },
+    {
+      "algo": "ppo",
+      "a": "ppo-potential",
+      "b": "ppo-ten_shaped",
+      "n_pairs": 3,
+      "mean_diff": 0.0011,
+      "sd_diff": 0.011,
+      "all_same_sign": false
+    },
+    {
+      "algo": "ppo",
+      "a": "ppo-potential",
+      "b": "ppo-terminal",
+      "n_pairs": 3,
+      "mean_diff": 0.0155,
+      "sd_diff": 0.0131,
+      "all_same_sign": false
+    },
+    {
+      "algo": "ppo",
+      "a": "ppo-potential",
+      "b": "ppo-trick_shaped",
+      "n_pairs": 3,
+      "mean_diff": 0.0033,
+      "sd_diff": 0.0147,
+      "all_same_sign": false
+    },
+    {
+      "algo": "ppo",
+      "a": "ppo-ten_shaped",
+      "b": "ppo-terminal",
+      "n_pairs": 3,
+      "mean_diff": 0.0144,
+      "sd_diff": 0.0069,
+      "all_same_sign": true
+    },
+    {
+      "algo": "ppo",
+      "a": "ppo-ten_shaped",
+      "b": "ppo-trick_shaped",
+      "n_pairs": 3,
+      "mean_diff": 0.0022,
+      "sd_diff": 0.0041,
+      "all_same_sign": false
+    },
+    {
+      "algo": "ppo",
+      "a": "ppo-terminal",
+      "b": "ppo-trick_shaped",
+      "n_pairs": 3,
+      "mean_diff": -0.0122,
+      "sd_diff": 0.0096,
+      "all_same_sign": true
+    }
+  ]
+}

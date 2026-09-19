@@ -1,0 +1,8 @@
+[a2c]
+    a2c ep 10000: {'Random': 0.5717, 'TensThenTricks': 0.2967}
+    a2c ep 20000: {'Random': 0.5517, 'TensThenTricks': 0.28}
+    a2c ep 30000: {'Random': 0.5217, 'TensThenTricks': 0.2467}
+    a2c ep 40000: {'Random': 0.525, 'TensThenTricks': 0.2467}
+    a2c ep 50000: {'Random': 0.5467, 'TensThenTricks': 0.2967}
+    a2c ep 60000: {'Random': 0.59, 'TensThenTricks': 0.39}
+FINAL a2c: {'Random': 0.6108, 'TensThenTricks': 0.3967} (1485s)

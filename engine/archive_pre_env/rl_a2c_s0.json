@@ -1,0 +1,40 @@
+{
+  "method": "a2c",
+  "final": {
+    "Random": 0.6108,
+    "TensThenTricks": 0.3967
+  },
+  "curve": [
+    {
+      "ep": 10000,
+      "Random": 0.5717,
+      "TensThenTricks": 0.2967
+    },
+    {
+      "ep": 20000,
+      "Random": 0.5517,
+      "TensThenTricks": 0.28
+    },
+    {
+      "ep": 30000,
+      "Random": 0.5217,
+      "TensThenTricks": 0.2467
+    },
+    {
+      "ep": 40000,
+      "Random": 0.525,
+      "TensThenTricks": 0.2467
+    },
+    {
+      "ep": 50000,
+      "Random": 0.5467,
+      "TensThenTricks": 0.2967
+    },
+    {
+      "ep": 60000,
+      "Random": 0.59,
+      "TensThenTricks": 0.39
+    }
+  ],
+  "seconds": 1485.4809512499778
+}

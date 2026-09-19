@@ -1,0 +1,9 @@
+panel=['GreedyTricks', 'TenAware', 'PartnerAware', 'AdaptiveGreedy', 'Random']  deals/match=260
+  restart 0: fitness 0.5987  Genome(free_trick_max_rank=0, trump_on_empty_trick=2, lead_trump_after=11, ten_dump_min_pos=3, late_switch=3, lead_from_longest=0, contest_last_seat=1)
+  restart 1: fitness 0.6119  Genome(free_trick_max_rank=8, trump_on_empty_trick=2, lead_trump_after=13, ten_dump_min_pos=1, late_switch=2, lead_from_longest=1, contest_last_seat=1)
+  restart 2: fitness 0.6096  Genome(free_trick_max_rank=9, trump_on_empty_trick=2, lead_trump_after=12, ten_dump_min_pos=0, late_switch=2, lead_from_longest=1, contest_last_seat=1)
+  restart 3: fitness 0.5942  Genome(free_trick_max_rank=11, trump_on_empty_trick=2, lead_trump_after=9, ten_dump_min_pos=0, late_switch=13, lead_from_longest=1, contest_last_seat=1)
+
+BEST fitness 0.6119 after 182s
+genome: Genome(free_trick_max_rank=8, trump_on_empty_trick=2, lead_trump_after=13, ten_dump_min_pos=1, late_switch=2, lead_from_longest=1, contest_last_seat=1)
+saved -> tuned_genome.json

@@ -1,0 +1,23 @@
+{
+  "block": "no_ten_status",
+  "features_zeroed": 12,
+  "episodes": 300,
+  "seed": 0,
+  "final": {
+    "Random": {
+      "win": 0.5841,
+      "ci": [
+        0.5703,
+        0.5981
+      ]
+    },
+    "TensThenTricks": {
+      "win": 0.3256,
+      "ci": [
+        0.3063,
+        0.3456
+      ]
+    }
+  },
+  "seconds": 40.44995262500015
+}

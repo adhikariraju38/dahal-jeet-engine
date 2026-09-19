@@ -1,0 +1,308 @@
+{
+  "ablation": [
+    {
+      "algo": "dqn",
+      "reward": "terminal",
+      "Random": [
+        0.5565,
+        0.5427,
+        0.5687
+      ],
+      "TensThenTricks": [
+        0.2935,
+        0.275,
+        0.3125
+      ]
+    },
+    {
+      "algo": "dqn",
+      "reward": "ten_shaped",
+      "Random": [
+        0.6118,
+        0.5985,
+        0.6248
+      ],
+      "TensThenTricks": [
+        0.342,
+        0.325,
+        0.359
+      ]
+    },
+    {
+      "algo": "dqn",
+      "reward": "potential",
+      "Random": [
+        0.6008,
+        0.5877,
+        0.614
+      ],
+      "TensThenTricks": [
+        0.344,
+        0.326,
+        0.3625
+      ]
+    },
+    {
+      "algo": "dqn",
+      "reward": "trick_shaped",
+      "Random": [
+        0.5803,
+        0.5663,
+        0.5938
+      ],
+      "TensThenTricks": [
+        0.3175,
+        0.3,
+        0.335
+      ]
+    },
+    {
+      "algo": "ppo",
+      "reward": "terminal",
+      "Random": [
+        0.5282,
+        0.5152,
+        0.541
+      ],
+      "TensThenTricks": [
+        0.2775,
+        0.2605,
+        0.295
+      ]
+    },
+    {
+      "algo": "ppo",
+      "reward": "ten_shaped",
+      "Random": [
+        0.5583,
+        0.5445,
+        0.5723
+      ],
+      "TensThenTricks": [
+        0.282,
+        0.264,
+        0.2995
+      ]
+    },
+    {
+      "algo": "ppo",
+      "reward": "potential",
+      "Random": [
+        0.5475,
+        0.5337,
+        0.561
+      ],
+      "TensThenTricks": [
+        0.248,
+        0.2305,
+        0.265
+      ]
+    },
+    {
+      "algo": "ppo",
+      "reward": "trick_shaped",
+      "Random": [
+        0.5268,
+        0.5145,
+        0.5393
+      ],
+      "TensThenTricks": [
+        0.278,
+        0.2615,
+        0.2945
+      ]
+    }
+  ],
+  "head_to_head": [
+    [
+      "dqn",
+      "terminal",
+      "ten_shaped",
+      0.4381,
+      0.4188,
+      0.4581,
+      "loses"
+    ],
+    [
+      "dqn",
+      "terminal",
+      "potential",
+      0.4619,
+      0.4425,
+      0.4831,
+      "loses"
+    ],
+    [
+      "dqn",
+      "terminal",
+      "trick_shaped",
+      0.5,
+      0.4794,
+      0.52,
+      "tie"
+    ],
+    [
+      "dqn",
+      "ten_shaped",
+      "potential",
+      0.495,
+      0.475,
+      0.515,
+      "tie"
+    ],
+    [
+      "dqn",
+      "ten_shaped",
+      "trick_shaped",
+      0.535,
+      0.515,
+      0.555,
+      "WINS"
+    ],
+    [
+      "dqn",
+      "potential",
+      "trick_shaped",
+      0.5587,
+      0.5394,
+      0.5775,
+      "WINS"
+    ],
+    [
+      "ppo",
+      "terminal",
+      "ten_shaped",
+      0.5294,
+      0.51,
+      0.5494,
+      "WINS"
+    ],
+    [
+      "ppo",
+      "terminal",
+      "potential",
+      0.5431,
+      0.5231,
+      0.5637,
+      "WINS"
+    ],
+    [
+      "ppo",
+      "terminal",
+      "trick_shaped",
+      0.4988,
+      0.4788,
+      0.5175,
+      "tie"
+    ],
+    [
+      "ppo",
+      "ten_shaped",
+      "potential",
+      0.6019,
+      0.5806,
+      0.6225,
+      "WINS"
+    ],
+    [
+      "ppo",
+      "ten_shaped",
+      "trick_shaped",
+      0.52,
+      0.5,
+      0.5406,
+      "tie"
+    ],
+    [
+      "ppo",
+      "potential",
+      "trick_shaped",
+      0.5056,
+      0.4856,
+      0.5256,
+      "tie"
+    ]
+  ],
+  "latency_curve": [
+    [
+      "PIMC",
+      2,
+      0.4771,
+      0.4396,
+      0.5125,
+      1.65
+    ],
+    [
+      "PIMC",
+      4,
+      0.5312,
+      0.4958,
+      0.5687,
+      3.3
+    ],
+    [
+      "PIMC",
+      8,
+      0.6229,
+      0.5833,
+      0.6604,
+      6.66
+    ],
+    [
+      "PIMC",
+      16,
+      0.6708,
+      0.6312,
+      0.7104,
+      13.32
+    ],
+    [
+      "PIMC",
+      32,
+      0.7312,
+      0.6958,
+      0.7667,
+      26.69
+    ],
+    [
+      "ISMCTS",
+      50,
+      0.5958,
+      0.5563,
+      0.6354,
+      8.75
+    ],
+    [
+      "ISMCTS",
+      100,
+      0.6292,
+      0.5875,
+      0.675,
+      17.32
+    ],
+    [
+      "ISMCTS",
+      200,
+      0.7021,
+      0.6646,
+      0.7396,
+      34.94
+    ],
+    [
+      "ISMCTS",
+      400,
+      0.7063,
+      0.6667,
+      0.7438,
+      70.67
+    ],
+    [
+      "ISMCTS",
+      800,
+      0.7396,
+      0.7021,
+      0.7771,
+      172.45
+    ]
+  ]
+}

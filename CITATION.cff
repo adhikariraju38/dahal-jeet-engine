@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: >-
+  Dahal Jeet: game engine, agents and experimental record
+message: >-
+  If you use this software or its artifacts, please cite both this
+  repository and the paper it accompanies.
+type: software
+authors:
+  - given-names: Raju Kumar
+    family-names: Yadav
+    email: 076bct100.raju@pcampus.edu.np
+    orcid: 'https://orcid.org/0009-0009-4811-246X'
+    affiliation: >-
+      Department of Electronics and Computer Engineering, Institute of
+      Engineering, Pulchowk Campus, Tribhuvan University
+  - given-names: Ganesh
+    family-names: Gautam
+    email: ganesh@pcampus.edu.np
+    orcid: 'https://orcid.org/0000-0002-1926-1492'
+    affiliation: >-
+      Department of Electronics and Computer Engineering, Institute of
+      Engineering, Pulchowk Campus, Tribhuvan University
+license: MIT
+license-url: 'https://opensource.org/licenses/MIT'
+keywords:
+  - imperfect-information games
+  - Monte Carlo tree search
+  - reinforcement learning
+  - trick-taking card games
+  - benchmarking
+  - cultural heritage computing
+preferred-citation:
+  type: article
+  title: >-
+    Search-based agents outperform reinforcement learning in Dahal Jeet, a
+    Nepali imperfect-information card game
+  authors:
+    - given-names: Raju Kumar
+      family-names: Yadav
+      orcid: 'https://orcid.org/0009-0009-4811-246X'
+    - given-names: Ganesh
+      family-names: Gautam
+      orcid: 'https://orcid.org/0000-0002-1926-1492'
+  year: 2026
+  notes: Under review at Scientific Reports.

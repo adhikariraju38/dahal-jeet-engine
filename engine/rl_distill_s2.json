@@ -1,0 +1,94 @@
+{
+  "env": {
+    "started": "2026-09-01T15:51:56",
+    "pid": 2346,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "train_more.py --method distill --epochs 30 --seed 2",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "method": "distill",
+  "final": {
+    "Random": 0.7412,
+    "TensThenTricks": 0.5292
+  },
+  "curve": [
+    {
+      "epoch": 1,
+      "loss": 1.0277859910736467,
+      "val_acc": 0.5110683441162109,
+      "is_best": true,
+      "Random": 0.673,
+      "TensThenTricks": 0.502
+    },
+    {
+      "epoch": 2,
+      "loss": 1.0019373507295,
+      "val_acc": 0.5202117562294006,
+      "is_best": true,
+      "Random": 0.747,
+      "TensThenTricks": 0.552
+    },
+    {
+      "epoch": 3,
+      "loss": 0.9729932644233458,
+      "val_acc": 0.5230991244316101,
+      "is_best": false,
+      "Random": 0.756,
+      "TensThenTricks": 0.49
+    },
+    {
+      "epoch": 4,
+      "loss": 0.927145261351515,
+      "val_acc": 0.5215591788291931,
+      "is_best": false,
+      "Random": 0.767,
+      "TensThenTricks": 0.504
+    },
+    {
+      "epoch": 5,
+      "loss": 0.8594313765661914,
+      "val_acc": 0.5153031945228577,
+      "is_best": false,
+      "Random": 0.717,
+      "TensThenTricks": 0.528
+    },
+    {
+      "epoch": 6,
+      "loss": 0.771046689040464,
+      "val_acc": 0.5085659027099609,
+      "is_best": false,
+      "Random": 0.723,
+      "TensThenTricks": 0.47
+    },
+    {
+      "epoch": 7,
+      "loss": 0.6727442109956819,
+      "val_acc": 0.5072184801101685,
+      "is_best": false,
+      "Random": 0.732,
+      "TensThenTricks": 0.468
+    },
+    {
+      "epoch": 8,
+      "loss": 0.5691487430121263,
+      "val_acc": 0.49701637029647827,
+      "is_best": false,
+      "Random": 0.692,
+      "TensThenTricks": 0.446
+    }
+  ],
+  "seconds": 62.17795845901128
+}

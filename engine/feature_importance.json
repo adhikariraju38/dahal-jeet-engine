@@ -1,0 +1,157 @@
+{
+  "env": {
+    "started": "2026-09-01T10:29:49",
+    "pid": 97369,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "unset",
+    "VECLIB_MAXIMUM_THREADS": "unset",
+    "argv": "feature_importance.py --deals 400 --pool-hands 300 --models rl_ppo_potential_s0.pt,rl_distill_s0.pt,rl_dqn_ten_shaped_s0.pt",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "deals": 400,
+  "opponent": "TensThenTricks",
+  "obs_size": 360,
+  "method": "Each block is replaced at every decision by the same slice taken from an unrelated real game state. This preserves the block's marginal distribution while destroying its relationship to the current position, unlike zeroing, which also pushes the input off the data manifold.",
+  "results": [
+    {
+      "model": "rl_ppo_potential_s0.pt",
+      "baseline": 0.5075,
+      "baseline_ci": [
+        0.4788,
+        0.535
+      ],
+      "blocks": {
+        "hand": {
+          "win": 0.5119,
+          "ci": [
+            0.4856,
+            0.5369
+          ],
+          "drop": -0.0044,
+          "features": 52
+        },
+        "history": {
+          "win": 0.4906,
+          "ci": [
+            0.4681,
+            0.5125
+          ],
+          "drop": 0.0169,
+          "features": 208
+        },
+        "ten_status": {
+          "win": 0.5062,
+          "ci": [
+            0.4813,
+            0.5325
+          ],
+          "drop": 0.0012,
+          "features": 12
+        },
+        "current_trick": {
+          "win": 0.4694,
+          "ci": [
+            0.4444,
+            0.4931
+          ],
+          "drop": 0.0381,
+          "features": 52
+        },
+        "voids": {
+          "win": 0.4988,
+          "ci": [
+            0.4731,
+            0.5244
+          ],
+          "drop": 0.0087,
+          "features": 16
+        },
+        "scalars": {
+          "win": 0.5038,
+          "ci": [
+            0.475,
+            0.5319
+          ],
+          "drop": 0.0037,
+          "features": 5
+        }
+      }
+    },
+    {
+      "model": "rl_dqn_ten_shaped_s0.pt",
+      "baseline": 0.3613,
+      "baseline_ci": [
+        0.3312,
+        0.3912
+      ],
+      "blocks": {
+        "hand": {
+          "win": 0.3731,
+          "ci": [
+            0.3525,
+            0.3937
+          ],
+          "drop": -0.0119,
+          "features": 52
+        },
+        "history": {
+          "win": 0.3063,
+          "ci": [
+            0.2863,
+            0.3269
+          ],
+          "drop": 0.055,
+          "features": 208
+        },
+        "ten_status": {
+          "win": 0.3506,
+          "ci": [
+            0.3281,
+            0.3731
+          ],
+          "drop": 0.0106,
+          "features": 12
+        },
+        "current_trick": {
+          "win": 0.3319,
+          "ci": [
+            0.31,
+            0.3563
+          ],
+          "drop": 0.0294,
+          "features": 52
+        },
+        "voids": {
+          "win": 0.3425,
+          "ci": [
+            0.3212,
+            0.3644
+          ],
+          "drop": 0.0187,
+          "features": 16
+        },
+        "scalars": {
+          "win": 0.3631,
+          "ci": [
+            0.3419,
+            0.385
+          ],
+          "drop": -0.0019,
+          "features": 5
+        }
+      }
+    }
+  ],
+  "seconds": 73.03705079201609
+}

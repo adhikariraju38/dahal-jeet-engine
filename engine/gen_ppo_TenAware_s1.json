@@ -1,0 +1,70 @@
+{
+  "env": {
+    "started": "2026-09-02T11:40:24",
+    "pid": 88619,
+    "python": "3.14.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "argv": "generalise.py --train --algo ppo --opponent TenAware --episodes 120000 --seed 1",
+    "torch": "2.13.0",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": true,
+    "mps_used": false,
+    "numpy": "2.5.2"
+  },
+  "algo": "ppo",
+  "reward": "potential",
+  "train_opponent": "TenAware",
+  "episodes": 120000,
+  "seed": 1,
+  "curve": [
+    {
+      "ep": 15000,
+      "Random": 0.4983,
+      "TensThenTricks": 0.2933
+    },
+    {
+      "ep": 30000,
+      "Random": 0.6133,
+      "TensThenTricks": 0.44
+    },
+    {
+      "ep": 45000,
+      "Random": 0.6217,
+      "TensThenTricks": 0.4467
+    },
+    {
+      "ep": 60000,
+      "Random": 0.65,
+      "TensThenTricks": 0.4633
+    },
+    {
+      "ep": 75000,
+      "Random": 0.695,
+      "TensThenTricks": 0.44
+    },
+    {
+      "ep": 90000,
+      "Random": 0.6767,
+      "TensThenTricks": 0.45
+    },
+    {
+      "ep": 105000,
+      "Random": 0.66,
+      "TensThenTricks": 0.4233
+    },
+    {
+      "ep": 120000,
+      "Random": 0.6483,
+      "TensThenTricks": 0.4867
+    }
+  ],
+  "seconds": 1105.5683617919567
+}

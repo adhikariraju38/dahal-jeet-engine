@@ -1,0 +1,53 @@
+{
+  "method": "nfsp",
+  "eta": 0.1,
+  "episodes": 200,
+  "seed": 0,
+  "final": {
+    "Random": 0.5162,
+    "TensThenTricks": 0.2592
+  },
+  "curve": [
+    {
+      "ep": 25,
+      "Random": 0.5238,
+      "TensThenTricks": 0.25
+    },
+    {
+      "ep": 50,
+      "Random": 0.5238,
+      "TensThenTricks": 0.25
+    },
+    {
+      "ep": 75,
+      "Random": 0.5238,
+      "TensThenTricks": 0.25
+    },
+    {
+      "ep": 100,
+      "Random": 0.5238,
+      "TensThenTricks": 0.25
+    },
+    {
+      "ep": 125,
+      "Random": 0.5238,
+      "TensThenTricks": 0.25
+    },
+    {
+      "ep": 150,
+      "Random": 0.5238,
+      "TensThenTricks": 0.25
+    },
+    {
+      "ep": 175,
+      "Random": 0.5238,
+      "TensThenTricks": 0.25
+    },
+    {
+      "ep": 200,
+      "Random": 0.5238,
+      "TensThenTricks": 0.25
+    }
+  ],
+  "seconds": 54.93987400000333
+}

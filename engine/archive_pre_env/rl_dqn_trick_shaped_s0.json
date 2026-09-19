@@ -1,0 +1,53 @@
+{
+  "algo": "dqn",
+  "reward": "trick_shaped",
+  "episodes": 9000,
+  "seed": 0,
+  "final": {
+    "Random": 0.5854,
+    "TensThenTricks": 0.3192
+  },
+  "curve": [
+    {
+      "ep": 1125,
+      "Random": 0.535,
+      "TensThenTricks": 0.2867
+    },
+    {
+      "ep": 2250,
+      "Random": 0.5717,
+      "TensThenTricks": 0.3133
+    },
+    {
+      "ep": 3375,
+      "Random": 0.5633,
+      "TensThenTricks": 0.2867
+    },
+    {
+      "ep": 4500,
+      "Random": 0.5983,
+      "TensThenTricks": 0.2867
+    },
+    {
+      "ep": 5625,
+      "Random": 0.595,
+      "TensThenTricks": 0.3167
+    },
+    {
+      "ep": 6750,
+      "Random": 0.5383,
+      "TensThenTricks": 0.3533
+    },
+    {
+      "ep": 7875,
+      "Random": 0.5533,
+      "TensThenTricks": 0.3167
+    },
+    {
+      "ep": 9000,
+      "Random": 0.5633,
+      "TensThenTricks": 0.3033
+    }
+  ],
+  "seconds": 534.2554767089896
+}

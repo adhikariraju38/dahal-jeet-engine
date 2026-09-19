@@ -1,0 +1,166 @@
+started Thu Sep  3 06:45:46 +0545 2026
+[06:45:46] START ablate none seed 0
+[06:45:46] START ablate no_ten_status seed 0
+[06:45:46] START ablate no_voids seed 0
+[06:45:46] START ablate no_history seed 0
+[06:45:46] START ablate no_scalars seed 0
+[06:45:46] START ablate minimal seed 0
+[encoding ablation: no_ten_status — 12/360 features zeroed]
+[encoding ablation: no_voids — 16/360 features zeroed]
+[encoding ablation: no_scalars — 5/360 features zeroed]
+[encoding ablation: minimal — 241/360 features zeroed]
+[encoding ablation: no_history — 208/360 features zeroed]
+[encoding ablation: none — 0/360 features zeroed]
+    [minimal] ep   5000/120000 ( 4.2%)     3.3 min  eta   76.4 min
+    [no_history] ep   5000/120000 ( 4.2%)     3.3 min  eta   76.4 min
+    [none] ep   5000/120000 ( 4.2%)     3.3 min  eta   76.7 min
+    [no_voids] ep   5000/120000 ( 4.2%)     3.3 min  eta   76.8 min
+    [no_scalars] ep   5000/120000 ( 4.2%)     3.3 min  eta   76.9 min
+    [no_ten_status] ep   5000/120000 ( 4.2%)     3.4 min  eta   77.1 min
+    [minimal] ep  10000/120000 ( 8.3%)     6.8 min  eta   75.1 min
+    [no_history] ep  10000/120000 ( 8.3%)     6.8 min  eta   75.3 min
+    [none] ep  10000/120000 ( 8.3%)     6.9 min  eta   75.5 min
+    [no_voids] ep  10000/120000 ( 8.3%)     6.9 min  eta   75.5 min
+    [no_scalars] ep  10000/120000 ( 8.3%)     6.9 min  eta   75.5 min
+    [no_ten_status] ep  10000/120000 ( 8.3%)     6.9 min  eta   75.7 min
+    [minimal] ep  15000/120000 (12.5%)    10.3 min  eta   72.4 min
+    [no_history] ep  15000/120000 (12.5%)    10.4 min  eta   72.5 min
+    [none] ep  15000/120000 (12.5%)    10.4 min  eta   72.8 min
+    [no_voids] ep  15000/120000 (12.5%)    10.4 min  eta   72.9 min
+    [no_scalars] ep  15000/120000 (12.5%)    10.4 min  eta   72.9 min
+    [no_ten_status] ep  15000/120000 (12.5%)    10.4 min  eta   73.0 min
+    [minimal] ep  20000/120000 (16.7%)    13.9 min  eta   69.3 min
+    [no_history] ep  20000/120000 (16.7%)    13.9 min  eta   69.5 min
+    [none] ep  20000/120000 (16.7%)    13.9 min  eta   69.7 min
+    [no_voids] ep  20000/120000 (16.7%)    13.9 min  eta   69.7 min
+    [no_scalars] ep  20000/120000 (16.7%)    14.0 min  eta   69.8 min
+    [no_ten_status] ep  20000/120000 (16.7%)    14.0 min  eta   69.9 min
+    [minimal] ep  25000/120000 (20.8%)    17.4 min  eta   66.1 min
+    [no_history] ep  25000/120000 (20.8%)    17.5 min  eta   66.4 min
+    [no_voids] ep  25000/120000 (20.8%)    17.5 min  eta   66.6 min
+    [none] ep  25000/120000 (20.8%)    17.5 min  eta   66.6 min
+    [no_scalars] ep  25000/120000 (20.8%)    17.5 min  eta   66.7 min
+    [no_ten_status] ep  25000/120000 (20.8%)    17.6 min  eta   66.8 min
+    [minimal] ep  30000/120000 (25.0%)    21.0 min  eta   63.0 min
+    [no_history] ep  30000/120000 (25.0%)    21.0 min  eta   63.1 min
+    [no_voids] ep  30000/120000 (25.0%)    21.1 min  eta   63.3 min
+    [none] ep  30000/120000 (25.0%)    21.1 min  eta   63.4 min
+    [no_scalars] ep  30000/120000 (25.0%)    21.1 min  eta   63.4 min
+    [no_ten_status] ep  30000/120000 (25.0%)    21.2 min  eta   63.5 min
+    [minimal] ep  35000/120000 (29.2%)    24.6 min  eta   59.7 min
+    [no_history] ep  35000/120000 (29.2%)    24.6 min  eta   59.8 min
+    [no_voids] ep  35000/120000 (29.2%)    24.7 min  eta   60.0 min
+    [no_scalars] ep  35000/120000 (29.2%)    24.7 min  eta   60.0 min
+    [none] ep  35000/120000 (29.2%)    24.7 min  eta   60.0 min
+    [no_ten_status] ep  35000/120000 (29.2%)    24.8 min  eta   60.2 min
+    [minimal] ep  40000/120000 (33.3%)    28.1 min  eta   56.3 min
+    [no_history] ep  40000/120000 (33.3%)    28.2 min  eta   56.4 min
+    [no_scalars] ep  40000/120000 (33.3%)    28.3 min  eta   56.6 min
+    [no_voids] ep  40000/120000 (33.3%)    28.3 min  eta   56.6 min
+    [none] ep  40000/120000 (33.3%)    28.3 min  eta   56.6 min
+    [no_ten_status] ep  40000/120000 (33.3%)    28.4 min  eta   56.8 min
+    [minimal] ep  45000/120000 (37.5%)    31.7 min  eta   52.9 min
+    [no_history] ep  45000/120000 (37.5%)    31.7 min  eta   52.9 min
+    [none] ep  45000/120000 (37.5%)    31.9 min  eta   53.1 min
+    [no_scalars] ep  45000/120000 (37.5%)    31.9 min  eta   53.1 min
+    [no_voids] ep  45000/120000 (37.5%)    31.9 min  eta   53.1 min
+    [no_ten_status] ep  45000/120000 (37.5%)    32.0 min  eta   53.3 min
+    [minimal] ep  50000/120000 (41.7%)    35.3 min  eta   49.4 min
+    [no_history] ep  50000/120000 (41.7%)    35.3 min  eta   49.4 min
+    [no_scalars] ep  50000/120000 (41.7%)    35.4 min  eta   49.6 min
+    [none] ep  50000/120000 (41.7%)    35.5 min  eta   49.6 min
+    [no_voids] ep  50000/120000 (41.7%)    35.5 min  eta   49.6 min
+    [no_ten_status] ep  50000/120000 (41.7%)    35.6 min  eta   49.8 min
+    [minimal] ep  55000/120000 (45.8%)    38.9 min  eta   45.9 min
+    [no_history] ep  55000/120000 (45.8%)    38.9 min  eta   45.9 min
+    [no_scalars] ep  55000/120000 (45.8%)    39.0 min  eta   46.1 min
+    [no_voids] ep  55000/120000 (45.8%)    39.0 min  eta   46.1 min
+    [none] ep  55000/120000 (45.8%)    39.0 min  eta   46.1 min
+    [no_ten_status] ep  55000/120000 (45.8%)    39.2 min  eta   46.3 min
+    [minimal] ep  60000/120000 (50.0%)    42.4 min  eta   42.4 min
+    [no_history] ep  60000/120000 (50.0%)    42.5 min  eta   42.5 min
+  Random           BR 0.8492 [0.8283,0.8700]   generic 0.8458 [0.8242,0.8667]   exploitability +0.0033  p=0.8465
+    [no_scalars] ep  60000/120000 (50.0%)    42.6 min  eta   42.6 min
+    [no_voids] ep  60000/120000 (50.0%)    42.6 min  eta   42.6 min
+    [none] ep  60000/120000 (50.0%)    42.6 min  eta   42.6 min
+    [no_ten_status] ep  60000/120000 (50.0%)    42.8 min  eta   42.8 min
+    [minimal] ep  65000/120000 (54.2%)    46.0 min  eta   38.9 min
+    [no_history] ep  65000/120000 (54.2%)    46.0 min  eta   39.0 min
+    [no_scalars] ep  65000/120000 (54.2%)    46.2 min  eta   39.1 min
+    [none] ep  65000/120000 (54.2%)    46.2 min  eta   39.1 min
+    [no_voids] ep  65000/120000 (54.2%)    46.3 min  eta   39.1 min
+    [no_ten_status] ep  65000/120000 (54.2%)    46.4 min  eta   39.3 min
+    [minimal] ep  70000/120000 (58.3%)    49.6 min  eta   35.4 min
+    [no_history] ep  70000/120000 (58.3%)    49.6 min  eta   35.4 min
+    [no_scalars] ep  70000/120000 (58.3%)    49.8 min  eta   35.6 min
+    [none] ep  70000/120000 (58.3%)    49.8 min  eta   35.6 min
+    [no_voids] ep  70000/120000 (58.3%)    49.9 min  eta   35.6 min
+    [no_ten_status] ep  70000/120000 (58.3%)    50.0 min  eta   35.7 min
+    [minimal] ep  75000/120000 (62.5%)    53.1 min  eta   31.9 min
+    [no_history] ep  75000/120000 (62.5%)    53.2 min  eta   31.9 min
+    [none] ep  75000/120000 (62.5%)    53.4 min  eta   32.0 min
+    [no_scalars] ep  75000/120000 (62.5%)    53.4 min  eta   32.0 min
+    [no_voids] ep  75000/120000 (62.5%)    53.5 min  eta   32.1 min
+    [no_ten_status] ep  75000/120000 (62.5%)    53.6 min  eta   32.2 min
+    [minimal] ep  80000/120000 (66.7%)    56.8 min  eta   28.4 min
+    [no_history] ep  80000/120000 (66.7%)    56.8 min  eta   28.4 min
+    [no_scalars] ep  80000/120000 (66.7%)    57.0 min  eta   28.5 min
+    [none] ep  80000/120000 (66.7%)    57.0 min  eta   28.5 min
+    [no_voids] ep  80000/120000 (66.7%)    57.1 min  eta   28.6 min
+    [no_ten_status] ep  80000/120000 (66.7%)    57.3 min  eta   28.6 min
+    [minimal] ep  85000/120000 (70.8%)    60.5 min  eta   24.9 min
+    [no_history] ep  85000/120000 (70.8%)    60.5 min  eta   24.9 min
+    [no_scalars] ep  85000/120000 (70.8%)    60.7 min  eta   25.0 min
+    [none] ep  85000/120000 (70.8%)    60.7 min  eta   25.0 min
+    [no_voids] ep  85000/120000 (70.8%)    60.8 min  eta   25.0 min
+    [no_ten_status] ep  85000/120000 (70.8%)    61.0 min  eta   25.1 min
+    [minimal] ep  90000/120000 (75.0%)    64.0 min  eta   21.3 min
+    [no_history] ep  90000/120000 (75.0%)    64.1 min  eta   21.4 min
+    [no_scalars] ep  90000/120000 (75.0%)    64.3 min  eta   21.4 min
+    [none] ep  90000/120000 (75.0%)    64.4 min  eta   21.5 min
+    [no_voids] ep  90000/120000 (75.0%)    64.4 min  eta   21.5 min
+    [no_ten_status] ep  90000/120000 (75.0%)    64.6 min  eta   21.5 min
+    [no_history] ep  95000/120000 (79.2%)    67.6 min  eta   17.8 min
+    [minimal] ep  95000/120000 (79.2%)    67.7 min  eta   17.8 min
+    [no_scalars] ep  95000/120000 (79.2%)    67.9 min  eta   17.9 min
+    [none] ep  95000/120000 (79.2%)    68.0 min  eta   17.9 min
+    [no_voids] ep  95000/120000 (79.2%)    68.1 min  eta   17.9 min
+    [no_ten_status] ep  95000/120000 (79.2%)    68.3 min  eta   18.0 min
+    [no_history] ep 100000/120000 (83.3%)    71.2 min  eta   14.2 min
+    [minimal] ep 100000/120000 (83.3%)    71.2 min  eta   14.2 min
+    [no_scalars] ep 100000/120000 (83.3%)    71.5 min  eta   14.3 min
+    [none] ep 100000/120000 (83.3%)    71.6 min  eta   14.3 min
+    [no_voids] ep 100000/120000 (83.3%)    71.7 min  eta   14.3 min
+    [no_ten_status] ep 100000/120000 (83.3%)    71.9 min  eta   14.4 min
+    [no_history] ep 105000/120000 (87.5%)    74.8 min  eta   10.7 min
+    [minimal] ep 105000/120000 (87.5%)    74.8 min  eta   10.7 min
+    [no_scalars] ep 105000/120000 (87.5%)    75.1 min  eta   10.7 min
+    [none] ep 105000/120000 (87.5%)    75.2 min  eta   10.7 min
+    [no_voids] ep 105000/120000 (87.5%)    75.3 min  eta   10.8 min
+    [no_ten_status] ep 105000/120000 (87.5%)    75.5 min  eta   10.8 min
+    [no_history] ep 110000/120000 (91.7%)    78.4 min  eta    7.1 min
+    [minimal] ep 110000/120000 (91.7%)    78.4 min  eta    7.1 min
+    [no_scalars] ep 110000/120000 (91.7%)    78.7 min  eta    7.2 min
+    [none] ep 110000/120000 (91.7%)    78.8 min  eta    7.2 min
+    [no_voids] ep 110000/120000 (91.7%)    78.9 min  eta    7.2 min
+    [no_ten_status] ep 110000/120000 (91.7%)    79.1 min  eta    7.2 min
+    [no_history] ep 115000/120000 (95.8%)    82.0 min  eta    3.6 min
+    [minimal] ep 115000/120000 (95.8%)    82.0 min  eta    3.6 min
+    [no_scalars] ep 115000/120000 (95.8%)    82.3 min  eta    3.6 min
+    [none] ep 115000/120000 (95.8%)    82.4 min  eta    3.6 min
+    [no_voids] ep 115000/120000 (95.8%)    82.5 min  eta    3.6 min
+    [no_ten_status] ep 115000/120000 (95.8%)    82.8 min  eta    3.6 min
+  GreedyTricks     BR 0.7525 [0.7292,0.7767]   generic 0.6817 [0.6583,0.7058]   exploitability +0.0708  p=0.0000
+    [no_history] ep 120000/120000 (100.0%)    85.6 min  eta    0.0 min
+    [minimal] ep 120000/120000 (100.0%)    85.6 min  eta    0.0 min
+    [no_scalars] ep 120000/120000 (100.0%)    85.9 min  eta    0.0 min
+FINAL ablate/no_history: {'Random': {'win': 0.5925, 'ci': [0.5778, 0.6075]}, 'TensThenTricks': {'win': 0.3375, 'ci': [0.3175, 0.3581]}} (5156s)
+FINAL ablate/minimal: {'Random': {'win': 0.6531, 'ci': [0.6381, 0.6675]}, 'TensThenTricks': {'win': 0.4094, 'ci': [0.3887, 0.4319]}} (5157s)
+    [none] ep 120000/120000 (100.0%)    86.0 min  eta    0.0 min
+    [no_voids] ep 120000/120000 (100.0%)    86.0 min  eta    0.0 min
+    [no_ten_status] ep 120000/120000 (100.0%)    86.2 min  eta    0.0 min
+FINAL ablate/no_scalars: {'Random': {'win': 0.6184, 'ci': [0.6038, 0.6328]}, 'TensThenTricks': {'win': 0.3769, 'ci': [0.3575, 0.3969]}} (5173s)
+FINAL ablate/none: {'Random': {'win': 0.6159, 'ci': [0.6012, 0.6306]}, 'TensThenTricks': {'win': 0.3887, 'ci': [0.3694, 0.4081]}} (5176s)
+FINAL ablate/no_voids: {'Random': {'win': 0.6281, 'ci': [0.6134, 0.6434]}, 'TensThenTricks': {'win': 0.3625, 'ci': [0.3431, 0.3819]}} (5177s)
+FINAL ablate/no_ten_status: {'Random': {'win': 0.6006, 'ci': [0.5869, 0.6144]}, 'TensThenTricks': {'win': 0.3588, 'ci': [0.3369, 0.3769]}} (5186s)
+  TenAware         BR 0.7508 [0.7258,0.7758]   generic 0.7108 [0.6858,0.7350]   exploitability +0.0400  p=0.0093

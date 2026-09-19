@@ -1,0 +1,13 @@
+[MAPPO CTDE self-play | reward=potential | 300000 eps]
+    ep  30000 {'Random': 0.665, 'TensThenTricks': 0.3933}
+    ep  60000 {'Random': 0.7167, 'TensThenTricks': 0.44}
+    ep  90000 {'Random': 0.7017, 'TensThenTricks': 0.43}
+    ep 120000 {'Random': 0.6567, 'TensThenTricks': 0.4233}
+    ep 150000 {'Random': 0.7117, 'TensThenTricks': 0.4333}
+    ep 180000 {'Random': 0.725, 'TensThenTricks': 0.42}
+    ep 210000 {'Random': 0.7267, 'TensThenTricks': 0.4733}
+    ep 240000 {'Random': 0.7667, 'TensThenTricks': 0.4833}
+    ep 270000 {'Random': 0.725, 'TensThenTricks': 0.4667}
+    ep 300000 {'Random': 0.735, 'TensThenTricks': 0.4833}
+FINAL mappo/potential: {'Random': 0.7325, 'TensThenTricks': 0.4817, 'GreedyTricks': 0.4608}  (3765s)
+saved

@@ -1,0 +1,4 @@
+[dqn | reward=ten_shaped | 150000 episodes | seed 1]
+    ep  18750 eps=0.050 {'Random': 0.585, 'TensThenTricks': 0.3067}
+    ep  37500 eps=0.050 {'Random': 0.54, 'TensThenTricks': 0.3133}
+    ep  56250 eps=0.050 {'Random': 0.6117, 'TensThenTricks': 0.2967}
